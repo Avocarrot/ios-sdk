@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StreamAdapterTableViewCell" rowHeight="80" id="kpS-Cr-FEF" customClass="StreamAdapterTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" verticalHuggingPriority="255" verticalCompressionResistancePriority="755" tableViewCell="kpS-Cr-FEF" id="QUe-so-f3S">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Text here Text here Text here Text here Text here Text here Text here Text here " lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="178" translatesAutoresizingMaskIntoConstraints="NO" id="iad-Cl-sTV">
+                        <rect key="frame" x="88" y="29" width="279" height="47"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="oqh-LR-gMK">
+                        <rect key="frame" x="16" y="8" width="64" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="64" id="GuY-de-2Si"/>
+                            <constraint firstAttribute="width" constant="64" id="KPR-la-wEC"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Dude" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="180" translatesAutoresizingMaskIntoConstraints="NO" id="eIb-M0-fEv">
+                        <rect key="frame" x="88" y="4" width="279" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="jHm-SC-K1U"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="iad-Cl-sTV" firstAttribute="top" secondItem="eIb-M0-fEv" secondAttribute="bottom" constant="4" id="I6c-6Z-bfQ"/>
+                    <constraint firstAttribute="trailing" secondItem="iad-Cl-sTV" secondAttribute="trailing" constant="8" id="TUZ-az-s7i"/>
+                    <constraint firstItem="oqh-LR-gMK" firstAttribute="top" secondItem="QUe-so-f3S" secondAttribute="top" constant="8" id="U3U-2F-3ko"/>
+                    <constraint firstItem="oqh-LR-gMK" firstAttribute="leading" secondItem="QUe-so-f3S" secondAttribute="leading" constant="16" id="UL3-YJ-lSv"/>
+                    <constraint firstAttribute="bottom" secondItem="iad-Cl-sTV" secondAttribute="bottom" constant="4" id="WhW-yB-jKM"/>
+                    <constraint firstAttribute="trailing" secondItem="eIb-M0-fEv" secondAttribute="trailing" constant="8" id="Zrs-Sd-76H"/>
+                    <constraint firstItem="eIb-M0-fEv" firstAttribute="top" secondItem="QUe-so-f3S" secondAttribute="top" constant="4" id="d0t-Oo-pA4"/>
+                    <constraint firstItem="eIb-M0-fEv" firstAttribute="leading" secondItem="oqh-LR-gMK" secondAttribute="trailing" constant="8" id="f5e-fN-cqh"/>
+                    <constraint firstItem="iad-Cl-sTV" firstAttribute="leading" secondItem="oqh-LR-gMK" secondAttribute="trailing" constant="8" id="xN4-6b-Y2b"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="tweetImageView" destination="oqh-LR-gMK" id="FYH-2H-pAp"/>
+                <outlet property="tweetNameLabel" destination="eIb-M0-fEv" id="RXt-RG-F4X"/>
+                <outlet property="tweetTextLabel" destination="iad-Cl-sTV" id="HvA-GM-tXG"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

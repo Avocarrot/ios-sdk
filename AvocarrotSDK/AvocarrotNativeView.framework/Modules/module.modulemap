@@ -1,0 +1,7 @@
+framework module AvocarrotNativeView {
+    umbrella header "AvocarrotNativeView.h"
+
+    export *
+    module * { export * }
+
+}

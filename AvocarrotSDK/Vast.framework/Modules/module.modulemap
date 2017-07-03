@@ -1,0 +1,9 @@
+framework module Vast {
+  umbrella header "Vast.h"
+  
+  export *
+  module * { export * }
+  
+  link "xml2"
+  link "c++"
+}

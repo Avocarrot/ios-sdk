@@ -1,0 +1,7 @@
+framework module AvocarrotInterstitial {
+    umbrella header "AvocarrotSDK+AVOInterstitial.h"
+
+    export *
+    module * { export * }
+
+}

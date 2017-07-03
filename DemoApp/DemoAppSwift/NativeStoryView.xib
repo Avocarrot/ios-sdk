@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="z36-cA-gNg" customClass="NativeStoryView" customModule="DemoAppSwift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="290" height="160"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Winter Publisher Contest" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="241" translatesAutoresizingMaskIntoConstraints="NO" id="8Pk-04-y6A">
+                    <rect key="frame" x="40" y="8" width="210" height="18"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ri3-KJ-Pog">
+                    <rect key="frame" x="272" y="2" width="16" height="16"/>
+                    <color key="backgroundColor" red="0.92156862750000001" green="0.30196078430000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="16" id="CjK-yG-nHb"/>
+                        <constraint firstAttribute="height" constant="16" id="hdp-8b-FEq"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HsL-gd-0oI">
+                    <rect key="frame" x="8" y="126" width="274" height="30"/>
+                    <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="7Fp-B4-CRB"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hea-x2-ayM" customClass="AVOMediaContainerView">
+                    <rect key="frame" x="0.0" y="30" width="290" height="92"/>
+                    <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="autoPlay" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ad" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANx-yR-4IY">
+                    <rect key="frame" x="2" y="2" width="14" height="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="0.66666668650000005" green="0.66666668650000005" blue="0.66666668650000005" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Hea-x2-ayM" firstAttribute="top" secondItem="8Pk-04-y6A" secondAttribute="bottom" constant="4" id="1sf-B6-yEb"/>
+                <constraint firstItem="Hea-x2-ayM" firstAttribute="leading" secondItem="z36-cA-gNg" secondAttribute="leading" id="3OE-8i-UeP"/>
+                <constraint firstItem="8Pk-04-y6A" firstAttribute="top" secondItem="z36-cA-gNg" secondAttribute="top" constant="8" id="8QH-Nc-4i0"/>
+                <constraint firstItem="HsL-gd-0oI" firstAttribute="leading" secondItem="z36-cA-gNg" secondAttribute="leading" constant="8" id="AUF-ms-t9t"/>
+                <constraint firstItem="Ri3-KJ-Pog" firstAttribute="top" secondItem="z36-cA-gNg" secondAttribute="top" constant="2" id="ERA-Tb-gbe"/>
+                <constraint firstAttribute="trailing" secondItem="Ri3-KJ-Pog" secondAttribute="trailing" constant="2" id="FTk-Ia-Qzl"/>
+                <constraint firstItem="Hea-x2-ayM" firstAttribute="top" secondItem="8Pk-04-y6A" secondAttribute="bottom" constant="8" id="IgG-cN-Aa4"/>
+                <constraint firstAttribute="bottom" secondItem="HsL-gd-0oI" secondAttribute="bottom" constant="4" id="P4T-av-m5Y"/>
+                <constraint firstAttribute="trailing" secondItem="8Pk-04-y6A" secondAttribute="trailing" constant="40" id="Wff-aJ-bVj"/>
+                <constraint firstItem="HsL-gd-0oI" firstAttribute="top" secondItem="Hea-x2-ayM" secondAttribute="bottom" constant="8" id="YaX-ES-CTe"/>
+                <constraint firstItem="ANx-yR-4IY" firstAttribute="leading" secondItem="z36-cA-gNg" secondAttribute="leading" constant="2" id="ccG-XC-aK7"/>
+                <constraint firstItem="8Pk-04-y6A" firstAttribute="leading" secondItem="z36-cA-gNg" secondAttribute="leading" constant="40" id="gO7-u9-4ha"/>
+                <constraint firstAttribute="trailing" secondItem="HsL-gd-0oI" secondAttribute="trailing" constant="8" id="jKS-t2-ZNf"/>
+                <constraint firstItem="HsL-gd-0oI" firstAttribute="top" secondItem="Hea-x2-ayM" secondAttribute="bottom" constant="4" id="qa0-WT-tI1"/>
+                <constraint firstAttribute="trailing" secondItem="Hea-x2-ayM" secondAttribute="trailing" id="uX2-yP-7oI"/>
+                <constraint firstItem="ANx-yR-4IY" firstAttribute="top" secondItem="z36-cA-gNg" secondAttribute="top" constant="2" id="xwB-Ge-0f6"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="IgG-cN-Aa4"/>
+                    <exclude reference="YaX-ES-CTe"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="avoCallToActionTextLabel" destination="HsL-gd-0oI" id="BXT-cR-fif"/>
+                <outlet property="avoMainMediaView" destination="Hea-x2-ayM" id="ZMO-PF-Jfd"/>
+                <outlet property="avoPrivacyInfoContainerView" destination="Ri3-KJ-Pog" id="98C-O2-KQo"/>
+                <outlet property="avoTitleTextLabel" destination="8Pk-04-y6A" id="9ls-vm-qhL"/>
+            </connections>
+            <point key="canvasLocation" x="432" y="367"/>
+        </view>
+    </objects>
+</document>

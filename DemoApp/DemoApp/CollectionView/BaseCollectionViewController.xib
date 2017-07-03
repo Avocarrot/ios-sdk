@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaseCollectionViewController">
+            <connections>
+                <outlet property="collectionView" destination="CMo-6Y-Ysu" id="q1w-BR-qLZ"/>
+                <outlet property="view" destination="ZOl-cm-dOv" id="rKy-qR-cCC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ZOl-cm-dOv">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="CMo-6Y-Ysu">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="b31-Y7-h7W">
+                        <size key="itemSize" width="155" height="237"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <cells/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Kpt-59-tnm"/>
+                        <outlet property="delegate" destination="-1" id="hGo-Mi-Ehz"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="CMo-6Y-Ysu" firstAttribute="top" secondItem="ZOl-cm-dOv" secondAttribute="top" id="9sG-yo-Rc7"/>
+                <constraint firstAttribute="bottom" secondItem="CMo-6Y-Ysu" secondAttribute="bottom" id="CUw-us-PcR"/>
+                <constraint firstItem="CMo-6Y-Ysu" firstAttribute="leading" secondItem="ZOl-cm-dOv" secondAttribute="leading" id="e6e-Z5-r0M"/>
+                <constraint firstAttribute="trailing" secondItem="CMo-6Y-Ysu" secondAttribute="trailing" id="la2-pm-7ma"/>
+            </constraints>
+            <point key="canvasLocation" x="282.5" y="435.5"/>
+        </view>
+    </objects>
+</document>

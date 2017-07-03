@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" verticalHuggingPriority="255" verticalCompressionResistancePriority="755" reuseIdentifier="StreamAdapterCustomCollectionViewCell" id="5aQ-rV-Yl2" customClass="StreamAdapterCustomCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="155" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="155" height="200"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Dude" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="130" translatesAutoresizingMaskIntoConstraints="NO" id="bNz-B3-lVI">
+                        <rect key="frame" x="10" y="6" width="135" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BzF-Jt-wwZ">
+                        <rect key="frame" x="5" y="32" width="145" height="163"/>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="bNz-B3-lVI" firstAttribute="leading" secondItem="5aQ-rV-Yl2" secondAttribute="leading" constant="10" id="Hec-Zh-fQE"/>
+                <constraint firstAttribute="bottom" secondItem="BzF-Jt-wwZ" secondAttribute="bottom" constant="5" id="IKd-81-fCW"/>
+                <constraint firstAttribute="trailing" secondItem="bNz-B3-lVI" secondAttribute="trailing" constant="10" id="Oha-2M-55o"/>
+                <constraint firstItem="bNz-B3-lVI" firstAttribute="top" secondItem="5aQ-rV-Yl2" secondAttribute="top" constant="6" id="W7w-Ww-ngZ"/>
+                <constraint firstItem="BzF-Jt-wwZ" firstAttribute="leading" secondItem="5aQ-rV-Yl2" secondAttribute="leading" constant="5" id="dZw-O7-iof"/>
+                <constraint firstItem="BzF-Jt-wwZ" firstAttribute="top" secondItem="bNz-B3-lVI" secondAttribute="bottom" constant="8" id="eUD-37-l3s"/>
+                <constraint firstAttribute="trailing" secondItem="BzF-Jt-wwZ" secondAttribute="trailing" constant="5" id="lR6-E1-NYE"/>
+                <constraint firstItem="BzF-Jt-wwZ" firstAttribute="centerX" secondItem="5aQ-rV-Yl2" secondAttribute="centerX" id="uFC-Al-piv"/>
+            </constraints>
+            <size key="customSize" width="155" height="200"/>
+            <connections>
+                <outlet property="tweetImageView" destination="BzF-Jt-wwZ" id="ORn-9H-JFW"/>
+                <outlet property="tweetNameLabel" destination="bNz-B3-lVI" id="9bL-ee-8SB"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -1,0 +1,23 @@
+//
+//  DemoApp.pch
+//  AvocarrotSDK
+//
+//  Created by Glispa GmbH on 12/08/15.
+//  Copyright (c) 2015 Glispa GmbH. All rights reserved.
+//
+
+#ifndef AvocarrotSDK_AvocarrotSDK_pch
+#define AvocarrotSDK_AvocarrotSDK_pch
+
+#ifdef __OBJC__
+
+#import <UIKit/UIKit.h>
+#import <AvocarrotCore/Avocarrot.h>
+#import <AvocarrotNativeView/AvocarrotNativeView.h>
+#import <AvocarrotVideo/AvocarrotSDK+AVOVideo.h>
+#import <AvocarrotNativeAssets/AvocarrotSDK+AVONativeAssets.h>
+#import <AvocarrotBanner/AvocarrotSDK+AVOBannerView.h>
+#import <AvocarrotInterstitial/AvocarrotSDK+AVOInterstitial.h>
+#endif
+
+#endif

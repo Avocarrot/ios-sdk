@@ -1,0 +1,10 @@
+framework module AvocarrotCore {
+  umbrella header "Avocarrot.h"
+  
+  export *
+  module * { export * }
+  
+  link "sqlite3"
+  link "c++"
+  link "z"
+}

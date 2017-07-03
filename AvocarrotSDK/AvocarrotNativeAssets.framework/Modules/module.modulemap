@@ -1,0 +1,7 @@
+framework module AvocarrotNativeAssets {
+    umbrella header "AvocarrotSDK+AVONativeAssets.h"
+
+    export *
+    module * { export * }
+
+}

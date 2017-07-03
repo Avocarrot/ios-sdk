@@ -1,0 +1,7 @@
+framework module AvocarrotVideo {
+    umbrella header "AvocarrotSDK+AVOVideo.h"
+
+    export *
+    module * { export * }
+
+}

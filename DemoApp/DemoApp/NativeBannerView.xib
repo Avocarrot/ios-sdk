@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="bhM-IS-Nub" customClass="NativeBannerView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="il8-nP-Qik" customClass="AVOStarRatingView">
+                    <rect key="frame" x="65" y="1" width="154" height="16"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="kHo-Zg-RQs"/>
+                        <constraint firstAttribute="width" constant="154" id="nD7-eh-e33"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Winter Publisher Contest" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="244" translatesAutoresizingMaskIntoConstraints="NO" id="KFl-3x-Fgy">
+                    <rect key="frame" x="65" y="14" width="245" height="17"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yXV-eZ-F4e">
+                    <rect key="frame" x="5" y="5" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="TOn-ns-tU6"/>
+                        <constraint firstAttribute="width" constant="50" id="jyv-9a-RCV"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ad" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dK9-gP-kuO">
+                    <rect key="frame" x="281" y="2" width="14" height="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Rq-Xo-H1S">
+                    <rect key="frame" x="302" y="2" width="16" height="16"/>
+                    <color key="backgroundColor" red="0.92156862750000001" green="0.30196078430000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="16" id="NC6-UB-gfe"/>
+                        <constraint firstAttribute="height" constant="16" id="NVl-hZ-7MB"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Waq-kQ-qxt">
+                    <rect key="frame" x="280" y="32" width="38" height="25"/>
+                    <color key="backgroundColor" red="0.25703248381614685" green="0.82238799333572388" blue="0.31203877925872803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="ZLh-7o-7Aj"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="207" translatesAutoresizingMaskIntoConstraints="NO" id="bE0-vF-yGV">
+                    <rect key="frame" x="65" y="31" width="207" height="24"/>
+                    <string key="text">Free flights, premium accommodation, and gourmet catering await you as the best glispa guides lead you to the most amazing parties in South Africa; you certainly won’t want to miss this!</string>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                    <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="bE0-vF-yGV" firstAttribute="top" secondItem="KFl-3x-Fgy" secondAttribute="bottom" id="3GH-b9-G5X"/>
+                <constraint firstItem="Waq-kQ-qxt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bE0-vF-yGV" secondAttribute="trailing" constant="8" id="BN7-Ka-DuX"/>
+                <constraint firstItem="KFl-3x-Fgy" firstAttribute="leading" secondItem="yXV-eZ-F4e" secondAttribute="trailing" constant="10" id="F8f-rZ-al8"/>
+                <constraint firstAttribute="bottom" secondItem="bE0-vF-yGV" secondAttribute="bottom" constant="5" id="Gag-tH-hfO"/>
+                <constraint firstItem="dK9-gP-kuO" firstAttribute="top" secondItem="bhM-IS-Nub" secondAttribute="top" constant="2" id="IAh-LH-t4D"/>
+                <constraint firstItem="KFl-3x-Fgy" firstAttribute="top" secondItem="bhM-IS-Nub" secondAttribute="top" constant="14" id="MLe-HA-7Nq"/>
+                <constraint firstAttribute="centerY" secondItem="yXV-eZ-F4e" secondAttribute="centerY" id="NOL-mZ-xuV"/>
+                <constraint firstAttribute="trailing" secondItem="3Rq-Xo-H1S" secondAttribute="trailing" constant="2" id="OoM-V1-mqP"/>
+                <constraint firstItem="yXV-eZ-F4e" firstAttribute="leading" secondItem="bhM-IS-Nub" secondAttribute="leading" constant="5" id="Rxx-WV-PbQ"/>
+                <constraint firstAttribute="bottom" secondItem="Waq-kQ-qxt" secondAttribute="bottom" constant="3" id="aP7-3k-EdD"/>
+                <constraint firstAttribute="trailing" secondItem="KFl-3x-Fgy" secondAttribute="trailing" constant="10" id="cN1-Pa-MCf"/>
+                <constraint firstItem="il8-nP-Qik" firstAttribute="leading" secondItem="yXV-eZ-F4e" secondAttribute="trailing" constant="10" id="huH-be-N76"/>
+                <constraint firstItem="3Rq-Xo-H1S" firstAttribute="top" secondItem="bhM-IS-Nub" secondAttribute="top" constant="2" id="jZb-yF-bjY"/>
+                <constraint firstItem="il8-nP-Qik" firstAttribute="top" secondItem="bhM-IS-Nub" secondAttribute="top" constant="1" id="jcQ-UT-JsB"/>
+                <constraint firstAttribute="trailing" secondItem="Waq-kQ-qxt" secondAttribute="trailing" constant="2" id="nfp-nT-v06"/>
+                <constraint firstItem="bE0-vF-yGV" firstAttribute="top" secondItem="il8-nP-Qik" secondAttribute="bottom" constant="14" id="rQW-7b-Qhm"/>
+                <constraint firstItem="bE0-vF-yGV" firstAttribute="leading" secondItem="yXV-eZ-F4e" secondAttribute="trailing" constant="10" id="sBn-ne-4qJ"/>
+                <constraint firstAttribute="trailing" secondItem="dK9-gP-kuO" secondAttribute="trailing" constant="25" id="uPC-Gx-PCW"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="avoCallToActionTextLabel" destination="Waq-kQ-qxt" id="qhV-jb-fck"/>
+                <outlet property="avoIconImageView" destination="yXV-eZ-F4e" id="IHK-lY-HfG"/>
+                <outlet property="avoMainTextLabel" destination="bE0-vF-yGV" id="AVQ-DU-nFF"/>
+                <outlet property="avoPrivacyInfoContainerView" destination="3Rq-Xo-H1S" id="hEu-69-vSQ"/>
+                <outlet property="avoRatingStarView" destination="il8-nP-Qik" id="MSu-Zd-a3I"/>
+                <outlet property="avoTitleTextLabel" destination="KFl-3x-Fgy" id="t55-qQ-3gw"/>
+            </connections>
+            <point key="canvasLocation" x="432" y="486"/>
+        </view>
+    </objects>
+</document>

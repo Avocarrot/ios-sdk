@@ -1,0 +1,24 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+use_frameworks!
+
+workspace 'DemoApp'
+target 'DemoApp' do
+  pod 'avocarrot-ios-sdk/Full', '~> 4.5.0'
+  pod 'SDWebImage'
+  pod 'DZNSegmentedControl'
+end
+
+target 'DemoAppSwift' do
+  pod 'avocarrot-ios-sdk/Full', '~> 4.5.0'
+  pod 'SDWebImage'
+  pod 'DZNSegmentedControl'
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '3.0'
+    end
+  end
+end
