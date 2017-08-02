@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+# [4.5.1]
+### Fixed
+- adDidHide event for Video ads
+
 # [4.5.0]
 ### Added
 - AdChoices click handling for Native Assets
