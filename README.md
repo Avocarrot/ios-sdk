@@ -40,17 +40,6 @@ From version 4.5 Avocarrot SDK uses modular system to distribute based on subspe
 - By default Avocarrot SDK pod provides SDK with our native assets ad format only, add  pod 'avocarrot-ios-sdk' to your Podfile to integrate it to your project.
 - If you want to use custom set of SDK modules, include `pod 'avocarrot-ios-sdk/Core` to your Podfile and then select additional modules below.
 
-*Native assets adapters*
-
-- If you want to use the Avocarrot native assets with all server-side mediated networks including client side SDKs, add pod 'avocarrot-ios-sdk/NativeAssetsAdapters' to your Podfile
-
-- For native assets, if you want to select which client networks SDK to be included with server side mediated networks, refer to the pods specified below to add into your Podfile:
-
-- `pod 'avocarrot-ios-sdk/NativeAssetsAdapters/FBAudienceAdapter'` - Avocarrot native assets and adapter for  [Facebook Audience](https://developers.facebook.com/docs/ios) native assets
-- `pod 'avocarrot-ios-sdk/NativeAssetsAdapters/GoogleMobileAdsAdapter'` - Avocarrot native assets and adapter for  [Google Mobile Ads SDK](https://developers.google.com/admob/ios/download) native assets
-- `pod 'avocarrot-ios-sdk/NativeAssetsAdapters/MopubAdapter'` - Avocarrot native assets and adapter for  [MoPub](https://github.com/mopub/mopub-ios-sdk) native assets
-- `pod 'avocarrot-ios-sdk/NativeAssetsAdapters/AppLovinAdapter'` - Avocarrot native assets and adapter for  [AppLovin](https://www.applovin.com/) native assets
-- `pod 'avocarrot-ios-sdk/NativeAssetsAdapters/InLocoAdapter'` - Avocarrot native assets and adapter for  [InLoco](http://docs.inlocomedia.com/docs/ios) native assets
 
 *Native assets adapters*
 
