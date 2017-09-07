@@ -237,7 +237,9 @@ extension MainViewController {
                 MasterTableItem(title: "Standard size (320*50)", controller: "BannersDetailViewController", xibName: nil, childItems: nil, userData: ["bannerType": AVOBannerViewSizeSmall,
                      "adUnitId": UserSettings.bannerAdUnitID]),
                 MasterTableItem(title: "Tablet size (728*90)", controller: "BannersDetailViewController", xibName: nil, childItems: nil, userData: ["bannerType": AVOBannerViewSizeLarge,
-                     "adUnitId": UserSettings.bannerAdUnitID])
+                     "adUnitId": UserSettings.bannerAdUnitID]),
+                MasterTableItem(title: "MREC size (300*250)", controller: "BannersDetailViewController", xibName: nil, childItems: nil, userData: ["bannerType": AVOBannerViewSizeMREC,
+                     "adUnitId": UserSettings.bannerAdUnitID]),
                 ],
                 image: "adtype_banner"
             ),
@@ -252,15 +254,17 @@ extension MainViewController {
                 image: "adtype_video"
             ),
             MasterTableItem(title: "Native", childItems:  [
-                MasterTableItem(title: "List", controller: "NativeAdDemonstratorViewController", xibName: nil, childItems: nil, userData: ["template": AVONativeAdsTemplateType.list,
-                                                "adUnitId": UserSettings.nativeAdUnitID]
+                MasterTableItem(title: "List", controller: "NativeAdDemonstratorViewController", xibName: nil, childItems: nil, userData: ["template": AVONativeAdsTemplateType.list, "adUnitId": UserSettings.nativeAdUnitID]
                 ),
-                MasterTableItem(title: "Feed", controller: "NativeAdDemonstratorViewController", xibName: nil, childItems: nil, userData: ["template": AVONativeAdsTemplateType.feed,
-                                                "adUnitId": UserSettings.nativeAdUnitID]
+                MasterTableItem(title: "Feed", controller: "NativeAdDemonstratorViewController", xibName: nil, childItems: nil, userData: ["template": AVONativeAdsTemplateType.feed, "adUnitId": UserSettings.nativeAdUnitID]
                 ),
-                MasterTableItem(title: "Grid", controller: "NativeAdDemonstratorViewController", xibName: nil, childItems: nil, userData: ["template": AVONativeAdsTemplateType.grid,
-                                                "adUnitId": UserSettings.nativeAdUnitID]),
-                MasterTableItem(title: "Custom", controller: "NativeAdDemonstratorViewController", xibName: nil, childItems: nil, userData: ["adUnitId": UserSettings.nativeAdUnitID])
+                MasterTableItem(title: "Grid", controller: "NativeAdDemonstratorViewController", xibName: nil, childItems: nil, userData: ["template": AVONativeAdsTemplateType.grid, "adUnitId": UserSettings.nativeAdUnitID]
+                ),
+                MasterTableItem(title: "Custom", controller: "NativeAdDemonstratorViewController", xibName: nil, childItems: nil, userData: ["adUnitId": UserSettings.nativeAdUnitID]
+                ),
+                MasterTableItem(title: "Dynamic template from server", controller: "NativeAdDemonstratorViewController", xibName: nil, childItems: nil, userData: ["template": AVONativeAdsTemplateType.server, "adUnitId": UserSettings.nativeAdUnitID]
+                ),
+                MasterTableItem(title: "AdsProvider (stream adapter alternative)", controller: "AdsProviderTableViewController", xibName: "BaseTableViewController", childItems: nil, userData: ["adUnitId": UserSettings.nativeAdUnitID])
                 ], image: "adtype_native"
             )]
     }

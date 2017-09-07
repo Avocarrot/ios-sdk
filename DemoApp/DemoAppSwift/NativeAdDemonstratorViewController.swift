@@ -117,6 +117,13 @@ extension NativeAdDemonstratorViewController {
                 MasterTableItem(title: "CollectionView", controller: "GridCollectionViewController", xibName: "BaseCollectionViewController", childItems: nil, userData: ["adUnitId": UserSettings.nativeAdUnitID]),
                 MasterTableItem(title: "Single Native", controller: "GridNativeAdDetailsViewController", xibName: "BaseNativeAdDetailsViewController", childItems: nil, userData: ["adUnitId": UserSettings.nativeAdUnitID])
                    ]
+        case .server:
+            return [
+                MasterTableItem(title: "CollectionView", controller: "ServerTemplateCollectionViewController", xibName: "BaseCollectionViewController", childItems: nil, userData: ["adUnitId": UserSettings.nativeAdUnitID]),
+                MasterTableItem(title: "TableView", controller: "ServerTemplateTableViewStreamController", xibName: "BaseTableViewController", childItems: nil, userData: ["adUnitId": UserSettings.nativeAdUnitID]),
+                MasterTableItem(title: "Single Native", controller: "ServerTemplateNativeAdDetailsViewController", xibName: "BaseNativeAdDetailsViewController", childItems: nil, userData: ["adUnitId": UserSettings.nativeAdUnitID])
+            ]
+            
         default:
             return []
         }

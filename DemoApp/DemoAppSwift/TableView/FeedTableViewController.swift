@@ -10,7 +10,7 @@ import Foundation
 import AvocarrotNativeView
 
 @objc(FeedTableViewController)
-class FeedTableViewController: BaseTableViewController {
+class FeedTableViewController: TableViewStreamController {
 
     fileprivate
     var adapter: AVOTableViewStreamAdapter?

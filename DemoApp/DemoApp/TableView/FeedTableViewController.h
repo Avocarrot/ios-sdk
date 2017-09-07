@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseTableViewController.h"
+#import "TableViewStreamController.h"
 
-@interface FeedTableViewController : BaseTableViewController
+@interface FeedTableViewController : TableViewStreamController
 
 @end

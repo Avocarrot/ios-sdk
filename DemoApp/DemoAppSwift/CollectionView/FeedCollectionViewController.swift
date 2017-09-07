@@ -16,7 +16,7 @@ class FeedCollectionViewController: BaseFlowLayoutCollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        dataSource = loadData(20, from: 0)
+        loadData(20)
         loadAds()
     }
 

@@ -34,8 +34,7 @@
 
 #pragma mark - AVOCollectionViewStreamAdapterDelegate
 
-// * Optional protocol
-// If you create an AVOCollectionViewStreamAdapter instance on the base of predefined ad templates then support of anAVOCollectionViewStreamAdapterDelegate protocol is not required because each template has an optimal size. However if you conform this protocol, you can change these predefined values.
+// Avocarrot SDK knows nothing about optimal size for your native ad view, so you should return desired value.
 - (CGSize)sizeForAdAtIndexPath:(NSIndexPath *)indexPath {
     return CGSizeMake( self.collectionView.frame.size.width - 2, [NativeBannerView desiredHeight]);
 }

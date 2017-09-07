@@ -13,7 +13,8 @@ typedef NS_ENUM(NSInteger, AVONativeAdsTemplateType) {
     AVONativeAdsTemplateTypeList = 0,
     AVONativeAdsTemplateTypeFeed,
     AVONativeAdsTemplateTypeGrid,
-    AVONativeAdsTemplateTypeGridIcon
+    AVONativeAdsTemplateTypeGridIcon,
+    AVONativeAdsTemplateTypeServer
 };
 
 typedef NS_ENUM(NSInteger, AVONativeLabelTextStyle) {

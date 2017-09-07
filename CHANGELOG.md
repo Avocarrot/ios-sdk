@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+# [4.6.0]
+### Added
+- Added Native Assets support for: Facebook Audience SDK, Google Mobile Ads SDK, InLocoMedia Ads SDK, Applovin Ads SDK, Tencent Ads SDK
+- Added 300x250 banner size supporting
+- Added dynamic template for native ads
+
 # [4.5.2]
 ### Fixed
 - birthday format for user information
@@ -30,7 +36,7 @@ All notable changes to this project will be documented in this file.
 ### Added
 - *Grid* and *Grid Icon* templates for the native ad type
 - Ability to use templates in single native ads
-- Additional native templates customizations 
+- Additional native templates customizations
 
 ### Changed
 - Chartboost SDK updated to 6.6.3

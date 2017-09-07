@@ -10,7 +10,7 @@ import Foundation
 import AvocarrotNativeView
 
 @objc(ListTableViewController)
-class ListTableViewController: BaseTableViewController {
+class ListTableViewController: TableViewStreamController {
 
     fileprivate
     var adapter: AVOTableViewStreamAdapter?

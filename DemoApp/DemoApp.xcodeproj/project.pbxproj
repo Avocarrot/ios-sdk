@@ -17,12 +17,19 @@
 		482EB38C1EF420290071B4DA /* CreateAdUnitIdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 482EB38B1EF420290071B4DA /* CreateAdUnitIdViewController.m */; };
 		482EB38F1EF4232E0071B4DA /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 482EB38E1EF4232E0071B4DA /* Constants.m */; };
 		482EB3921EF7C20F0071B4DA /* UserSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 482EB3911EF7C20F0071B4DA /* UserSettings.m */; };
+		482F8FDF1F3C54C500AC9530 /* ServerTemplateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 482F8FDE1F3C54C500AC9530 /* ServerTemplateTableViewController.m */; };
+		482F8FE21F3C552400AC9530 /* ServerTemplateLayoutCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 482F8FE11F3C552400AC9530 /* ServerTemplateLayoutCollectionViewController.m */; };
+		482F8FE51F3C587900AC9530 /* ServerTemplateNativeAdDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 482F8FE41F3C587900AC9530 /* ServerTemplateNativeAdDetailsViewController.m */; };
 		4836D8AF1E893F6100A7DB63 /* NativeAssetsPlusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4836D8AE1E893F6100A7DB63 /* NativeAssetsPlusView.m */; };
 		4836D8B31E89460B00A7DB63 /* NativeAssetsPlusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4836D8B21E89460B00A7DB63 /* NativeAssetsPlusView.xib */; };
 		4836D8BC1E895B3A00A7DB63 /* NativeAssetsPlusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836D8BB1E895B3A00A7DB63 /* NativeAssetsPlusView.swift */; };
 		4836D8BE1E89612800A7DB63 /* NativeAssetsPlusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4836D8BD1E89612700A7DB63 /* NativeAssetsPlusView.xib */; };
 		4856EDDD1D06CC7B008E68F8 /* StreamAdapterCustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4856EDDB1D06CC7B008E68F8 /* StreamAdapterCustomCollectionViewCell.m */; };
 		4856EDE71D070405008E68F8 /* StreamAdapterCustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4856EDDB1D06CC7B008E68F8 /* StreamAdapterCustomCollectionViewCell.m */; };
+		485A3BB61F3C651A002F1670 /* ServerTemplateTableViewStreamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485A3BB51F3C651A002F1670 /* ServerTemplateTableViewStreamController.swift */; };
+		485A3BB81F3C658B002F1670 /* ServerTemplateCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485A3BB71F3C658B002F1670 /* ServerTemplateCollectionViewController.swift */; };
+		485A3BBA1F3C66E4002F1670 /* ServerTemplateNativeAdDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485A3BB91F3C66E4002F1670 /* ServerTemplateNativeAdDetailsViewController.swift */; };
+		486034221F16656D0041E255 /* AdsProviderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 486034211F16656D0041E255 /* AdsProviderTableViewController.m */; };
 		4874807B1EF7D1F30074DCE7 /* NativeAdDemonstratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4874807A1EF7D1F30074DCE7 /* NativeAdDemonstratorViewController.m */; };
 		4874807E1EF7F9AF0074DCE7 /* BaseNativeAdDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4874807D1EF7F9AF0074DCE7 /* BaseNativeAdDetailsViewController.m */; };
 		487480831EF80E250074DCE7 /* ListNativeAdDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487480821EF80E250074DCE7 /* ListNativeAdDetailsViewController.m */; };
@@ -35,6 +42,10 @@
 		487480951EF900780074DCE7 /* BaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487480931EF900780074DCE7 /* BaseCollectionViewController.m */; };
 		487480961EF900780074DCE7 /* BaseCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 487480941EF900780074DCE7 /* BaseCollectionViewController.xib */; };
 		487480991EF9436F0074DCE7 /* CustomLayoutNativeAdDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487480981EF9436F0074DCE7 /* CustomLayoutNativeAdDetailsViewController.m */; };
+		487B72A01F164F1800A7270C /* AdsProviderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487B729F1F164F1800A7270C /* AdsProviderTableViewController.swift */; };
+		487B72A21F16570C00A7270C /* TableViewStreamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487B72A11F16570C00A7270C /* TableViewStreamController.swift */; };
+		48977FBE1F17A6E1000F4853 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48977FBA1F17A692000F4853 /* BaseTableViewController.m */; };
+		48977FBF1F17A6E1000F4853 /* TableViewStreamController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48977FBC1F17A6BD000F4853 /* TableViewStreamController.m */; };
 		489F1A3A1EF16D9800F0F6FB /* MasterTableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489F1A391EF16D9800F0F6FB /* MasterTableItem.swift */; };
 		489F1A3D1EF16DE900F0F6FB /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489F1A3B1EF16DE900F0F6FB /* AppController.swift */; };
 		489F1A3E1EF16DE900F0F6FB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489F1A3C1EF16DE900F0F6FB /* Constants.swift */; };
@@ -87,7 +98,6 @@
 		90B5AE4E1D5B289B00990614 /* FeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B5AE491D5B289B00990614 /* FeedTableViewController.m */; };
 		90B5AE4F1D5B289B00990614 /* CustomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B5AE4B1D5B289B00990614 /* CustomTableViewController.m */; };
 		90B5AE501D5B289B00990614 /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B5AE4D1D5B289B00990614 /* ListTableViewController.m */; };
-		90B5AE5B1D5B349900990614 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B5AE5A1D5B349900990614 /* BaseTableViewController.m */; };
 		90B5AE601D5B490000990614 /* BaseFlowLayoutCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B5AE5D1D5B490000990614 /* BaseFlowLayoutCollectionViewController.m */; };
 		90B5AE611D5B490000990614 /* ListFlowLayoutCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B5AE5F1D5B490000990614 /* ListFlowLayoutCollectionViewController.m */; };
 		90B5AE6C1D5B5B4500990614 /* FeedFlowLayoutCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B5AE6B1D5B5B4500990614 /* FeedFlowLayoutCollectionViewController.m */; };
@@ -134,6 +144,12 @@
 		482EB38E1EF4232E0071B4DA /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		482EB3901EF7C20F0071B4DA /* UserSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSettings.h; sourceTree = "<group>"; };
 		482EB3911EF7C20F0071B4DA /* UserSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSettings.m; sourceTree = "<group>"; };
+		482F8FDD1F3C54C500AC9530 /* ServerTemplateTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ServerTemplateTableViewController.h; path = TableView/ServerTemplateTableViewController.h; sourceTree = "<group>"; };
+		482F8FDE1F3C54C500AC9530 /* ServerTemplateTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ServerTemplateTableViewController.m; path = TableView/ServerTemplateTableViewController.m; sourceTree = "<group>"; };
+		482F8FE01F3C552400AC9530 /* ServerTemplateLayoutCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ServerTemplateLayoutCollectionViewController.h; path = CollectionView/ServerTemplateLayoutCollectionViewController.h; sourceTree = "<group>"; };
+		482F8FE11F3C552400AC9530 /* ServerTemplateLayoutCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ServerTemplateLayoutCollectionViewController.m; path = CollectionView/ServerTemplateLayoutCollectionViewController.m; sourceTree = "<group>"; };
+		482F8FE31F3C587900AC9530 /* ServerTemplateNativeAdDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerTemplateNativeAdDetailsViewController.h; sourceTree = "<group>"; };
+		482F8FE41F3C587900AC9530 /* ServerTemplateNativeAdDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServerTemplateNativeAdDetailsViewController.m; sourceTree = "<group>"; };
 		4836D8AD1E893F6100A7DB63 /* NativeAssetsPlusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAssetsPlusView.h; sourceTree = "<group>"; };
 		4836D8AE1E893F6100A7DB63 /* NativeAssetsPlusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAssetsPlusView.m; sourceTree = "<group>"; };
 		4836D8B21E89460B00A7DB63 /* NativeAssetsPlusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAssetsPlusView.xib; sourceTree = "<group>"; };
@@ -141,6 +157,11 @@
 		4836D8BD1E89612700A7DB63 /* NativeAssetsPlusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAssetsPlusView.xib; sourceTree = "<group>"; };
 		4856EDDA1D06CC7B008E68F8 /* StreamAdapterCustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamAdapterCustomCollectionViewCell.h; sourceTree = "<group>"; };
 		4856EDDB1D06CC7B008E68F8 /* StreamAdapterCustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamAdapterCustomCollectionViewCell.m; sourceTree = "<group>"; };
+		485A3BB51F3C651A002F1670 /* ServerTemplateTableViewStreamController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ServerTemplateTableViewStreamController.swift; path = TableView/ServerTemplateTableViewStreamController.swift; sourceTree = "<group>"; };
+		485A3BB71F3C658B002F1670 /* ServerTemplateCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ServerTemplateCollectionViewController.swift; path = CollectionView/ServerTemplateCollectionViewController.swift; sourceTree = "<group>"; };
+		485A3BB91F3C66E4002F1670 /* ServerTemplateNativeAdDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerTemplateNativeAdDetailsViewController.swift; sourceTree = "<group>"; };
+		486034201F16656D0041E255 /* AdsProviderTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AdsProviderTableViewController.h; path = TableView/AdsProviderTableViewController.h; sourceTree = "<group>"; };
+		486034211F16656D0041E255 /* AdsProviderTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AdsProviderTableViewController.m; path = TableView/AdsProviderTableViewController.m; sourceTree = "<group>"; };
 		487480791EF7D1F30074DCE7 /* NativeAdDemonstratorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdDemonstratorViewController.h; sourceTree = "<group>"; };
 		4874807A1EF7D1F30074DCE7 /* NativeAdDemonstratorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdDemonstratorViewController.m; sourceTree = "<group>"; };
 		4874807C1EF7F9AF0074DCE7 /* BaseNativeAdDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNativeAdDetailsViewController.h; sourceTree = "<group>"; };
@@ -161,6 +182,12 @@
 		487480971EF9436F0074DCE7 /* CustomLayoutNativeAdDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLayoutNativeAdDetailsViewController.h; sourceTree = "<group>"; };
 		487480981EF9436F0074DCE7 /* CustomLayoutNativeAdDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLayoutNativeAdDetailsViewController.m; sourceTree = "<group>"; };
 		4877701B1E89389B001134B0 /* NativeAssetsDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAssetsDetailsViewController.h; sourceTree = "<group>"; };
+		487B729F1F164F1800A7270C /* AdsProviderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AdsProviderTableViewController.swift; path = TableView/AdsProviderTableViewController.swift; sourceTree = "<group>"; };
+		487B72A11F16570C00A7270C /* TableViewStreamController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewStreamController.swift; path = TableView/TableViewStreamController.swift; sourceTree = "<group>"; };
+		48977FBA1F17A692000F4853 /* BaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		48977FBB1F17A692000F4853 /* BaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		48977FBC1F17A6BD000F4853 /* TableViewStreamController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewStreamController.m; sourceTree = "<group>"; };
+		48977FBD1F17A6BD000F4853 /* TableViewStreamController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewStreamController.h; sourceTree = "<group>"; };
 		489F1A391EF16D9800F0F6FB /* MasterTableItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterTableItem.swift; sourceTree = "<group>"; };
 		489F1A3B1EF16DE900F0F6FB /* AppController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		489F1A3C1EF16DE900F0F6FB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -223,8 +250,6 @@
 		90B5AE4B1D5B289B00990614 /* CustomTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomTableViewController.m; path = TableView/CustomTableViewController.m; sourceTree = "<group>"; };
 		90B5AE4C1D5B289B00990614 /* ListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListTableViewController.h; path = TableView/ListTableViewController.h; sourceTree = "<group>"; };
 		90B5AE4D1D5B289B00990614 /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListTableViewController.m; path = TableView/ListTableViewController.m; sourceTree = "<group>"; };
-		90B5AE591D5B349900990614 /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTableViewController.h; path = TableView/BaseTableViewController.h; sourceTree = "<group>"; };
-		90B5AE5A1D5B349900990614 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTableViewController.m; path = TableView/BaseTableViewController.m; sourceTree = "<group>"; };
 		90B5AE5C1D5B490000990614 /* BaseFlowLayoutCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseFlowLayoutCollectionViewController.h; path = CollectionView/BaseFlowLayoutCollectionViewController.h; sourceTree = "<group>"; };
 		90B5AE5D1D5B490000990614 /* BaseFlowLayoutCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseFlowLayoutCollectionViewController.m; path = CollectionView/BaseFlowLayoutCollectionViewController.m; sourceTree = "<group>"; };
 		90B5AE5E1D5B490000990614 /* ListFlowLayoutCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListFlowLayoutCollectionViewController.h; path = CollectionView/ListFlowLayoutCollectionViewController.h; sourceTree = "<group>"; };
@@ -301,6 +326,23 @@
 				482EB38E1EF4232E0071B4DA /* Constants.m */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		487B729D1F1631A100A7270C /* AdsProvider */ = {
+			isa = PBXGroup;
+			children = (
+				487B729F1F164F1800A7270C /* AdsProviderTableViewController.swift */,
+			);
+			name = AdsProvider;
+			sourceTree = "<group>";
+		};
+		487B729E1F1631E900A7270C /* AdsProvider */ = {
+			isa = PBXGroup;
+			children = (
+				486034201F16656D0041E255 /* AdsProviderTableViewController.h */,
+				486034211F16656D0041E255 /* AdsProviderTableViewController.m */,
+			);
+			name = AdsProvider;
 			sourceTree = "<group>";
 		};
 		489F1A371EF16D3B00F0F6FB /* Model */ = {
@@ -418,6 +460,7 @@
 				4874807A1EF7D1F30074DCE7 /* NativeAdDemonstratorViewController.m */,
 				90B5AE431D5B226E00990614 /* Single Native ad */,
 				90B5AE421D5B226700990614 /* StreamAdapter */,
+				487B729E1F1631E900A7270C /* AdsProvider */,
 			);
 			name = Native;
 			sourceTree = "<group>";
@@ -465,6 +508,8 @@
 				BF2FD2261EA758A8009BF97F /* NativeAssetsDetailsViewController.m */,
 				487480971EF9436F0074DCE7 /* CustomLayoutNativeAdDetailsViewController.h */,
 				487480981EF9436F0074DCE7 /* CustomLayoutNativeAdDetailsViewController.m */,
+				482F8FE31F3C587900AC9530 /* ServerTemplateNativeAdDetailsViewController.h */,
+				482F8FE41F3C587900AC9530 /* ServerTemplateNativeAdDetailsViewController.m */,
 			);
 			name = "Single Native ad";
 			sourceTree = "<group>";
@@ -483,15 +528,19 @@
 		90B5AE451D5B228300990614 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				48977FBB1F17A692000F4853 /* BaseTableViewController.h */,
+				48977FBA1F17A692000F4853 /* BaseTableViewController.m */,
 				4874808C1EF8204E0074DCE7 /* BaseTableViewController.xib */,
-				90B5AE591D5B349900990614 /* BaseTableViewController.h */,
-				90B5AE5A1D5B349900990614 /* BaseTableViewController.m */,
+				48977FBD1F17A6BD000F4853 /* TableViewStreamController.h */,
+				48977FBC1F17A6BD000F4853 /* TableViewStreamController.m */,
 				90B5AE4C1D5B289B00990614 /* ListTableViewController.h */,
 				90B5AE4D1D5B289B00990614 /* ListTableViewController.m */,
 				90B5AE481D5B289B00990614 /* FeedTableViewController.h */,
 				90B5AE491D5B289B00990614 /* FeedTableViewController.m */,
 				90B5AE4A1D5B289B00990614 /* CustomTableViewController.h */,
 				90B5AE4B1D5B289B00990614 /* CustomTableViewController.m */,
+				482F8FDD1F3C54C500AC9530 /* ServerTemplateTableViewController.h */,
+				482F8FDE1F3C54C500AC9530 /* ServerTemplateTableViewController.m */,
 			);
 			name = TableView;
 			sourceTree = "<group>";
@@ -511,6 +560,8 @@
 				BFC59FCD1ED48A3500E39C2D /* GridFlowLayoutCollectionViewController.m */,
 				BFC59FCF1ED48A4E00E39C2D /* GridIconFlowLayoutCollectionViewController.h */,
 				BFC59FD01ED48A4E00E39C2D /* GridIconFlowLayoutCollectionViewController.m */,
+				482F8FE01F3C552400AC9530 /* ServerTemplateLayoutCollectionViewController.h */,
+				482F8FE11F3C552400AC9530 /* ServerTemplateLayoutCollectionViewController.m */,
 			);
 			name = FlowLayout;
 			sourceTree = "<group>";
@@ -548,6 +599,7 @@
 				489F1A431EF1715700F0F6FB /* NativeAdDemonstratorViewController.swift */,
 				90B5AE9C1D5DDB8B00990614 /* Single Native Ad */,
 				90B5AE9B1D5DDB8000990614 /* StreamAdapter */,
+				487B729D1F1631A100A7270C /* AdsProvider */,
 			);
 			name = Native;
 			sourceTree = "<group>";
@@ -595,6 +647,7 @@
 				489F1A491EF1744A00F0F6FB /* GridNativeAdDetailsViewController.swift */,
 				489F1A4A1EF1744A00F0F6FB /* ListNativeAdDetailsViewController.swift */,
 				489F1A4B1EF1744A00F0F6FB /* NativeAssetsDetailsViewController.swift */,
+				485A3BB91F3C66E4002F1670 /* ServerTemplateNativeAdDetailsViewController.swift */,
 			);
 			name = "Single Native Ad";
 			sourceTree = "<group>";
@@ -614,9 +667,11 @@
 			children = (
 				4874808E1EF829710074DCE7 /* BaseTableViewController.xib */,
 				489F1A531EF1787D00F0F6FB /* BaseTableViewController.swift */,
+				487B72A11F16570C00A7270C /* TableViewStreamController.swift */,
 				489F1A541EF1787D00F0F6FB /* CustomTemplateTableViewController.swift */,
 				489F1A551EF1787D00F0F6FB /* FeedTableViewController.swift */,
 				489F1A561EF1787D00F0F6FB /* ListTableViewController.swift */,
+				485A3BB51F3C651A002F1670 /* ServerTemplateTableViewStreamController.swift */,
 			);
 			name = TableView;
 			sourceTree = "<group>";
@@ -630,6 +685,7 @@
 				489F1A601EF17CE100F0F6FB /* ListCollectionViewController.swift */,
 				489F1A651EF17D2500F0F6FB /* GridCollectionViewController.swift */,
 				489F1A661EF17D2500F0F6FB /* GridIconCollectionViewController.swift */,
+				485A3BB71F3C658B002F1670 /* ServerTemplateCollectionViewController.swift */,
 			);
 			name = FlowLayout;
 			sourceTree = "<group>";
@@ -997,6 +1053,7 @@
 				90B5AE501D5B289B00990614 /* ListTableViewController.m in Sources */,
 				BF6686671CD8E52800B345ED /* StreamAdapterCollectionViewCell.m in Sources */,
 				4874807B1EF7D1F30074DCE7 /* NativeAdDemonstratorViewController.m in Sources */,
+				482F8FE51F3C587900AC9530 /* ServerTemplateNativeAdDetailsViewController.m in Sources */,
 				482EB3861EF4040B0071B4DA /* MasterTableItem.m in Sources */,
 				BFC59FCE1ED48A3500E39C2D /* GridFlowLayoutCollectionViewController.m in Sources */,
 				90B5AE4E1D5B289B00990614 /* FeedTableViewController.m in Sources */,
@@ -1004,6 +1061,7 @@
 				7FBB4B481CA414F9002F7E15 /* main.m in Sources */,
 				487480951EF900780074DCE7 /* BaseCollectionViewController.m in Sources */,
 				4856EDDD1D06CC7B008E68F8 /* StreamAdapterCustomCollectionViewCell.m in Sources */,
+				486034221F16656D0041E255 /* AdsProviderTableViewController.m in Sources */,
 				7FBB4B441CA414F9002F7E15 /* AppDelegate.m in Sources */,
 				90B5AE6C1D5B5B4500990614 /* FeedFlowLayoutCollectionViewController.m in Sources */,
 				482EB38F1EF4232E0071B4DA /* Constants.m in Sources */,
@@ -1024,10 +1082,13 @@
 				482EB3921EF7C20F0071B4DA /* UserSettings.m in Sources */,
 				4836D8AF1E893F6100A7DB63 /* NativeAssetsPlusView.m in Sources */,
 				482EB3891EF411190071B4DA /* MainViewController.m in Sources */,
-				90B5AE5B1D5B349900990614 /* BaseTableViewController.m in Sources */,
 				482758201D2D35E500FC0921 /* DataUnitManager.m in Sources */,
 				7FBB4B4B1CA414F9002F7E15 /* InterstitialsDetailViewController.m in Sources */,
+				482F8FE21F3C552400AC9530 /* ServerTemplateLayoutCollectionViewController.m in Sources */,
+				48977FBF1F17A6E1000F4853 /* TableViewStreamController.m in Sources */,
 				487480891EF80EAD0074DCE7 /* GridNativeAdDetailsViewController.m in Sources */,
+				482F8FDF1F3C54C500AC9530 /* ServerTemplateTableViewController.m in Sources */,
+				48977FBE1F17A6E1000F4853 /* BaseTableViewController.m in Sources */,
 				7FBB4B511CA414F9002F7E15 /* NativePlusView.m in Sources */,
 				4827581F1D2D35E500FC0921 /* DataUnit.m in Sources */,
 				482EB38C1EF420290071B4DA /* CreateAdUnitIdViewController.m in Sources */,
@@ -1042,6 +1103,7 @@
 				489F1A621EF17CE100F0F6FB /* CustomTemplateCollectionViewController.swift in Sources */,
 				BF2CB9D21CEDFB4700176530 /* StreamAdapterCollectionViewCell.m in Sources */,
 				480DDE8C1D2D5D370070C222 /* DataUnitManager.m in Sources */,
+				487B72A01F164F1800A7270C /* AdsProviderTableViewController.swift in Sources */,
 				BF2CB9CC1CEDE6EE00176530 /* InterstitialsDetailViewController.swift in Sources */,
 				BF2CB9D01CEDEA1E00176530 /* BannersDetailViewController.swift in Sources */,
 				BF2CB9DF1CEE12F000176530 /* NativePlusView.swift in Sources */,
@@ -1059,12 +1121,15 @@
 				480DDE8B1D2D5D370070C222 /* DataUnit.m in Sources */,
 				908BEB5B1D5DF0F900DF53D6 /* NativeBannerView.m in Sources */,
 				4856EDE71D070405008E68F8 /* StreamAdapterCustomCollectionViewCell.m in Sources */,
+				485A3BB61F3C651A002F1670 /* ServerTemplateTableViewStreamController.swift in Sources */,
 				BF2CB9C91CEDE53100176530 /* MasterTableViewController.swift in Sources */,
+				485A3BBA1F3C66E4002F1670 /* ServerTemplateNativeAdDetailsViewController.swift in Sources */,
 				BF2CB9CE1CEDE94F00176530 /* VideoDetailViewController.swift in Sources */,
 				489F1A671EF17D2500F0F6FB /* GridCollectionViewController.swift in Sources */,
 				4836D8BC1E895B3A00A7DB63 /* NativeAssetsPlusView.swift in Sources */,
 				489F1A4E1EF1744A00F0F6FB /* CustomLayoutNativeAdDetailsViewController.swift in Sources */,
 				489F1A5A1EF1787D00F0F6FB /* ListTableViewController.swift in Sources */,
+				487B72A21F16570C00A7270C /* TableViewStreamController.swift in Sources */,
 				BF2CB9B61CEDBEDB00176530 /* AppDelegate.swift in Sources */,
 				489F1A681EF17D2500F0F6FB /* GridIconCollectionViewController.swift in Sources */,
 				489F1A571EF1787D00F0F6FB /* BaseTableViewController.swift in Sources */,
@@ -1077,6 +1142,7 @@
 				489F1A521EF1744A00F0F6FB /* NativeAssetsDetailsViewController.swift in Sources */,
 				489F1A631EF17CE100F0F6FB /* FeedCollectionViewController.swift in Sources */,
 				908BEB651D5E162200DF53D6 /* BaseCollectionViewController.swift in Sources */,
+				485A3BB81F3C658B002F1670 /* ServerTemplateCollectionViewController.swift in Sources */,
 				489F1A411EF1701E00F0F6FB /* CreateAdUnitIdViewController.swift in Sources */,
 				489F1A4F1EF1744A00F0F6FB /* FeedNativeAdDetailsViewController.swift in Sources */,
 			);
@@ -1219,7 +1285,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 170830.124732-3;
+				CURRENT_PROJECT_VERSION = 170907.103037-20;
 				DEVELOPMENT_TEAM = 7C7H88B9P9;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1279,7 +1345,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CURRENT_PROJECT_VERSION = 170830.124732-3;
+				CURRENT_PROJECT_VERSION = 170907.103037-20;
 				DEVELOPMENT_TEAM = 7C7H88B9P9;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1338,7 +1404,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 170830.124732-3;
+				CURRENT_PROJECT_VERSION = 170907.103037-20;
 				DEVELOPMENT_TEAM = 7C7H88B9P9;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = DemoAppSwift/Info.plist;
@@ -1362,7 +1428,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CURRENT_PROJECT_VERSION = 170830.124732-3;
+				CURRENT_PROJECT_VERSION = 170907.103037-20;
 				DEVELOPMENT_TEAM = 7C7H88B9P9;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = DemoAppSwift/Info.plist;

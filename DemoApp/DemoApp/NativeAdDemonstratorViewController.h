@@ -12,7 +12,7 @@
 
 @interface NativeAdDemonstratorViewController : UIViewController
 
-@property(copy, nonatomic) NSString *adUnitId;
+@property (copy, nonatomic) NSString *adUnitId;
 @property (strong, nonatomic) NSArray <MasterTableItem *> *items;
 
 @end

@@ -21,6 +21,7 @@
 #import "VideoDetailViewController.h"
 #import "NativeAdDemonstratorViewController.h"
 #import "CreateAdUnitIdViewController.h"
+#import "AdsProviderTableViewController.h"
 
 typedef NS_ENUM(NSUInteger, DZDSegmentType) {
     DZDSegmentBanner = 0,
@@ -303,6 +304,13 @@ typedef NS_ENUM(NSUInteger, DZDSegmentType) {
                                                     withChilds:nil
                                                   withUserData:@{@"bannerType" : @(AVOBannerViewSizeLarge),
                                                                  @"adUnitId" : UserSettings.bannerAdUnitID
+                                                                 }],
+                        [[MasterTableItem alloc] initWithTitle:@"MREC size (300*250)"
+                                                withController:NSStringFromClass([BannersDetailViewController class])
+                                                   withXibName:nil
+                                                    withChilds:nil
+                                                  withUserData:@{@"bannerType" : @(AVOBannerViewSizeMREC),
+                                                                 @"adUnitId" : UserSettings.bannerAdUnitID
                                                                  }]
                             ]
                                              withImageName:@"adtype_banner"],
@@ -356,7 +364,20 @@ typedef NS_ENUM(NSUInteger, DZDSegmentType) {
                                                    withXibName:nil
                                                     withChilds:nil
                                                   withUserData:@{@"adUnitId" : UserSettings.nativeAdUnitID
-                                                                }]
+                                                                }],
+                        [[MasterTableItem alloc] initWithTitle:@"Dynamic template from server"
+                                                withController:NSStringFromClass([NativeAdDemonstratorViewController class])
+                                                   withXibName:nil
+                                                    withChilds:nil
+                                                  withUserData:@{@"adUnitId" : UserSettings.nativeAdUnitID,
+                                                                 @"template" : @(AVONativeAdsTemplateTypeServer)
+                                                                 }],
+                        [[MasterTableItem alloc] initWithTitle:@"AdsProvider (stream adapter alternative)"
+                                                withController:NSStringFromClass([AdsProviderTableViewController class])
+                                                   withXibName:@"BaseTableViewController"
+                                                    withChilds:nil
+                                                  withUserData:@{@"adUnitId" : UserSettings.nativeAdUnitID
+                                                                 }]
                         ]
                                              withImageName:@"adtype_native"],
                   ];

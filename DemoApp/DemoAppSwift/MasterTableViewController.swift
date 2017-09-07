@@ -34,18 +34,19 @@ class MasterTableViewController: UITableViewController {
         guard let item = adItems?[(indexPath as NSIndexPath).row] else { return }
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         var viewController: UIViewController? = nil
+        var showBlock: (() -> Void)!
         if let xibName = item.xibName, let controllerName = item.controller {
             let viewControllerClass = NSClassFromString(controllerName) as! UIViewController.Type
             viewController = viewControllerClass.init(nibName: xibName, bundle: Bundle.main)
-            self.navigationController?.showDetailViewController(viewController!, sender: nil)
+            showBlock = {self.navigationController?.pushViewController(viewController!, animated: true)}
         } else if let controllerName = item.controller {
             viewController = storyboard.instantiateViewController(withIdentifier: controllerName)
-            self.navigationController?.pushViewController(viewController!, animated: true)
+            showBlock = {self.navigationController?.pushViewController(viewController!, animated: true)}
         } else if let items = item.childItems {
             let tableController = storyboard.instantiateViewController(withIdentifier: "MasterTableViewController") as! MasterTableViewController
             tableController.adItems = items
             tableController.title = item.title
-            self.navigationController?.pushViewController(tableController, animated: true)
+            showBlock = {self.navigationController?.pushViewController(tableController, animated: true)}
             viewController = tableController
         }
 
@@ -53,5 +54,7 @@ class MasterTableViewController: UITableViewController {
             let userData = item.userData {
             managedController.applyUserData(userData)
         }
+        
+        showBlock()
     }
 }

@@ -20,5 +20,6 @@
 #import "AvocarrotSDK+AVOCollectionViewStreamAdapter.h"
 #import "UICollectionView+AVOStreamAdapter.h"
 #import "AvocarrotSDK+AVONativeView.h"
+#import "AvocarrotSDK+AVONativeAdsProvider.h"
 
 #endif /* AvocarrotNativeView_h */

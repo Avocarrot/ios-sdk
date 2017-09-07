@@ -16,7 +16,7 @@ class ListCollectionViewController: BaseFlowLayoutCollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        dataSource = loadData(24, from: 0)
+        loadData(24)
         loadAds()
     }
 

@@ -17,6 +17,8 @@
 #import "ListFlowLayoutCollectionViewController.h"
 #import "FeedFlowLayoutCollectionViewController.h"
 #import "GridFlowLayoutCollectionViewController.h"
+#import "ServerTemplateTableViewController.h"
+#import "ServerTemplateLayoutCollectionViewController.h"
 
 @interface NativeAdDemonstratorViewController () <DZNSegmentedControlDelegate>
 
@@ -174,6 +176,24 @@
                                                 withUserData:@{@"adUnitId" : UserSettings.nativeAdUnitID}],
                       [[MasterTableItem alloc] initWithTitle:@"Single Native"
                                               withController:@"GridNativeAdDetailsViewController"
+                                                 withXibName:@"BaseNativeAdDetailsViewController"
+                                                  withChilds:nil
+                                                withUserData:@{@"adUnitId" : UserSettings.nativeAdUnitID}]
+                      ];
+            
+        case AVONativeAdsTemplateTypeServer:
+            return @[ [[MasterTableItem alloc] initWithTitle:@"CollectionView"
+                                              withController:NSStringFromClass([ServerTemplateLayoutCollectionViewController class])
+                                                 withXibName:@"BaseCollectionViewController"
+                                                  withChilds:nil
+                                                withUserData:@{@"adUnitId" : UserSettings.nativeAdUnitID}],
+                      [[MasterTableItem alloc] initWithTitle:@"TableView"
+                                              withController:NSStringFromClass([ServerTemplateTableViewController class])
+                                                 withXibName:@"BaseTableViewController"
+                                                  withChilds:nil
+                                                withUserData:@{@"adUnitId" : UserSettings.nativeAdUnitID}],
+                      [[MasterTableItem alloc] initWithTitle:@"Single Native"
+                                              withController:@"ServerTemplateNativeAdDetailsViewController"
                                                  withXibName:@"BaseNativeAdDetailsViewController"
                                                   withChilds:nil
                                                 withUserData:@{@"adUnitId" : UserSettings.nativeAdUnitID}]

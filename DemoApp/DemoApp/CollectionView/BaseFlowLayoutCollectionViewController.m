@@ -69,13 +69,7 @@
 #pragma mark - Data
 
 - (void)loadData {
-    NSArray *units = [DataUnitManager createDataUnitList:20];
-    [self organizeData:units];
+    self.dataSource = [DataUnitManager createDataUnitList:20];
 }
-
-- (void)organizeData:(NSArray *)dataArray {
-    self.dataSource = [NSMutableArray arrayWithArray:dataArray];
-}
-
 
 @end

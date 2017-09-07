@@ -37,7 +37,32 @@ Adding through Cocoapods
 
 From version 4.5 Avocarrot SDK uses modular system to distribute based on subspecs:
 
-- By default Avocarrot SDK pod provides SDK with our native assets ad format only, add  pod 'avocarrot-ios-sdk' to your Podfile to integrate it to your project
+- By default Avocarrot SDK pod provides SDK with our native assets ad format only, add  pod 'avocarrot-ios-sdk' to your Podfile to integrate it to your project.
+- If you want to use custom set of SDK modules, include `pod 'avocarrot-ios-sdk/Core` to your Podfile and then select additional modules below.
+
+*Native assets adapters*
+
+- If you want to use the Avocarrot native assets with all server-side mediated networks including client side SDKs, add pod 'avocarrot-ios-sdk/NativeAssetsAdapters' to your Podfile
+
+- For native assets, if you want to select which client networks SDK to be included with server side mediated networks, refer to the pods specified below to add into your Podfile:
+
+- `pod 'avocarrot-ios-sdk/NativeAssetsAdapters/FBAudienceAdapter'` - Avocarrot native assets and adapter for  [Facebook Audience](https://developers.facebook.com/docs/ios) native assets
+- `pod 'avocarrot-ios-sdk/NativeAssetsAdapters/GoogleMobileAdsAdapter'` - Avocarrot native assets and adapter for  [Google Mobile Ads SDK](https://developers.google.com/admob/ios/download) native assets
+- `pod 'avocarrot-ios-sdk/NativeAssetsAdapters/MopubAdapter'` - Avocarrot native assets and adapter for  [MoPub](https://github.com/mopub/mopub-ios-sdk) native assets
+- `pod 'avocarrot-ios-sdk/NativeAssetsAdapters/AppLovinAdapter'` - Avocarrot native assets and adapter for  [AppLovin](https://www.applovin.com/) native assets
+- `pod 'avocarrot-ios-sdk/NativeAssetsAdapters/InLocoAdapter'` - Avocarrot native assets and adapter for  [InLoco](http://docs.inlocomedia.com/docs/ios) native assets
+
+*Native assets adapters*
+
+- If you want to use the Avocarrot native assets with all server-side mediated networks including client side SDKs, add pod 'avocarrot-ios-sdk/NativeAssetsAdapters' to your Podfile
+
+- For native assets, if you want to select which client networks SDK to be included with server side mediated networks, refer to the pods specified below to add into your Podfile:
+
+- `pod 'avocarrot-ios-sdk/NativeAssetsAdapters/FBAudienceAdapter'` - Avocarrot native assets and adapter for  [Facebook Audience](https://developers.facebook.com/docs/ios) native assets
+- `pod 'avocarrot-ios-sdk/NativeAssetsAdapters/GoogleMobileAdsAdapter'` - Avocarrot native assets and adapter for  [Google Mobile Ads SDK](https://developers.google.com/admob/ios/download) native assets
+- `pod 'avocarrot-ios-sdk/NativeAssetsAdapters/MopubAdapter'` - Avocarrot native assets and adapter for  [MoPub](https://github.com/mopub/mopub-ios-sdk) native assets
+- `pod 'avocarrot-ios-sdk/NativeAssetsAdapters/AppLovinAdapter'` - Avocarrot native assets and adapter for  [AppLovin](https://www.applovin.com/) native assets
+- `pod 'avocarrot-ios-sdk/NativeAssetsAdapters/InLocoAdapter'` - Avocarrot native assets and adapter for  [InLoco](http://docs.inlocomedia.com/docs/ios) native assets
 
 
 *Banners*
@@ -101,7 +126,7 @@ From version 4.5 Avocarrot SDK uses modular system to distribute based on subspe
     - `pod 'avocarrot-ios-sdk/NativeViewAdapters/InLocoAdapter'` - Avocarrot native views and adapter for  [InLoco](http://docs.inlocomedia.com/docs/ios) native views
 
 
-**Warning: Avocarrot SDK 4.5.2 was designed and verified to work correctly with the following versions of 3rd party ad network SDKs:**
+**Warning: Avocarrot SDK 4.6.0 was designed and verified to work correctly with the following versions of 3rd party ad network SDKs:**
 
 * AdColony – 3.1.1
 * Chartboost – 6.6.3
@@ -149,6 +174,7 @@ Available banner sizes:
 
 - AVOBannerViewSizeSmall (320x50) (recommended)
 - AVOBannerViewSizeLarge (728x90)
+- AVOBannerViewSizeMREC (300x250)
 
 Use the following methods in your UIViewController subclass:
 
@@ -501,7 +527,7 @@ Native ads
 
 ID of advertising space for testing (Native ad): `"7f900c7d-7ce3-4190-8e93-310053e70ca2"`
 
-A native ad is a raw representation of an ad without any pre-defined wrapping UI, which gives developers the freedom to design and control the ad, or for the easiest integration you could use our customizable templates: *List*, *Feed*, *Grid* and *GridIcon* based on `AVONativeAdsTemplateType` enum.
+Native ad is a raw representation of an ad without any predefined wrapping UI, which gives developers the freedom to design and control the ad. For easy integration you could use our customizable templates: *List*, *Feed*, *Grid* and *GridIcon*. You can also choose *Server* template (i.e Dynamic Template), which will be downloaded from the server based on your color preferences. The main advantage of this template  is the possibility to change the color scheme of the native ad after your app has been uploaded to the AppStore. The full list of templates is available in the `AVONativeAdsTemplateType` enum.
 
 Use this method to represent native ads by our templates:
 
@@ -639,7 +665,7 @@ ID of advertising space for testing (like for native ad): `"7f900c7d-7ce3-4190-8
 
 Stream adapter is a smart technology to add native ads as items in your feeds based on *UITableView* or *UICollectionView*. Settings for stream adapter are returned from the server side and you can change it as you wish.
 
-For the easiest integration you could use our customizable templates: *List*, *Feed*, *Grid* and *GridIcon* based on `AVONativeAdsTemplateType` enum:
+For the easiest integration you could use our customizable templates: *List*, *Feed*, *Grid*, *GridIcon* and *Server* based on `AVONativeAdsTemplateType` enum:
 
 *objective-c*
 

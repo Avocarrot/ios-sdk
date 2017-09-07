@@ -16,7 +16,7 @@ class CustomTemplateCollectionViewController: BaseFlowLayoutCollectionViewContro
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.dataSource = loadData(20, from: 0)
+        loadData(20)
         loadAds()
     }
 

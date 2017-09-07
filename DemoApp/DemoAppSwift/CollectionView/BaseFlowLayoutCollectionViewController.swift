@@ -58,27 +58,7 @@ import Foundation
         return CGSize(width: Int((collectionView.frame.size.width - 4) / 2.0), height: Int((collectionView.frame.size.width - 4) / 1.1))
     }
 
-    func loadData(_ count: UInt, from: UInt) -> [[DataUnit]] {
-        let units = DataUnitManager.createDataUnitList(count, from: from)
-        return organizeData(units, dividedBySectionsCount: 2)
-    }
-
-    func organizeData(_ dataArray: [DataUnit], dividedBySectionsCount sectionsCount: Int) -> [[DataUnit]] {
-        var sections = [[DataUnit]]()
-        let itemsInSection: Int = Int(dataArray.count / sectionsCount)
-        var startPos: Int = 0
-        for _ in 0..<sectionsCount {
-            let lastPosition = min(startPos + itemsInSection, dataArray.count)
-            let itemsGroupe = Array(dataArray[startPos..<lastPosition])
-            startPos += itemsGroupe.count
-            sections.append(itemsGroupe)
-        }
-
-        if startPos < dataArray.count {
-            var itemsGroupe = sections[sections.count - 1]
-            itemsGroupe += dataArray[startPos..<dataArray.count]
-            sections[sections.count - 1] = itemsGroupe
-        }
-        return sections
+    func loadData(_ count: UInt) {
+        dataSource = DataUnitManager.createDataUnitList(count, dividedByGroups: 2)
     }
 }

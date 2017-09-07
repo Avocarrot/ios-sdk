@@ -52,4 +52,26 @@ static NSUInteger DUMImageCount = 10;
     return units;
 }
 
++ (nonnull NSArray<DataUnit *> *)createDataUnitList:(NSUInteger)count dividedByGroups:(NSInteger)groupsCount {
+    
+    NSArray *units = [self createDataUnitList:count];
+    
+    NSMutableArray *groups = [NSMutableArray new];
+    NSInteger itemsInSection = units.count / groupsCount;
+    NSInteger startPos = 0;
+    for (int i = 0; i < groupsCount; i++) {
+        NSArray *groupe = [units subarrayWithRange:NSMakeRange(startPos, MIN(itemsInSection, units.count - startPos))];
+        startPos += groupe.count;
+        NSMutableArray *itemsGroup = [NSMutableArray arrayWithArray:groupe];
+        [groups addObject:itemsGroup];
+    }
+    
+    if (startPos < units.count) {
+        NSMutableArray *itemsGroup = [groups lastObject];
+        [itemsGroup arrayByAddingObjectsFromArray:[units subarrayWithRange:NSMakeRange(startPos, units.count - startPos)]];
+    }
+    
+    return groups;
+}
+
 @end

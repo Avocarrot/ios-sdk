@@ -14,7 +14,7 @@
 @protocol AVOMRAIDServiceDelegate;
 
 // A delegate for MRAIDView to listen for notification on ad ready or expand related events.
-@protocol SKMRAIDViewDelegate <NSObject>
+@protocol AVOMRAIDViewDelegate <NSObject>
 
 @optional
 
@@ -45,7 +45,7 @@
 
 @interface AVOMRAIDView : UIView
 
-@property (nonatomic, weak) id <SKMRAIDViewDelegate> delegate;
+@property (nonatomic, weak) id <AVOMRAIDViewDelegate> delegate;
 @property (nonatomic, weak) id <AVOMRAIDServiceDelegate> serviceDelegate;
 @property (nonatomic, strong, setter = setRootViewController:) UIViewController *rootViewController;
 @property (nonatomic, assign, getter = isViewable, setter = setIsViewable:) BOOL isViewable;
@@ -57,7 +57,7 @@
       withHtmlData:(NSString *)htmlData
       withBaseURL:(NSURL *)bsURL
       withAd:(AVOAd *)ad
-      delegate:(id <SKMRAIDViewDelegate>)delegate
+      delegate:(id <AVOMRAIDViewDelegate>)delegate
       serviceDelegate:(id <AVOMRAIDServiceDelegate>)serviceDelegate
       rootViewController:(UIViewController *)rootViewController;
 
@@ -66,7 +66,7 @@
       withBaseURL:(NSURL *)bsURL
       withAd:(AVOAd *)ad
       asInterstitial:(BOOL)isInter
-      delegate:(id <SKMRAIDViewDelegate>)delegate
+      delegate:(id <AVOMRAIDViewDelegate>)delegate
       serviceDelegate:(id <AVOMRAIDServiceDelegate>)serviceDelegate
       rootViewController:(UIViewController *)rootViewController;
 

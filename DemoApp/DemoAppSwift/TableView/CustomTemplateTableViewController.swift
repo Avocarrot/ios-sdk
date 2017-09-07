@@ -10,7 +10,7 @@ import Foundation
 import AvocarrotNativeView
 
 @objc(CustomTemplateTableViewController)
-class CustomTemplateTableViewController: BaseTableViewController {
+class CustomTemplateTableViewController: TableViewStreamController {
 
     fileprivate
     var adapter: AVOTableViewStreamAdapter?

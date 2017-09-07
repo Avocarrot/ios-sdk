@@ -49,18 +49,20 @@
     MasterTableItem *item = self.adItems[indexPath.row];
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UIViewController *viewController;
+    void (^showBlock) (void);
+    
     if (item.controller && item.xibName) {
         Class class = NSClassFromString(item.controller);
         viewController = [[class alloc] initWithNibName:item.xibName bundle:[NSBundle mainBundle]];
-        [self.navigationController showViewController:viewController sender:nil];
+        showBlock = ^{[self.navigationController pushViewController:viewController animated:YES];};
     } else if (item.controller) {
         viewController = [storyboard instantiateViewControllerWithIdentifier:item.controller];
-        [self.navigationController pushViewController:viewController animated:YES];
+        showBlock = ^{[self.navigationController pushViewController:viewController animated:YES];};
     } else if (item.childItems.count > 0) {
         MasterTableViewController *tableController = (MasterTableViewController*)[storyboard instantiateViewControllerWithIdentifier:@"MasterTableViewController"];
         tableController.adItems = item.childItems;
         tableController.title = item.title;
-        [self.navigationController pushViewController:tableController animated:YES];
+        showBlock = ^{[self.navigationController pushViewController:tableController animated:YES];};
         viewController = tableController;
     }
     
@@ -68,6 +70,8 @@
         [viewController respondsToSelector:@selector(applyUserData:)]) {
         [(UIViewController<AppControllerManagement> *)viewController applyUserData:item.userData];
     }
+    
+    showBlock();
 }
 
 @end

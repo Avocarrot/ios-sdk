@@ -16,4 +16,6 @@
 + (nonnull NSArray<DataUnit *> *)createDataUnitList:(NSUInteger)count;
 
 + (nonnull NSArray<DataUnit *> *)createDataUnitList:(NSUInteger)count from:(NSUInteger)from;
+
++ (nonnull NSArray<NSArray<DataUnit*> *> *)createDataUnitList:(NSUInteger)count dividedByGroups:(NSInteger)groupsCount;
 @end
