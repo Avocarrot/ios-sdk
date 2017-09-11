@@ -21,7 +21,7 @@ Avocarrot Support
 Additional documentation regarding integration of the Avocarrot SDK into your iOS app can be found under the following links:
 
 - [https://www.avocarrot.com/](https://login.avocarrot.com/register)  -  Sign Up to Avocarrot
-- [Avocarrot SDK iOS Quickstart](https://docs.avocarrot.com/ios/getting-started-with-mediation) - Basic integration for testing
+- [Avocarrot SDK iOS Quickstart](https://docs.avocarrot.com/ios/getting-started) - Basic integration for testing
 
 Initialization
 ==============
