@@ -35,22 +35,22 @@
 // A class which handles interstitials and offers optional callbacks for its states and services (sms, tel, calendar, etc.)
 @interface AVOMRAIDInterstitial : NSObject
 
-@property (nonatomic, weak) id <AVOMRAIDInterstitialDelegate> delegate;
-@property (nonatomic, weak) id <AVOMRAIDServiceDelegate> serviceDelegate;
-@property (nonatomic, weak, setter = setRootViewController:) UIViewController *rootViewController;
-@property (nonatomic, assign, getter = isViewable, setter = setIsViewable:) BOOL isViewable;
-@property (nonatomic, copy) UIColor *backgroundColor;
+@property(nonatomic, weak) id <AVOMRAIDInterstitialDelegate> delegate;
+@property(nonatomic, weak) id <AVOMRAIDServiceDelegate> serviceDelegate;
+@property(nonatomic, weak, setter = setRootViewController:) UIViewController *rootViewController;
+@property(nonatomic, assign, getter = isViewable, setter = setIsViewable:) BOOL isViewable;
+@property(nonatomic, copy) UIColor *backgroundColor;
 
-@property (nonatomic, strong, readonly) UIViewController *presentedViewController;
+@property(nonatomic, strong, readonly) UIViewController *presentedViewController;
 
 // IMPORTANT: This is the only valid initializer for an MRAIDInterstitial; -init will throw an exception
 - (id)initWithSupportedFeatures:(NSArray *)features
-      withHtmlData:(NSString *)htmlData
-      withBaseURL:(NSURL *)bsURL
-      withAd:(AVOAd *)ad
-      delegate:(id <AVOMRAIDInterstitialDelegate>)delegate
-      serviceDelegate:(id <AVOMRAIDServiceDelegate>)serviceDelegate
-      rootViewController:(UIViewController *)rootViewController;
+                   withHtmlData:(NSString *)htmlData
+                    withBaseURL:(NSURL *)bsURL
+                         withAd:(AVOAd *)ad
+                       delegate:(id <AVOMRAIDInterstitialDelegate>)delegate
+                serviceDelegate:(id <AVOMRAIDServiceDelegate>)serviceDelegate
+             rootViewController:(UIViewController *)rootViewController;
 
 - (BOOL)isAdReady;
 

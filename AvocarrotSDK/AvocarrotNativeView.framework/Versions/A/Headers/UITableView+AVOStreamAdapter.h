@@ -12,7 +12,7 @@
 
 @interface UITableView (AVOStreamAdapter)
 
-@property (nonatomic, strong, readonly) AVOTableViewStreamAdapter *streamAdapter;
+@property(nonatomic, strong, readonly) AVOTableViewStreamAdapter *streamAdapter;
 
 - (void)avo_reloadData;
 

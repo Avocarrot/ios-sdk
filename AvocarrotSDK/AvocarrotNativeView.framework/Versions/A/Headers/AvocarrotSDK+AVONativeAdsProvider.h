@@ -2,7 +2,7 @@
 //  AvocarrotSDK+AVONativeAdsProvider.h
 //  AvocarrotSDK
 //
-//  Created by Siarhei Barmotska on 06.07.17.
+//  Created by Glispa GmbH on 06.07.17.
 //  Copyright © 2017 Glispa GmbH. All rights reserved.
 //
 

@@ -12,34 +12,34 @@
 
 @interface AVOVASTMediaViewController : UIViewController
 
-@property (weak, nonatomic, readonly, nullable) id <AVOVASTMediaViewControllerDelegate> delegate;
-@property (weak, nonatomic, readonly, nullable) id <MPVASTMediaViewControllerInfoSource> infoSource;
+@property(weak, nonatomic, readonly, nullable) id <AVOVASTMediaViewControllerDelegate> delegate;
+@property(weak, nonatomic, readonly, nullable) id <MPVASTMediaViewControllerInfoSource> infoSource;
 
 + (_Nonnull instancetype)mediaViewControllerWithVASTStringXML:(NSString *_Nonnull)vastStringXML
-                         delegate:(id <AVOVASTMediaViewControllerDelegate> _Nullable)delegate
-                         infoSource:(id <MPVASTMediaViewControllerInfoSource> _Nullable)infoSource;
+                                                     delegate:(id <AVOVASTMediaViewControllerDelegate> _Nullable)delegate
+                                                   infoSource:(id <MPVASTMediaViewControllerInfoSource> _Nullable)infoSource;
 
 
 + (_Nonnull instancetype)mediaViewControllerWithVideoURL:(NSURL *_Nonnull)videoURL
-                         htmlString:(NSString *_Nullable)htmlString
-                         delegate:(id <AVOVASTMediaViewControllerDelegate> _Nullable)delegate
-                         infoSource:(id <MPVASTMediaViewControllerInfoSource> _Nullable)infoSource;
+                                              htmlString:(NSString *_Nullable)htmlString
+                                                delegate:(id <AVOVASTMediaViewControllerDelegate> _Nullable)delegate
+                                              infoSource:(id <MPVASTMediaViewControllerInfoSource> _Nullable)infoSource;
 
 - (void)presentModalyFromViewController:(UIViewController *_Nonnull)viewController;
 
 - (void)freeResources;
 
-@property (assign, nonatomic, readonly) BOOL isReady;
+@property(assign, nonatomic, readonly) BOOL isReady;
 
-@property (assign, nonatomic) BOOL shouldShowExitButton;                //default is NO
-@property (assign, nonatomic) BOOL shouldShowTimeline;                  //default is YES
-@property (assign, nonatomic) BOOL shouldPauseVideoWhenResignActive;    //default is NO
+@property(assign, nonatomic) BOOL shouldShowExitButton;                //default is NO
+@property(assign, nonatomic) BOOL shouldShowTimeline;                  //default is YES
+@property(assign, nonatomic) BOOL shouldPauseVideoWhenResignActive;    //default is NO
 
-@property (strong, nonatomic, nonnull) UIImage *exitButtonImage;
-@property (strong, nonatomic, nonnull) UIColor *timeLineMinimumTrackTintColor;   //default is [UIColor orangeColor]
-@property (strong, nonatomic, nonnull) UIColor *timeLineMaximumTrackTintColor;   //default is [UIColor blackColor]
-@property (assign, nonatomic) BOOL looping;
-@property (assign, nonatomic) BOOL stopPlayAfterExit;
+@property(strong, nonatomic, nonnull) UIImage *exitButtonImage;
+@property(strong, nonatomic, nonnull) UIColor *timeLineMinimumTrackTintColor;   //default is [UIColor orangeColor]
+@property(strong, nonatomic, nonnull) UIColor *timeLineMaximumTrackTintColor;   //default is [UIColor blackColor]
+@property(assign, nonatomic) BOOL looping;
+@property(assign, nonatomic) BOOL stopPlayAfterExit;
 
 @end
 

@@ -11,7 +11,7 @@
 
 @interface AVOVideo : NSObject
 
-@property (nonatomic, assign, readonly) BOOL ready;
+@property(nonatomic, assign, readonly) BOOL ready;
 
 /**
  *  Show fullscreen banner modally

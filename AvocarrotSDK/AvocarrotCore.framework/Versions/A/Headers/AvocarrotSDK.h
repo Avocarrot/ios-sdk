@@ -22,27 +22,27 @@ typedef enum {
  *
  * @return a singleton AvocarrotSDK instance.
  */
-@property (class, nonatomic, strong, readonly, nonnull) AvocarrotSDK *sharedSDK;
+@property(class, nonatomic, strong, readonly, nonnull) AvocarrotSDK *sharedSDK;
 
 /**
  * Provides access to the AvocarrotSDK version
  */
-@property (class, nonatomic, strong, readonly, nonnull) NSString *sdkVersion;
+@property(class, nonatomic, strong, readonly, nonnull) NSString *sdkVersion;
 
 /**
  * Provides access to the AvocarrotSDK logging permission
  */
-@property (class, nonatomic, assign) BOOL logEnabled;
+@property(class, nonatomic, assign) BOOL logEnabled;
 
 /**
  * Provides access to test modes of external libs
  */
-@property (class, nonatomic, assign) BOOL testMode;
+@property(class, nonatomic, assign) BOOL testMode;
 
 /**
  * Provides access to the AvocarrotSDK statistic sending permission
  */
-@property (class, nonatomic, assign) BOOL statisticsEnabled;
+@property(class, nonatomic, assign) BOOL statisticsEnabled;
 
 @end
 

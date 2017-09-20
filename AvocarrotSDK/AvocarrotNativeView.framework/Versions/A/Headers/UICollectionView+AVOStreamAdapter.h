@@ -12,7 +12,7 @@
 
 @interface UICollectionView (AVOStreamAdapter)
 
-@property (nonatomic, strong, readonly) AVOCollectionViewStreamAdapter *streamAdapter;
+@property(nonatomic, strong, readonly) AVOCollectionViewStreamAdapter *streamAdapter;
 
 - (void)avo_reloadData;
 

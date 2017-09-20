@@ -10,7 +10,7 @@
 
 @interface AVOStreamAdapter : NSObject
 
-@property (nonatomic, weak, nullable, readonly) UIViewController *parentViewController;
+@property(nonatomic, weak, nullable, readonly) UIViewController *parentViewController;
 
 
 /**

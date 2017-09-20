@@ -2,7 +2,7 @@
 //  AVONativeAdsProvider.h
 //  AvocarrotSDK
 //
-//  Created by Siarhei Barmotska on 06.07.17.
+//  Created by Glispa GmbH on 06.07.17.
 //  Copyright © 2017 Glispa GmbH. All rights reserved.
 //
 
@@ -12,7 +12,7 @@
 
 @interface AVONativeAdsProvider : NSObject
 
-@property (nonatomic, copy, readonly) NSString * _Nullable adUnitId;
+@property(nonatomic, copy, readonly) NSString *_Nullable adUnitId;
 
 /**
  Create immutable provider of native ads. Don't call this method directly. Use specialized class methods from AvocarrotSDK+AVONativeAdsProvider.h
@@ -42,7 +42,7 @@
  
  @return View instance which contains rendered native ad
  */
-- (AVONativeView* _Nullable)getNextAdView;
+- (AVONativeView *_Nullable)getNextAdView;
 
 @end
 

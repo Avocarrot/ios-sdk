@@ -27,7 +27,7 @@ typedef enum : NSUInteger {
 
 @interface AVOError : NSError
 
-@property (nonatomic, readonly, nonnull) NSString *avo_errorDescription;
+@property(nonatomic, readonly, nonnull) NSString *avo_errorDescription;
 
 + (nonnull id)errorWithCode:(NSInteger)errorCode andLocalizedDescription:(NSString *_Nonnull)localizedDescription;
 

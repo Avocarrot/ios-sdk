@@ -23,7 +23,7 @@
  *  @param failure                  - (optional) called when native ad download fails, returns AVOError
  */
 - (void)loadNativeAdWithAdUnitId:(NSString *_Nonnull)adUnitId
-                         success:(UIView * _Nullable (^ _Nonnull)(AVONativeAssets *_Nonnull nativeAssests))success
+                         success:(UIView *_Nullable (^ _Nonnull)(AVONativeAssets *_Nonnull nativeAssests))success
                          failure:(void (^ _Nullable)(AVOError *_Nonnull error))failure;
 
 

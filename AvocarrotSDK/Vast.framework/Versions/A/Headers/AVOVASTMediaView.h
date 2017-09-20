@@ -13,19 +13,19 @@
 
 @interface AVOVASTMediaView : UIView
 
-@property (weak, nonatomic, readonly, nullable) id <AVOVASTMediaViewDelegate> delegate;
-@property (weak, nonatomic, readonly, nullable) id <AVOVASTMediaViewInfoSource> infoSource;
+@property(weak, nonatomic, readonly, nullable) id <AVOVASTMediaViewDelegate> delegate;
+@property(weak, nonatomic, readonly, nullable) id <AVOVASTMediaViewInfoSource> infoSource;
 
 + (_Nonnull instancetype)mediaViewWithFrame:(CGRect)frame
-                         VASTStringXML:(NSString *_Nonnull)vastStringXML
-                         delegate:(id <AVOVASTMediaViewDelegate> _Nullable)delegate
-                         infoSource:(id <AVOVASTMediaViewInfoSource> _Nullable)infoSource;
+                              VASTStringXML:(NSString *_Nonnull)vastStringXML
+                                   delegate:(id <AVOVASTMediaViewDelegate> _Nullable)delegate
+                                 infoSource:(id <AVOVASTMediaViewInfoSource> _Nullable)infoSource;
 
 + (_Nonnull instancetype)mediaViewWithFrame:(CGRect)frame
-                         videoURL:(NSURL *_Nonnull)videoURL
-                         htmlString:(NSString *_Nullable)htmlString
-                         delegate:(id <AVOVASTMediaViewDelegate> _Nullable)delegate
-                         infoSource:(id <AVOVASTMediaViewInfoSource> _Nullable)infoSource;
+                                   videoURL:(NSURL *_Nonnull)videoURL
+                                 htmlString:(NSString *_Nullable)htmlString
+                                   delegate:(id <AVOVASTMediaViewDelegate> _Nullable)delegate
+                                 infoSource:(id <AVOVASTMediaViewInfoSource> _Nullable)infoSource;
 
 - (void)freeResources;
 
@@ -41,21 +41,21 @@
 
 - (void)unmute;
 
-@property (assign, nonatomic, readonly) BOOL isReady;
+@property(assign, nonatomic, readonly) BOOL isReady;
 
-@property (assign, nonatomic) BOOL shouldShowFullscreenButton;          //default is YES
-@property (assign, nonatomic) BOOL shouldShowTimeline;                  //default is YES
+@property(assign, nonatomic) BOOL shouldShowFullscreenButton;          //default is YES
+@property(assign, nonatomic) BOOL shouldShowTimeline;                  //default is YES
 
-@property (assign, nonatomic) BOOL shouldShowExitButton;               //default is YES
-@property (assign, nonatomic) BOOL shouldShowReplayButton;             //default is NO
-@property (assign, nonatomic) BOOL shouldShowFadeScreenAfterFinish;    //default is NO
+@property(assign, nonatomic) BOOL shouldShowExitButton;               //default is YES
+@property(assign, nonatomic) BOOL shouldShowReplayButton;             //default is NO
+@property(assign, nonatomic) BOOL shouldShowFadeScreenAfterFinish;    //default is NO
 
-@property (assign, nonatomic) BOOL stopPlayAfterCollapse;
+@property(assign, nonatomic) BOOL stopPlayAfterCollapse;
 
-@property (strong, nonatomic, nonnull) UIColor *timeLineMinimumTrackTintColor;   //default is [UIColor orangeColor]
-@property (strong, nonatomic, nonnull) UIColor *timeLineMaximumTrackTintColor;   //default is [UIColor blackColor]
+@property(strong, nonatomic, nonnull) UIColor *timeLineMinimumTrackTintColor;   //default is [UIColor orangeColor]
+@property(strong, nonatomic, nonnull) UIColor *timeLineMaximumTrackTintColor;   //default is [UIColor blackColor]
 
-@property (assign, nonatomic) BOOL looping; //default is NO
+@property(assign, nonatomic) BOOL looping; //default is NO
 
 @end
 

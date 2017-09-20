@@ -13,18 +13,18 @@
 
 @interface AVONativeAssets : NSObject
 
-@property (nonatomic, strong, nullable) UIImage *image;
-@property (nonatomic, strong, nullable) UIImage *icon;
-@property (nonatomic, copy, nullable) NSString *imageURL;
-@property (nonatomic, copy, nullable) NSString *iconURL;
-@property (nonatomic, copy, nullable) NSString *text;
-@property (nonatomic, copy, nullable) NSString *title;
-@property (nonatomic, copy, nullable) NSString *sponsored;
-@property (nonatomic, copy, nullable) NSString *callToActionTitle;
-@property (nonatomic, copy, nullable) NSString *vastString;
-@property (nonatomic, assign) CGFloat starRating;
-@property (nonatomic, strong, nullable) UIImage *adChoicesIcon;
-@property (nonatomic, strong, nullable) AVOAdChoicesModel *adChoices;
+@property(nonatomic, strong, nullable) UIImage *image;
+@property(nonatomic, strong, nullable) UIImage *icon;
+@property(nonatomic, copy, nullable) NSString *imageURL;
+@property(nonatomic, copy, nullable) NSString *iconURL;
+@property(nonatomic, copy, nullable) NSString *text;
+@property(nonatomic, copy, nullable) NSString *title;
+@property(nonatomic, copy, nullable) NSString *sponsored;
+@property(nonatomic, copy, nullable) NSString *callToActionTitle;
+@property(nonatomic, copy, nullable) NSString *vastString;
+@property(nonatomic, assign) CGFloat starRating;
+@property(nonatomic, strong, nullable) UIImage *adChoicesIcon;
+@property(nonatomic, strong, nullable) AVOAdChoicesModel *adChoices;
 
 @end
 
@@ -84,5 +84,5 @@
  @param  viewController - view controller which is used to present ad content
  @return - self
  */
-- (instancetype _Nonnull)setViewControllerForAdPresentation:(nonnull UIViewController*)viewController;
+- (instancetype _Nonnull)setViewControllerForAdPresentation:(nonnull UIViewController *)viewController;
 @end

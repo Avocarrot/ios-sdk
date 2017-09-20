@@ -11,6 +11,8 @@
 @interface AVOInsights : NSObject
 
 + (instancetype)sharedInstance;
+
 + (BOOL)isEnabled;
+
 + (void)stopInsights;
 @end

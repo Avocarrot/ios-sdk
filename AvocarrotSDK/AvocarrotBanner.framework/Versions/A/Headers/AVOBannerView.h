@@ -15,11 +15,10 @@ typedef enum {
 } AVOBannerViewSize;
 
 
-
 @interface AVOBannerView : UIView
 
-@property (nonatomic, assign) CGSize adSize;
-@property (nonatomic, assign) BOOL autoUpdate;
+@property(nonatomic, assign) CGSize adSize;
+@property(nonatomic, assign) BOOL autoUpdate;
 
 /**
  *  Dismiss banner
@@ -37,7 +36,6 @@ typedef enum {
 - (void)resumeAutoUpdate;
 
 @end
-
 
 
 @interface AVOBannerView (EventRegistration)

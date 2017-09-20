@@ -45,30 +45,30 @@
 
 @interface AVOMRAIDView : UIView
 
-@property (nonatomic, weak) id <AVOMRAIDViewDelegate> delegate;
-@property (nonatomic, weak) id <AVOMRAIDServiceDelegate> serviceDelegate;
-@property (nonatomic, strong, setter = setRootViewController:) UIViewController *rootViewController;
-@property (nonatomic, assign, getter = isViewable, setter = setIsViewable:) BOOL isViewable;
+@property(nonatomic, weak) id <AVOMRAIDViewDelegate> delegate;
+@property(nonatomic, weak) id <AVOMRAIDServiceDelegate> serviceDelegate;
+@property(nonatomic, strong, setter = setRootViewController:) UIViewController *rootViewController;
+@property(nonatomic, assign, getter = isViewable, setter = setIsViewable:) BOOL isViewable;
 
-@property (nonatomic, strong, readonly) UIViewController *presentedViewController;
+@property(nonatomic, strong, readonly) UIViewController *presentedViewController;
 
 // IMPORTANT: This is the only valid initializer for an MRAIDView; -init and -initWithFrame: will throw exceptions
 - (id)initWithFrame:(CGRect)frame
-      withHtmlData:(NSString *)htmlData
-      withBaseURL:(NSURL *)bsURL
-      withAd:(AVOAd *)ad
-      delegate:(id <AVOMRAIDViewDelegate>)delegate
-      serviceDelegate:(id <AVOMRAIDServiceDelegate>)serviceDelegate
-      rootViewController:(UIViewController *)rootViewController;
+       withHtmlData:(NSString *)htmlData
+        withBaseURL:(NSURL *)bsURL
+             withAd:(AVOAd *)ad
+           delegate:(id <AVOMRAIDViewDelegate>)delegate
+    serviceDelegate:(id <AVOMRAIDServiceDelegate>)serviceDelegate
+ rootViewController:(UIViewController *)rootViewController;
 
 - (id)initWithFrame:(CGRect)frame
-      withHtmlData:(NSString *)htmlData
-      withBaseURL:(NSURL *)bsURL
-      withAd:(AVOAd *)ad
-      asInterstitial:(BOOL)isInter
-      delegate:(id <AVOMRAIDViewDelegate>)delegate
-      serviceDelegate:(id <AVOMRAIDServiceDelegate>)serviceDelegate
-      rootViewController:(UIViewController *)rootViewController;
+       withHtmlData:(NSString *)htmlData
+        withBaseURL:(NSURL *)bsURL
+             withAd:(AVOAd *)ad
+     asInterstitial:(BOOL)isInter
+           delegate:(id <AVOMRAIDViewDelegate>)delegate
+    serviceDelegate:(id <AVOMRAIDServiceDelegate>)serviceDelegate
+ rootViewController:(UIViewController *)rootViewController;
 
 - (void)cancel;
 

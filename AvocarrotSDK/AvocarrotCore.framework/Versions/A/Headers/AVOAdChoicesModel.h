@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface AVOAdChoicesModel : NSObject
-@property (nonatomic, strong, nullable) NSString *iconUrl;
-@property (nonatomic, strong, nullable) NSString *iconCaption;
-@property (nonatomic, strong, nullable) NSString *clickUrl;
+@property(nonatomic, strong, nullable) NSString *iconUrl;
+@property(nonatomic, strong, nullable) NSString *iconCaption;
+@property(nonatomic, strong, nullable) NSString *clickUrl;
 
-- (id _Nonnull) initWithDictionaryData:(NSDictionary  * _Nonnull)data;
+- (id _Nonnull)initWithDictionaryData:(NSDictionary *_Nonnull)data;
 
 @end

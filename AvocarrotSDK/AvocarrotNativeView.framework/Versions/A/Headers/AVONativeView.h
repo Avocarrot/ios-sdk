@@ -17,26 +17,26 @@
 
 @required
 
-@property (weak, nonatomic) IBOutlet UILabel * _Nullable avoMainTextLabel;
-@property (weak, nonatomic) IBOutlet UILabel * _Nullable  avoTitleTextLabel;
-@property (weak, nonatomic) IBOutlet UILabel * _Nullable  avoSubtitleTextLabel;
-@property (weak, nonatomic) IBOutlet UIImageView * _Nullable  avoIconImageView;
-@property (weak, nonatomic) IBOutlet AVOMediaContainerView * _Nullable  avoMainMediaView;
-@property (weak, nonatomic) IBOutlet UILabel * _Nullable  avoCallToActionTextLabel;
-@property (weak, nonatomic) IBOutlet UIView * _Nullable  avoPrivacyInfoContainerView;
-@property (weak, nonatomic) IBOutlet AVOStarRatingView * _Nullable  avoRatingStarView;
+@property(weak, nonatomic) IBOutlet UILabel *_Nullable avoMainTextLabel;
+@property(weak, nonatomic) IBOutlet UILabel *_Nullable avoTitleTextLabel;
+@property(weak, nonatomic) IBOutlet UILabel *_Nullable avoSubtitleTextLabel;
+@property(weak, nonatomic) IBOutlet UIImageView *_Nullable avoIconImageView;
+@property(weak, nonatomic) IBOutlet AVOMediaContainerView *_Nullable avoMainMediaView;
+@property(weak, nonatomic) IBOutlet UILabel *_Nullable avoCallToActionTextLabel;
+@property(weak, nonatomic) IBOutlet UIView *_Nullable avoPrivacyInfoContainerView;
+@property(weak, nonatomic) IBOutlet AVOStarRatingView *_Nullable avoRatingStarView;
 
 /**
  *  You should register your custom ad to interaction in order to track clicks and impressions
  *  @param viewController               - UIViewController where your ad is located
  */
-- (void)registerViewControllerForInteraction:(UIViewController * _Nonnull )viewController;
+- (void)registerViewControllerForInteraction:(UIViewController *_Nonnull)viewController;
 
 /**
  *  You should unregister your custom ad to disable tracking of clicks and impressions, pause video playing and etc
  *  @param viewController               - UIViewController where your ad is located
  */
-- (void)unRegisterViewControllerForInteraction:(UIViewController * _Nonnull )viewController;
+- (void)unRegisterViewControllerForInteraction:(UIViewController *_Nonnull)viewController;
 @end
 
 // SDK can propose to change the controls replacement if some ad data is absent
@@ -60,28 +60,28 @@
 
 @interface AVONativeView : UIView <AVONativeViewInterface, AVONativeViewManagementInterface>
 
-@property (weak, nonatomic) IBOutlet UILabel * _Nullable  avoMainTextLabel;
-@property (weak, nonatomic) IBOutlet UILabel * _Nullable  avoTitleTextLabel;
-@property (weak, nonatomic) IBOutlet UILabel * _Nullable  avoSubtitleTextLabel;
-@property (weak, nonatomic) IBOutlet UIImageView * _Nullable  avoIconImageView;
-@property (weak, nonatomic) IBOutlet AVOMediaContainerView * _Nullable  avoMainMediaView;;
-@property (weak, nonatomic) IBOutlet UILabel * _Nullable  avoCallToActionTextLabel;
-@property (weak, nonatomic) IBOutlet UIView * _Nullable  avoPrivacyInfoContainerView;
-@property (weak, nonatomic) IBOutlet AVOStarRatingView * _Nullable  avoRatingStarView;
+@property(weak, nonatomic) IBOutlet UILabel *_Nullable avoMainTextLabel;
+@property(weak, nonatomic) IBOutlet UILabel *_Nullable avoTitleTextLabel;
+@property(weak, nonatomic) IBOutlet UILabel *_Nullable avoSubtitleTextLabel;
+@property(weak, nonatomic) IBOutlet UIImageView *_Nullable avoIconImageView;
+@property(weak, nonatomic) IBOutlet AVOMediaContainerView *_Nullable avoMainMediaView;;
+@property(weak, nonatomic) IBOutlet UILabel *_Nullable avoCallToActionTextLabel;
+@property(weak, nonatomic) IBOutlet UIView *_Nullable avoPrivacyInfoContainerView;
+@property(weak, nonatomic) IBOutlet AVOStarRatingView *_Nullable avoRatingStarView;
 
-+ (NSString * _Nonnull )xibName;
++ (NSString *_Nonnull)xibName;
 
 @end
 
 @interface AVOMediaContainerView : UIView
 
-@property (assign, nonatomic) IBInspectable BOOL autoPlay;
+@property(assign, nonatomic) IBInspectable BOOL autoPlay;
 
 @end
 
 @interface AVOStarRatingView : UIView
 
-@property (assign, nonatomic) CGFloat ratingValue;
+@property(assign, nonatomic) CGFloat ratingValue;
 
 @end
 

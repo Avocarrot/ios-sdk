@@ -14,18 +14,18 @@
 
 @interface AVOCollectionViewStreamAdapter : AVOStreamAdapter
 
-@property (nonatomic, weak, nullable) id <AVOCollectionViewStreamAdapterDelegate> delegate;
+@property(nonatomic, weak, nullable) id <AVOCollectionViewStreamAdapterDelegate> delegate;
 
 /**
  * There is a bug in UICollectionView, it interchanges the minimumInteritemSpacing and minimumLineSpacing if items have different size. If all items in collection have the same size, do not interchange it by yourself, we will do it automatically for you. If you interchange spacings on your side, set this flag to NO and we won't interchange them
  */
-@property (nonatomic, assign) BOOL interchangeLayoutSpacings;
+@property(nonatomic, assign) BOOL interchangeLayoutSpacings;
 
 
 /**
  If flag is true, we shift collection view offset back to the original position after we insert ads, cause it's moved if there ads, that inserted before the current offset. Default value is true.
  */
-@property (nonatomic, assign) BOOL shiftOffsetBackOnAdInsert;
+@property(nonatomic, assign) BOOL shiftOffsetBackOnAdInsert;
 @end
 
 

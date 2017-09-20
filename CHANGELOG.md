@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+# [4.6.1]
+### Fixed
+- iOS 11 status bar crash
+
 # [4.6.0]
 ### Added
 - Added Native Assets support for: Facebook Audience SDK, Google Mobile Ads SDK, InLocoMedia Ads SDK, Applovin Ads SDK, Tencent Ads SDK
@@ -240,7 +244,7 @@ All notable changes to this project will be documented in this file.
 - Facebook Audience updated to 4.11.0
 - Chartboost updated to 6.4.4
 - Google Mobile Ads updated to 7.8.0
-- Mopub updated to 4.6.0
+- Mopub updated to 4.6.1
 
 ### Fixed
 - Server-side video loading

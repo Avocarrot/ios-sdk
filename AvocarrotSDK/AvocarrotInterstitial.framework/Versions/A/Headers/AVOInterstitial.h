@@ -10,7 +10,7 @@
 
 @interface AVOInterstitial : NSObject
 
-@property (nonatomic, readonly) BOOL ready;
+@property(nonatomic, readonly) BOOL ready;
 
 /**
  *  Show interstitial banner modally
