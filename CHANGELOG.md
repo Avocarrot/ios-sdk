@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+# [4.6.2]
+### Fixed
+- Native Assets, MoPub and Admob adapters for mediation
+
 # [4.6.1]
 ### Fixed
 - iOS 11 status bar crash
