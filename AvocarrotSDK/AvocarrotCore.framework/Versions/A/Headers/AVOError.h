@@ -22,7 +22,8 @@ typedef enum : NSUInteger {
     AVOErrorTooFrequentAttempts,
     AVOErrorInvalidAdUnitID,
     AVOErrorInvalidParameters,
-    AVOErrorTooManyRequests
+    AVOErrorTooManyRequests,
+    AVOErrorMraidError
 } AVOErrorCode;
 
 @interface AVOError : NSError
@@ -58,5 +59,7 @@ typedef enum : NSUInteger {
 + (nonnull instancetype)avo_invalidParameters;
 
 + (nonnull instancetype)avo_tooManyRequests;
+
++ (nonnull instancetype)avo_mraidErrorWithDescription:(nonnull NSString *)errorDescription;
 
 @end

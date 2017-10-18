@@ -15,6 +15,10 @@ class ServerTemplateTableViewStreamController: TableViewStreamController {
     fileprivate
     var adapter: AVOTableViewStreamAdapter?
     
+    fileprivate
+    // You should set value of ad cell height for server template. Just try different values.
+    var adCellHeight: Int = 320
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadAds()
@@ -26,6 +30,7 @@ class ServerTemplateTableViewStreamController: TableViewStreamController {
                                                           parentViewController: self,
                                                           adUnitId: adUnitId,
                                                           templateType: .server,
+                                                          delegate: self,
                                                           templateCustomization: {
                                                             templateCustomizationObject in
                                                             templateCustomizationObject.avoCTABorderWidth = 1
@@ -33,4 +38,13 @@ class ServerTemplateTableViewStreamController: TableViewStreamController {
         })
     }
 
+}
+
+extension ServerTemplateTableViewStreamController: AVOTableViewStreamAdapterDelegate {
+    // * Optional protocol
+    // If you create an AVOTableViewStreamAdapterDelegate instance on the base of predefined ad templates then support of an AVOTableViewStreamAdapterDelegate protocol is not required because each template has an optimal size. However if you conform this protocol, you can change these predefined values.
+    
+    func sizeForAd(at indexPath: IndexPath?) -> CGSize {
+        return CGSize(width: Int(self.tableView.frame.size.width), height: adCellHeight)
+    }
 }

@@ -9,9 +9,9 @@
 #ifndef Mraid_h
 #define Mraid_h
 
-#import "AVOMRAIDInterstitial.h"
-#import "AVOMRAIDView.h"
-#import "AVOMRAIDServiceDelegate.h"
 #import "CloseButton.h"
+#import "AVOMRAID.h"
+#import "AVOMRAIDProperties.h"
 
 #endif /* Mraid_h */
+//#import "weakify.h"

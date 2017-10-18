@@ -9,9 +9,10 @@
 #import "AVOStreamAdapter.h"
 
 @class AVOTemplateCustomizationObject;
+@protocol AVOTableViewStreamAdapterDelegate;
 
 @interface AVOTableViewStreamAdapter : AVOStreamAdapter
-
+@property (nonatomic, weak, nullable) id <AVOTableViewStreamAdapterDelegate> delegate;
 @end
 
 @interface AVOTableViewStreamAdapter (AVOTableViewEditMode)
@@ -29,6 +30,20 @@
  *  @param animation                - UITableView row animation enum
  */
 - (void)deleteRowsAtIndexPaths:(NSArray *_Nullable)indexPaths withRowAnimation:(UITableViewRowAnimation)animation;
+
+@end
+
+
+@protocol AVOTableViewStreamAdapterDelegate <NSObject>
+
+
+/**
+ *  Rendered native ad cell size at index path if it should be displayed
+ *  @param indexPath               - index path of cell where the ad has to be displayed
+ *
+ *  @return size of rendered ad cell at index path
+ */
+- (CGSize)sizeForAdAtIndexPath:(NSIndexPath *_Nullable)indexPath;
 
 @end
 

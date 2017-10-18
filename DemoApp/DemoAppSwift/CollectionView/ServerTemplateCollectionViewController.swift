@@ -14,6 +14,10 @@ class ServerTemplateCollectionViewController: BaseFlowLayoutCollectionViewContro
     fileprivate
     var adapter: AVOCollectionViewStreamAdapter?
     
+    // You should set value of ad cell height for server template. Just try different values.
+    fileprivate
+    var adCellHeight: Int = 320
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData(24)
@@ -36,7 +40,7 @@ extension ServerTemplateCollectionViewController: AVOCollectionViewStreamAdapter
     // Avocarrot SDK knows nothing about optimal size for server template, so you should return desired value.
     
     func sizeForAd(at indexPath: IndexPath?) -> CGSize {
-        return CGSize(width: Int(collectionView.frame.size.width - 2), height: 300)
+        return CGSize(width: Int(collectionView.frame.size.width - 2), height: adCellHeight)
     }
 }
 

@@ -8,22 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol AVOVASTMediaViewControllerDelegate, MPVASTMediaViewControllerInfoSource;
+@protocol AVOVASTMediaViewControllerDelegate, AVOVASTMediaViewControllerInfoSource;
 
 @interface AVOVASTMediaViewController : UIViewController
 
 @property(weak, nonatomic, readonly, nullable) id <AVOVASTMediaViewControllerDelegate> delegate;
-@property(weak, nonatomic, readonly, nullable) id <MPVASTMediaViewControllerInfoSource> infoSource;
+@property(weak, nonatomic, readonly, nullable) id <AVOVASTMediaViewControllerInfoSource> infoSource;
 
 + (_Nonnull instancetype)mediaViewControllerWithVASTStringXML:(NSString *_Nonnull)vastStringXML
                                                      delegate:(id <AVOVASTMediaViewControllerDelegate> _Nullable)delegate
-                                                   infoSource:(id <MPVASTMediaViewControllerInfoSource> _Nullable)infoSource;
+                                                   infoSource:(id <AVOVASTMediaViewControllerInfoSource> _Nullable)infoSource;
 
 
 + (_Nonnull instancetype)mediaViewControllerWithVideoURL:(NSURL *_Nonnull)videoURL
                                               htmlString:(NSString *_Nullable)htmlString
                                                 delegate:(id <AVOVASTMediaViewControllerDelegate> _Nullable)delegate
-                                              infoSource:(id <MPVASTMediaViewControllerInfoSource> _Nullable)infoSource;
+                                              infoSource:(id <AVOVASTMediaViewControllerInfoSource> _Nullable)infoSource;
 
 - (void)presentModalyFromViewController:(UIViewController *_Nonnull)viewController;
 
@@ -32,6 +32,7 @@
 @property(assign, nonatomic, readonly) BOOL isReady;
 
 @property(assign, nonatomic) BOOL shouldShowExitButton;                //default is NO
+@property(assign, nonatomic) BOOL supportsAutoRotate;                  //default is NO
 @property(assign, nonatomic) BOOL shouldShowTimeline;                  //default is YES
 @property(assign, nonatomic) BOOL shouldPauseVideoWhenResignActive;    //default is NO
 
@@ -71,7 +72,7 @@
 @end
 
 
-@protocol MPVASTMediaViewControllerInfoSource <NSObject>
+@protocol AVOVASTMediaViewControllerInfoSource <NSObject>
 
 @optional
 

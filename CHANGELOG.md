@@ -1,6 +1,18 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+# [4.7.0]
+### Added
+- Delegate for UITableView StreamAdapter
+
+### Changed
+- Support of MRAID 3.0
+- UIWebView has been replaced with WKWebView in MRAID and VAST modules
+- Analytics for better ad targeting splitted on 2 modules: base and advanced
+
+### Fixed
+- Locale data processing crash
+
 # [4.6.2]
 ### Fixed
 - Native Assets, MoPub and Admob adapters for mediation

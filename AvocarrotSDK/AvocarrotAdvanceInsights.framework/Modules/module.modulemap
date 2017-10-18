@@ -1,0 +1,8 @@
+framework module AvocarrotAdvanceInsights {
+  umbrella header "AVOAdvanceInsights.h"
+  
+  export *
+  module * { export * }
+
+
+}

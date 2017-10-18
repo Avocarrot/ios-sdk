@@ -15,25 +15,40 @@
 /**
  Add native ads provider for UITableView or UICollectionView as more flexible approach instead
      of the completed stream adapter classes (AVOTableViewStreamAdapter or AVOCollectionViewStreamAdapter)
+ @param adUnitId                - your ad unit id
+ @param templateType            - type of native ads representation template
+ @param userData                - user special settings (now for Admob NativeExpress support only)
+ @param templateCustomization   - (optional) customization for ads representation template
  
- @param adUnitId - your ad unit id
- @param templateType - type of native ads representation template
- @param templateCustomization - (optional) customization for ads representation template
  @return AVONativeAdsProvider object which preloads native ads and provided rendered ad views. Generaly it works as ring data structure.
  */
 - (AVONativeAdsProvider *_Nonnull)createNativeAdsProviderForAdunit:(NSString *_Nonnull)adUnitId
                                                       templateType:(AVONativeAdsTemplateType)templateType
+                                                          userData:(NSDictionary <NSString *, id> * _Nullable)userData
                                              templateCustomization:(void (^ _Nullable)(AVOTemplateCustomizationObject *_Nonnull templateCustomizationObject))templateCustomization;
 
 /**
  Add native ads provider for UITableView or UICollectionView as more flexible approach instead
- of the completed stream adapter classes (AVOTableViewStreamAdapter or AVOCollectionViewStreamAdapter)
+ of the completed stream adapter classes (AVOTableViewStreamAdapter or AVOCollectionViewStreamAdapter) 
+ @param adUnitId                - your ad unit id
+ @param adViewClass             - UIView subclass with your own native ad representation
+ @param userData                - user special settings (now for Admob NativeExpress support only)
  
- @param adUnitId - your ad unit id
- @param adViewClass - UIView subclass with your own native ad representation
  @return AVONativeAdsProvider object which preloads native ads and provided rendered ad views. Generaly it works as ring data structure.
  */
 - (AVONativeAdsProvider *_Nonnull)createNativeAdsProviderForAdunit:(NSString *_Nonnull)adUnitId
-                                           adViewClassForRendering:(Class _Nonnull)adViewClass;
+                                           adViewClassForRendering:(Class _Nonnull)adViewClass
+                                                          userData:(NSDictionary <NSString *, id> * _Nullable)userData;
+
+
+
+#pragma mark - Deprecated methods will be supported until major release
+
+- (AVONativeAdsProvider *_Nonnull)createNativeAdsProviderForAdunit:(NSString *_Nonnull)adUnitId
+                                                      templateType:(AVONativeAdsTemplateType)templateType
+                                             templateCustomization:(void (^ _Nullable)(AVOTemplateCustomizationObject *_Nonnull templateCustomizationObject))templateCustomization __deprecated_msg("Use extended \'createNativeAdsProviderForAdunit:..\' method with \'userData\' parameter.");
+
+- (AVONativeAdsProvider *_Nonnull)createNativeAdsProviderForAdunit:(NSString *_Nonnull)adUnitId
+                                           adViewClassForRendering:(Class _Nonnull)adViewClass __deprecated_msg("Use extended \'createNativeAdsProviderForAdunit:..\' method with \'userData\' parameter.");
 
 @end

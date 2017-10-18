@@ -25,6 +25,13 @@ class CustomTemplateTableViewController: TableViewStreamController {
         adapter = AvocarrotSDK.shared.createStreamAdapter(for: tableView,
                 parentViewController: self,
                 adUnitId: adUnitId,
+                delegate: self,
                 adViewClassForRendering: NativeBannerView.self)
+    }
+}
+
+extension CustomTemplateTableViewController: AVOTableViewStreamAdapterDelegate {
+    func sizeForAd(at indexPath: IndexPath?) -> CGSize {
+        return CGSize(width: self.tableView.frame.size.width, height: NativeBannerView.desiredHeight())
     }
 }

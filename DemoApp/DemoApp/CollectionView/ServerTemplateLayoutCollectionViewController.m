@@ -8,14 +8,17 @@
 
 #import "ServerTemplateLayoutCollectionViewController.h"
 
-@interface ServerTemplateLayoutCollectionViewController () <AVOCollectionViewStreamAdapterDelegate>
-@property(strong, nonatomic) AVOCollectionViewStreamAdapter *adapter;
+@interface ServerTemplateLayoutCollectionViewController() <AVOCollectionViewStreamAdapterDelegate>
+@property (strong, nonatomic) AVOCollectionViewStreamAdapter *adapter;
+@property (assign) NSUInteger adCellHeight;
 @end
 
 @implementation ServerTemplateLayoutCollectionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // You should set value of ad cell height for server template. Just try different values.
+    self.adCellHeight = 320;
     [self loadAds];
 }
 
@@ -34,7 +37,7 @@
 
 // Avocarrot SDK knows nothing about optimal size for server template, so you should return desired value.
 - (CGSize)sizeForAdAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(self.collectionView.frame.size.width - 2, 300);
+    return CGSizeMake(self.collectionView.frame.size.width - 2, self.adCellHeight);
 }
 
 @end

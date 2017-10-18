@@ -2,7 +2,7 @@
 //  AVONativeAdsProvider.h
 //  AvocarrotSDK
 //
-//  Created by Glispa GmbH on 06.07.17.
+//  Created by Siarhei Barmotska on 06.07.17.
 //  Copyright © 2017 Glispa GmbH. All rights reserved.
 //
 
@@ -12,7 +12,8 @@
 
 @interface AVONativeAdsProvider : NSObject
 
-@property(nonatomic, copy, readonly) NSString *_Nullable adUnitId;
+@property (nonatomic, copy, readonly) NSString * _Nullable adUnitId;
+@property (copy, nonatomic, readonly) NSDictionary <NSString *, id> * _Nullable userData;
 
 /**
  Create immutable provider of native ads. Don't call this method directly. Use specialized class methods from AvocarrotSDK+AVONativeAdsProvider.h
@@ -20,7 +21,7 @@
  @param adUnitId - your ad unit id
  @return AVONativeAdsProvider object
  */
-+ (instancetype _Nullable)nativeAdsProviderForAdunit:(NSString *_Nonnull)adUnitId;
++ (instancetype _Nullable)nativeAdsProviderForAdunit:(NSString *_Nonnull)adUnitId userData:(NSDictionary <NSString *, id> * _Nullable)userData;
 
 
 /**
@@ -42,7 +43,12 @@
  
  @return View instance which contains rendered native ad
  */
-- (AVONativeView *_Nullable)getNextAdView;
+- (AVONativeView* _Nullable)getNextAdView;
+
+
+#pragma mark - Deprecated methods will be supported until major release
+
++ (instancetype _Nullable)nativeAdsProviderForAdunit:(NSString *_Nonnull)adUnitId __deprecated_msg("Use extended  \'nativeAdsProviderForAdunit:..\' method with \'userData\' parameter.");;
 
 @end
 

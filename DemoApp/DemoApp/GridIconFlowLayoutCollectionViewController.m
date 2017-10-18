@@ -8,8 +8,8 @@
 
 #import "GridIconFlowLayoutCollectionViewController.h"
 
-@interface GridIconFlowLayoutCollectionViewController ()<AVOCollectionViewStreamAdapterDelegate>
-@property(strong, nonatomic) AVOCollectionViewStreamAdapter *adapter;
+@interface GridIconFlowLayoutCollectionViewController() <AVOCollectionViewStreamAdapterDelegate>
+@property (strong, nonatomic) AVOCollectionViewStreamAdapter *adapter;
 @end
 
 @implementation GridIconFlowLayoutCollectionViewController

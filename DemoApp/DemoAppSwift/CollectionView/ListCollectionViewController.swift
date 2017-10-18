@@ -13,6 +13,9 @@ import AvocarrotNativeView
 class ListCollectionViewController: BaseFlowLayoutCollectionViewController {
     fileprivate
     var adapter: AVOCollectionViewStreamAdapter?
+    
+    fileprivate
+    var adCellHeight: Int = 105
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,12 +24,17 @@ class ListCollectionViewController: BaseFlowLayoutCollectionViewController {
     }
 
     func loadAds() {
-
+        var sizeDelegate: AVOCollectionViewStreamAdapterDelegate?
+        
+        if adCellHeight > 0 {
+            sizeDelegate = self
+        }
+        
         adapter = AvocarrotSDK.shared.createStreamAdapter(for: collectionView,
                 parentViewController: self,
                 adUnitId: adUnitId,
                 templateType: .list,
-                delegate: self,
+                delegate: sizeDelegate,
                 templateCustomization: nil)
         adapter?.shiftOffsetBackOnAdInsert = false
     }
@@ -37,6 +45,6 @@ extension ListCollectionViewController: AVOCollectionViewStreamAdapterDelegate {
     // If you create an AVOCollectionViewStreamAdapter instance on the base of predefined ad templates then support of anAVOCollectionViewStreamAdapterDelegate protocol is not required because each template has an optimal size. However if you conform this protocol, you can change these predefined values.
     
     func sizeForAd(at indexPath: IndexPath?) -> CGSize {
-        return CGSize(width: Int(collectionView.frame.size.width - 2), height: 105)
+        return CGSize(width: Int(collectionView.frame.size.width - 2), height: adCellHeight)
     }
 }

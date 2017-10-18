@@ -9,10 +9,4 @@
 #import <Foundation/Foundation.h>
 
 @interface AVOInsights : NSObject
-
-+ (instancetype)sharedInstance;
-
-+ (BOOL)isEnabled;
-
-+ (void)stopInsights;
 @end

@@ -108,6 +108,7 @@
 - (void)loadAds {
     self.adsProvider = [AvocarrotSDK.sharedSDK createNativeAdsProviderForAdunit:self.adUnitId
                                                                    templateType:AVONativeAdsTemplateTypeList
+                                                                       userData:nil
                                                           templateCustomization:^(AVOTemplateCustomizationObject *templateCustomizationObject){
                                                                 templateCustomizationObject.avoCTABorderWidth = 1;
                                                                 templateCustomizationObject.avoCTACornerRadius = 5;

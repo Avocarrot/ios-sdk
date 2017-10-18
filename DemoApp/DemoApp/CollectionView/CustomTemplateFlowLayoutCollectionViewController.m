@@ -9,8 +9,8 @@
 #import "CustomTemplateFlowLayoutCollectionViewController.h"
 #import "NativeBannerView.h"
 
-@interface CustomTemplateFlowLayoutCollectionViewController () <AVOCollectionViewStreamAdapterDelegate>
-@property(strong, nonatomic) AVOCollectionViewStreamAdapter *adapter;
+@interface CustomTemplateFlowLayoutCollectionViewController() <AVOCollectionViewStreamAdapterDelegate>
+@property (strong, nonatomic) AVOCollectionViewStreamAdapter *adapter;
 @end
 
 
