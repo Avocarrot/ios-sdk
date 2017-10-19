@@ -52,7 +52,6 @@ From version 4.5 Avocarrot SDK uses modular system to distribute based on subspe
 
 - `pod 'avocarrot-ios-sdk/NativeAssetsAdapters/FBAudienceAdapter'` - Avocarrot native assets and adapter for  [Facebook Audience](https://developers.facebook.com/docs/ios) native assets
 - `pod 'avocarrot-ios-sdk/NativeAssetsAdapters/GoogleMobileAdsAdapter'` - Avocarrot native assets and adapter for  [Google Mobile Ads SDK](https://developers.google.com/admob/ios/download) native assets
-- `pod 'avocarrot-ios-sdk/NativeAssetsAdapters/MopubAdapter'` - Avocarrot native assets and adapter for  [MoPub](https://github.com/mopub/mopub-ios-sdk) native assets
 - `pod 'avocarrot-ios-sdk/NativeAssetsAdapters/AppLovinAdapter'` - Avocarrot native assets and adapter for  [AppLovin](https://www.applovin.com/) native assets
 - `pod 'avocarrot-ios-sdk/NativeAssetsAdapters/InLocoAdapter'` - Avocarrot native assets and adapter for  [InLoco](http://docs.inlocomedia.com/docs/ios) native assets
 
