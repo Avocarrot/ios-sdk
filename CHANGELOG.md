@@ -1,6 +1,13 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+# [4.7.1]
+### Added
+- Notifications in logs to update SDK to new version
+
+### Fixed
+- HTML banners autoupdate logic
+
 # [4.7.0]
 ### Added
 - Delegate for UITableView StreamAdapter

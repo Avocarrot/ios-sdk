@@ -4,13 +4,13 @@ use_frameworks!
 
 workspace 'DemoApp'
 target 'DemoApp' do
-  pod 'avocarrot-ios-sdk/Full', '~> 4.7.0'
+  pod 'avocarrot-ios-sdk/Full', '~> 4.7.1'
   pod 'SDWebImage'
   pod 'DZNSegmentedControl'
 end
 
 target 'DemoAppSwift' do
-  pod 'avocarrot-ios-sdk/Full', '~> 4.7.0'
+  pod 'avocarrot-ios-sdk/Full', '~> 4.7.1'
   pod 'SDWebImage'
   pod 'DZNSegmentedControl'
 end
