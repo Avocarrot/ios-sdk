@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+# [4.7.2]
+### Fixed
+- SDK performance optimization
+- Cocoapods podspec dependencies
+
 # [4.7.1]
 ### Added
 - Notifications in logs to update SDK to new version

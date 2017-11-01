@@ -1,156 +1,154 @@
 PODS:
   - AdColony (3.2.1)
-  - avocarrot-ios-dev/Banner (4.7.1-171030.125217):
-    - avocarrot-ios-dev/CoreNoInsights
+  - avocarrot-ios-dev/Banner (4.7.2-171101.155050):
+    - avocarrot-ios-dev/Core
     - avocarrot-ios-dev/Mraid
-  - avocarrot-ios-dev/BannerAdapters (4.7.1-171030.125217):
-    - avocarrot-ios-dev/BannerAdapters/FBAudienceAdapter (= 4.7.1-171030.125217)
-    - avocarrot-ios-dev/BannerAdapters/GoogleMobileAdsAdapter (= 4.7.1-171030.125217)
-    - avocarrot-ios-dev/BannerAdapters/InLocoAdapter (= 4.7.1-171030.125217)
-    - avocarrot-ios-dev/BannerAdapters/MopubAdapter (= 4.7.1-171030.125217)
-  - avocarrot-ios-dev/BannerAdapters/FBAudienceAdapter (4.7.1-171030.125217):
+  - avocarrot-ios-dev/BannerAdapters (4.7.2-171101.155050):
+    - avocarrot-ios-dev/BannerAdapters/FBAudienceAdapter (= 4.7.2-171101.155050)
+    - avocarrot-ios-dev/BannerAdapters/GoogleMobileAdsAdapter (= 4.7.2-171101.155050)
+    - avocarrot-ios-dev/BannerAdapters/InLocoAdapter (= 4.7.2-171101.155050)
+    - avocarrot-ios-dev/BannerAdapters/MopubAdapter (= 4.7.2-171101.155050)
+  - avocarrot-ios-dev/BannerAdapters/FBAudienceAdapter (4.7.2-171101.155050):
     - avocarrot-ios-dev/Banner
     - avocarrot-ios-dev/CoreAdapters/FBAudienceAdapter
     - FBAudienceNetwork (~> 4.24)
-  - avocarrot-ios-dev/BannerAdapters/GoogleMobileAdsAdapter (4.7.1-171030.125217):
+  - avocarrot-ios-dev/BannerAdapters/GoogleMobileAdsAdapter (4.7.2-171101.155050):
     - avocarrot-ios-dev/Banner
     - avocarrot-ios-dev/CoreAdapters/GoogleMobileAdsAdapter
     - Google-Mobile-Ads-SDK (~> 7.21)
-  - avocarrot-ios-dev/BannerAdapters/InLocoAdapter (4.7.1-171030.125217):
+  - avocarrot-ios-dev/BannerAdapters/InLocoAdapter (4.7.2-171101.155050):
     - avocarrot-ios-dev/Banner
     - avocarrot-ios-dev/CoreAdapters/InLocoAdapter
     - InLocoMedia-Ads-SDK (~> 2.4)
-  - avocarrot-ios-dev/BannerAdapters/MopubAdapter (4.7.1-171030.125217):
+  - avocarrot-ios-dev/BannerAdapters/MopubAdapter (4.7.2-171101.155050):
     - avocarrot-ios-dev/Banner
     - avocarrot-ios-dev/CoreAdapters/MopubAdapter
     - mopub-ios-sdk/Core (~> 4.13)
-  - avocarrot-ios-dev/Core (4.7.1-171030.125217):
-    - avocarrot-ios-dev/CoreNoInsights
-  - avocarrot-ios-dev/CoreAdapters/AppLovinAdapter (4.7.1-171030.125217):
-    - avocarrot-ios-dev/CoreNoInsights
-  - avocarrot-ios-dev/CoreAdapters/ChartboostAdapter (4.7.1-171030.125217):
-    - avocarrot-ios-dev/CoreNoInsights
+  - avocarrot-ios-dev/Core (4.7.2-171101.155050)
+  - avocarrot-ios-dev/CoreAdapters/AppLovinAdapter (4.7.2-171101.155050):
+    - avocarrot-ios-dev/Core
+  - avocarrot-ios-dev/CoreAdapters/ChartboostAdapter (4.7.2-171101.155050):
+    - avocarrot-ios-dev/Core
     - ChartboostSDK (~> 6.6)
-  - avocarrot-ios-dev/CoreAdapters/FBAudienceAdapter (4.7.1-171030.125217):
-    - avocarrot-ios-dev/CoreNoInsights
+  - avocarrot-ios-dev/CoreAdapters/FBAudienceAdapter (4.7.2-171101.155050):
+    - avocarrot-ios-dev/Core
     - FBAudienceNetwork (~> 4.24)
-  - avocarrot-ios-dev/CoreAdapters/GoogleMobileAdsAdapter (4.7.1-171030.125217):
-    - avocarrot-ios-dev/CoreNoInsights
+  - avocarrot-ios-dev/CoreAdapters/GoogleMobileAdsAdapter (4.7.2-171101.155050):
+    - avocarrot-ios-dev/Core
     - Google-Mobile-Ads-SDK (~> 7.21)
-  - avocarrot-ios-dev/CoreAdapters/InLocoAdapter (4.7.1-171030.125217):
-    - avocarrot-ios-dev/CoreNoInsights
+  - avocarrot-ios-dev/CoreAdapters/InLocoAdapter (4.7.2-171101.155050):
+    - avocarrot-ios-dev/Core
     - InLocoMedia-Ads-SDK (~> 2.4)
-  - avocarrot-ios-dev/CoreAdapters/MopubAdapter (4.7.1-171030.125217):
-    - avocarrot-ios-dev/CoreNoInsights
+  - avocarrot-ios-dev/CoreAdapters/MopubAdapter (4.7.2-171101.155050):
+    - avocarrot-ios-dev/Core
     - mopub-ios-sdk/Core (~> 4.13)
-  - avocarrot-ios-dev/CoreAdapters/NativeXAdapter (4.7.1-171030.125217):
-    - avocarrot-ios-dev/CoreNoInsights
+  - avocarrot-ios-dev/CoreAdapters/NativeXAdapter (4.7.2-171101.155050):
+    - avocarrot-ios-dev/Core
     - NativeX-iOS-SDK (~> 5.5)
-  - avocarrot-ios-dev/CoreNoInsights (4.7.1-171030.125217)
-  - avocarrot-ios-dev/Full (4.7.1-171030.125217):
+  - avocarrot-ios-dev/Full (4.7.2-171101.155050):
     - avocarrot-ios-dev/BannerAdapters
     - avocarrot-ios-dev/Core
     - avocarrot-ios-dev/InterstitialAdapters
     - avocarrot-ios-dev/NativeAssets
     - avocarrot-ios-dev/NativeViewAdapters
     - avocarrot-ios-dev/VideoAdapters
-  - avocarrot-ios-dev/Interstitial (4.7.1-171030.125217):
-    - avocarrot-ios-dev/CoreNoInsights
+  - avocarrot-ios-dev/Interstitial (4.7.2-171101.155050):
+    - avocarrot-ios-dev/Core
     - avocarrot-ios-dev/Mraid
-  - avocarrot-ios-dev/InterstitialAdapters (4.7.1-171030.125217):
-    - avocarrot-ios-dev/InterstitialAdapters/AppLovinAdapter (= 4.7.1-171030.125217)
-    - avocarrot-ios-dev/InterstitialAdapters/ChartboostAdapter (= 4.7.1-171030.125217)
-    - avocarrot-ios-dev/InterstitialAdapters/FBAudienceAdapter (= 4.7.1-171030.125217)
-    - avocarrot-ios-dev/InterstitialAdapters/GoogleMobileAdsAdapter (= 4.7.1-171030.125217)
-    - avocarrot-ios-dev/InterstitialAdapters/InLocoAdapter (= 4.7.1-171030.125217)
-    - avocarrot-ios-dev/InterstitialAdapters/MopubAdapter (= 4.7.1-171030.125217)
-    - avocarrot-ios-dev/InterstitialAdapters/NativeXAdapter (= 4.7.1-171030.125217)
-  - avocarrot-ios-dev/InterstitialAdapters/AppLovinAdapter (4.7.1-171030.125217):
+  - avocarrot-ios-dev/InterstitialAdapters (4.7.2-171101.155050):
+    - avocarrot-ios-dev/InterstitialAdapters/AppLovinAdapter (= 4.7.2-171101.155050)
+    - avocarrot-ios-dev/InterstitialAdapters/ChartboostAdapter (= 4.7.2-171101.155050)
+    - avocarrot-ios-dev/InterstitialAdapters/FBAudienceAdapter (= 4.7.2-171101.155050)
+    - avocarrot-ios-dev/InterstitialAdapters/GoogleMobileAdsAdapter (= 4.7.2-171101.155050)
+    - avocarrot-ios-dev/InterstitialAdapters/InLocoAdapter (= 4.7.2-171101.155050)
+    - avocarrot-ios-dev/InterstitialAdapters/MopubAdapter (= 4.7.2-171101.155050)
+    - avocarrot-ios-dev/InterstitialAdapters/NativeXAdapter (= 4.7.2-171101.155050)
+  - avocarrot-ios-dev/InterstitialAdapters/AppLovinAdapter (4.7.2-171101.155050):
     - avocarrot-ios-dev/CoreAdapters/AppLovinAdapter
     - avocarrot-ios-dev/Interstitial
-  - avocarrot-ios-dev/InterstitialAdapters/ChartboostAdapter (4.7.1-171030.125217):
+  - avocarrot-ios-dev/InterstitialAdapters/ChartboostAdapter (4.7.2-171101.155050):
     - avocarrot-ios-dev/CoreAdapters/ChartboostAdapter
     - avocarrot-ios-dev/Interstitial
     - ChartboostSDK (~> 6.6)
-  - avocarrot-ios-dev/InterstitialAdapters/FBAudienceAdapter (4.7.1-171030.125217):
+  - avocarrot-ios-dev/InterstitialAdapters/FBAudienceAdapter (4.7.2-171101.155050):
     - avocarrot-ios-dev/CoreAdapters/FBAudienceAdapter
     - avocarrot-ios-dev/Interstitial
     - FBAudienceNetwork (~> 4.24)
-  - avocarrot-ios-dev/InterstitialAdapters/GoogleMobileAdsAdapter (4.7.1-171030.125217):
+  - avocarrot-ios-dev/InterstitialAdapters/GoogleMobileAdsAdapter (4.7.2-171101.155050):
     - avocarrot-ios-dev/CoreAdapters/GoogleMobileAdsAdapter
     - avocarrot-ios-dev/Interstitial
     - Google-Mobile-Ads-SDK (~> 7.21)
-  - avocarrot-ios-dev/InterstitialAdapters/InLocoAdapter (4.7.1-171030.125217):
+  - avocarrot-ios-dev/InterstitialAdapters/InLocoAdapter (4.7.2-171101.155050):
     - avocarrot-ios-dev/CoreAdapters/InLocoAdapter
     - avocarrot-ios-dev/Interstitial
     - InLocoMedia-Ads-SDK (~> 2.4)
-  - avocarrot-ios-dev/InterstitialAdapters/MopubAdapter (4.7.1-171030.125217):
+  - avocarrot-ios-dev/InterstitialAdapters/MopubAdapter (4.7.2-171101.155050):
     - avocarrot-ios-dev/CoreAdapters/MopubAdapter
     - avocarrot-ios-dev/Interstitial
     - mopub-ios-sdk/Core (~> 4.13)
-  - avocarrot-ios-dev/InterstitialAdapters/NativeXAdapter (4.7.1-171030.125217):
+  - avocarrot-ios-dev/InterstitialAdapters/NativeXAdapter (4.7.2-171101.155050):
     - avocarrot-ios-dev/CoreAdapters/NativeXAdapter
     - avocarrot-ios-dev/Interstitial
     - NativeX-iOS-SDK (~> 5.5)
-  - avocarrot-ios-dev/Mraid (4.7.1-171030.125217):
-    - avocarrot-ios-dev/CoreNoInsights
-  - avocarrot-ios-dev/NativeAssets (4.7.1-171030.125217):
-    - avocarrot-ios-dev/CoreNoInsights
-  - avocarrot-ios-dev/NativeView (4.7.1-171030.125217):
-    - avocarrot-ios-dev/CoreNoInsights
+  - avocarrot-ios-dev/Mraid (4.7.2-171101.155050):
+    - avocarrot-ios-dev/Core
+  - avocarrot-ios-dev/NativeAssets (4.7.2-171101.155050):
+    - avocarrot-ios-dev/Core
+  - avocarrot-ios-dev/NativeView (4.7.2-171101.155050):
+    - avocarrot-ios-dev/Core
     - avocarrot-ios-dev/NativeAssets
     - avocarrot-ios-dev/Vast
-  - avocarrot-ios-dev/NativeViewAdapters (4.7.1-171030.125217):
-    - avocarrot-ios-dev/NativeViewAdapters/AppLovinAdapter (= 4.7.1-171030.125217)
-    - avocarrot-ios-dev/NativeViewAdapters/FBAudienceAdapter (= 4.7.1-171030.125217)
-    - avocarrot-ios-dev/NativeViewAdapters/GoogleMobileAdsAdapter (= 4.7.1-171030.125217)
-    - avocarrot-ios-dev/NativeViewAdapters/InLocoAdapter (= 4.7.1-171030.125217)
-    - avocarrot-ios-dev/NativeViewAdapters/MopubAdapter (= 4.7.1-171030.125217)
-  - avocarrot-ios-dev/NativeViewAdapters/AppLovinAdapter (4.7.1-171030.125217):
+  - avocarrot-ios-dev/NativeViewAdapters (4.7.2-171101.155050):
+    - avocarrot-ios-dev/NativeViewAdapters/AppLovinAdapter (= 4.7.2-171101.155050)
+    - avocarrot-ios-dev/NativeViewAdapters/FBAudienceAdapter (= 4.7.2-171101.155050)
+    - avocarrot-ios-dev/NativeViewAdapters/GoogleMobileAdsAdapter (= 4.7.2-171101.155050)
+    - avocarrot-ios-dev/NativeViewAdapters/InLocoAdapter (= 4.7.2-171101.155050)
+    - avocarrot-ios-dev/NativeViewAdapters/MopubAdapter (= 4.7.2-171101.155050)
+  - avocarrot-ios-dev/NativeViewAdapters/AppLovinAdapter (4.7.2-171101.155050):
     - avocarrot-ios-dev/CoreAdapters/AppLovinAdapter
     - avocarrot-ios-dev/NativeView
-  - avocarrot-ios-dev/NativeViewAdapters/FBAudienceAdapter (4.7.1-171030.125217):
+  - avocarrot-ios-dev/NativeViewAdapters/FBAudienceAdapter (4.7.2-171101.155050):
     - avocarrot-ios-dev/CoreAdapters/FBAudienceAdapter
     - avocarrot-ios-dev/NativeView
     - FBAudienceNetwork (~> 4.24)
-  - avocarrot-ios-dev/NativeViewAdapters/GoogleMobileAdsAdapter (4.7.1-171030.125217):
+  - avocarrot-ios-dev/NativeViewAdapters/GoogleMobileAdsAdapter (4.7.2-171101.155050):
     - avocarrot-ios-dev/CoreAdapters/GoogleMobileAdsAdapter
     - avocarrot-ios-dev/NativeView
     - Google-Mobile-Ads-SDK (~> 7.21)
-  - avocarrot-ios-dev/NativeViewAdapters/InLocoAdapter (4.7.1-171030.125217):
+  - avocarrot-ios-dev/NativeViewAdapters/InLocoAdapter (4.7.2-171101.155050):
     - avocarrot-ios-dev/CoreAdapters/InLocoAdapter
     - avocarrot-ios-dev/NativeView
     - InLocoMedia-Ads-SDK (~> 2.4)
-  - avocarrot-ios-dev/NativeViewAdapters/MopubAdapter (4.7.1-171030.125217):
+  - avocarrot-ios-dev/NativeViewAdapters/MopubAdapter (4.7.2-171101.155050):
     - avocarrot-ios-dev/CoreAdapters/MopubAdapter
     - avocarrot-ios-dev/NativeView
     - mopub-ios-sdk/Core (~> 4.13)
-  - avocarrot-ios-dev/Vast (4.7.1-171030.125217):
-    - avocarrot-ios-dev/CoreNoInsights
-  - avocarrot-ios-dev/Video (4.7.1-171030.125217):
-    - avocarrot-ios-dev/CoreNoInsights
+  - avocarrot-ios-dev/Vast (4.7.2-171101.155050):
+    - avocarrot-ios-dev/Core
+  - avocarrot-ios-dev/Video (4.7.2-171101.155050):
+    - avocarrot-ios-dev/Core
     - avocarrot-ios-dev/Vast
-  - avocarrot-ios-dev/VideoAdapters (4.7.1-171030.125217):
-    - avocarrot-ios-dev/VideoAdapters/AdColonyAdapter (= 4.7.1-171030.125217)
-    - avocarrot-ios-dev/VideoAdapters/ChartboostAdapter (= 4.7.1-171030.125217)
-    - avocarrot-ios-dev/VideoAdapters/NativeXAdapter (= 4.7.1-171030.125217)
-    - avocarrot-ios-dev/VideoAdapters/UnityAdsAdapter (= 4.7.1-171030.125217)
-    - avocarrot-ios-dev/VideoAdapters/VungleAdapter (= 4.7.1-171030.125217)
-  - avocarrot-ios-dev/VideoAdapters/AdColonyAdapter (4.7.1-171030.125217):
+  - avocarrot-ios-dev/VideoAdapters (4.7.2-171101.155050):
+    - avocarrot-ios-dev/VideoAdapters/AdColonyAdapter (= 4.7.2-171101.155050)
+    - avocarrot-ios-dev/VideoAdapters/ChartboostAdapter (= 4.7.2-171101.155050)
+    - avocarrot-ios-dev/VideoAdapters/NativeXAdapter (= 4.7.2-171101.155050)
+    - avocarrot-ios-dev/VideoAdapters/UnityAdsAdapter (= 4.7.2-171101.155050)
+    - avocarrot-ios-dev/VideoAdapters/VungleAdapter (= 4.7.2-171101.155050)
+  - avocarrot-ios-dev/VideoAdapters/AdColonyAdapter (4.7.2-171101.155050):
     - AdColony (~> 3.1)
     - avocarrot-ios-dev/Video
-  - avocarrot-ios-dev/VideoAdapters/ChartboostAdapter (4.7.1-171030.125217):
+  - avocarrot-ios-dev/VideoAdapters/ChartboostAdapter (4.7.2-171101.155050):
     - avocarrot-ios-dev/CoreAdapters/ChartboostAdapter
     - avocarrot-ios-dev/Video
     - ChartboostSDK (~> 6.6)
-  - avocarrot-ios-dev/VideoAdapters/NativeXAdapter (4.7.1-171030.125217):
+  - avocarrot-ios-dev/VideoAdapters/NativeXAdapter (4.7.2-171101.155050):
     - avocarrot-ios-dev/CoreAdapters/NativeXAdapter
     - avocarrot-ios-dev/Video
     - NativeX-iOS-SDK (~> 5.5)
-  - avocarrot-ios-dev/VideoAdapters/UnityAdsAdapter (4.7.1-171030.125217):
+  - avocarrot-ios-dev/VideoAdapters/UnityAdsAdapter (4.7.2-171101.155050):
     - avocarrot-ios-dev/Video
     - UnityAds (~> 2.1)
-  - avocarrot-ios-dev/VideoAdapters/VungleAdapter (4.7.1-171030.125217):
+  - avocarrot-ios-dev/VideoAdapters/VungleAdapter (4.7.2-171101.155050):
     - avocarrot-ios-dev/Video
     - VungleSDK-iOS (~> 3.2)
   - ChartboostSDK (6.6.3)
@@ -162,20 +160,20 @@ PODS:
   - KVOController (1.2.0)
   - mopub-ios-sdk/Core (4.17.0)
   - NativeX-iOS-SDK (5.5.9)
-  - SDWebImage (4.1.2):
-    - SDWebImage/Core (= 4.1.2)
-  - SDWebImage/Core (4.1.2)
+  - SDWebImage (4.2.1):
+    - SDWebImage/Core (= 4.2.1)
+  - SDWebImage/Core (4.2.1)
   - UnityAds (2.1.1)
   - VungleSDK-iOS (3.2.2)
 
 DEPENDENCIES:
-  - avocarrot-ios-dev/Full (~> 4.7.1-0)
+  - avocarrot-ios-dev/Full (~> 4.7.2-0)
   - DZNSegmentedControl
   - SDWebImage
 
 SPEC CHECKSUMS:
   AdColony: e657145620acd54033e38cc18902eed01d3c456d
-  avocarrot-ios-dev: bb53303ad4cc65aefc07e68f153c4cbc6a2e9e03
+  avocarrot-ios-dev: 28134a33e985cd2a4db7f954490e590347941904
   ChartboostSDK: c0aefb3c25efcd1fa9a43fb45547ea98b323c95c
   DZNSegmentedControl: ecc2f31c5581cce10c4d766ea4bd2d0781814c1f
   FBAudienceNetwork: c3488041a9aa3f716d2edb3ceec8929e54c8f95a
@@ -184,10 +182,10 @@ SPEC CHECKSUMS:
   KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
   mopub-ios-sdk: f8a9967568143275bec47bbe810c241170825adf
   NativeX-iOS-SDK: 603e43a508b3c52658d78f073a8d54a8baf8d75d
-  SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
+  SDWebImage: 1fa4c9edf525b744f002db89f3f5a38b3cd4c541
   UnityAds: be7606ebc8e44a08d630ac10672b621b80119dbb
   VungleSDK-iOS: 1c9ac04299476b78e592221fe6cbc8e3fd5b7418
 
-PODFILE CHECKSUM: 1a855aee8dffa3f58d7dc6d2d8d7797f22132e7e
+PODFILE CHECKSUM: 74bd299d3c922dd2f0f7414c89d1048d6aa5b3e6
 
 COCOAPODS: 1.3.1
