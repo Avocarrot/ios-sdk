@@ -53,7 +53,6 @@ To show **interstitial** ads from client-side mediated networks in your applicat
 
 To show **video** ads from client-side mediated networks in your application you need to add:
 
-* [AdColony](https://github.com/AdColony/AdColony-iOS-SDK) library
 * [Unity Ads](https://github.com/Applifier/unity-ads-sdk) library
 * [Chartboost](http://cboo.st/ios_v6-3) library
 * [NativeX](https://github.com/nativex/NativeX-iOS-SDK) library
@@ -71,7 +70,6 @@ To show **native** ads from client-side mediated networks in your application yo
 
 **Warning: Avocarrot SDK 4.5.0 was designed and verified to work correctly with the following versions of 3rd party ad network SDKs:**
 
-* AdColony – 3.1.1
 * Chartboost – 6.6.3
 * Google Mobile Ads – 7.20.0
 * NativeX – 5.5.9
@@ -88,13 +86,6 @@ We do not guarantee stable and correct behaviour of the Avocarrot SDK if you man
 
 ### **3.** Add SDK external adapters to your project
 For each added external ad network from the section above you should add the SDK adapter for this network for each ad type from the Adapters folder. Just add the necessary adapters to the project.
-
-*AdColony*:
-
-| Ad type | Adapters |
-|:----------------|:----------------|
-| Video | `libAVOAdColonyAdapter-Video.a` |
-
 
 *Chartboost*:
 
