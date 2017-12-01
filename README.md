@@ -99,6 +99,7 @@ From version 4.5 Avocarrot SDK uses modular system to distribute based on subspe
     - `pod 'avocarrot-ios-sdk/VideoAdapters/NativeXAdapter'` - Avocarrot banners and adapter for  [NativeX](https://github.com/nativex/NativeX-iOS-SDK) videos
     - `pod 'avocarrot-ios-sdk/VideoAdapters/UnityAdsAdapter'` - Avocarrot banners and adapter for  [Unity Ads](https://github.com/Applifier/unity-ads-sdk) videos
     - `pod 'avocarrot-ios-sdk/VideoAdapters/VungleAdapter'` - Avocarrot banners and adapter for  [Vungle](https://v.vungle.com/sdk) videos
+    - `pod 'avocarrot-ios-sdk/VideoAdapters/AdColonyAdapter'` - Avocarrot banners and adapter for  [AdColony](https://github.com/AdColony/AdColony-iOS-SDK) videos
 
 
 *Rendered native ads*
@@ -116,8 +117,9 @@ From version 4.5 Avocarrot SDK uses modular system to distribute based on subspe
     - `pod 'avocarrot-ios-sdk/NativeViewAdapters/InLocoAdapter'` - Avocarrot native views and adapter for  [InLoco](http://docs.inlocomedia.com/docs/ios) native views
 
 
-**Warning: Avocarrot SDK 4.7.2 was designed and verified to work correctly with the following versions of 3rd party ad network SDKs:**
+**Warning: Avocarrot SDK 4.7.3 was designed and verified to work correctly with the following versions of 3rd party ad network SDKs:**
 
+* AdColony – 3.2.1
 * Chartboost – 6.6.3
 * Google Mobile Ads – 7.24.1
 * NativeX – 5.5.9

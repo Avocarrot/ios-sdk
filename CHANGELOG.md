@@ -1,5 +1,8 @@
 # Change Log
 All notable changes to this project will be documented in this file.
+# [4.7.3]
+### Fixed
+- Global functions renamed to avoid potential conflicts
 
 # [4.7.2]
 ### Fixed
