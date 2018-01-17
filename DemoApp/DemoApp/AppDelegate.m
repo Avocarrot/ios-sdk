@@ -14,7 +14,6 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [AvocarrotSDK setTestMode:YES];
     return YES;

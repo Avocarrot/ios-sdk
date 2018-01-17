@@ -17,12 +17,9 @@
 
 @implementation BannersDetailViewController
 
-- (void)dealloc {
-    [self.bannerView stop];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self loadBanner];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -95,8 +92,6 @@
     if ([userData[@"bannerType"] isKindOfClass:[NSNumber class]]) {
         self.bannerSize = (AVOBannerViewSize)[(NSNumber *)userData[@"bannerType"] integerValue];
     }
-    
-    [self loadBanner];
 }
 
 @end

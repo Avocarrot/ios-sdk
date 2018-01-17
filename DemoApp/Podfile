@@ -4,15 +4,19 @@ use_frameworks!
 
 workspace 'DemoApp'
 target 'DemoApp' do
-  pod 'avocarrot-ios-sdk/Full', '~> 4.7.3'
+  pod 'avocarrot-ios-sdk/Full', '~> 4.7.4'
   pod 'SDWebImage'
   pod 'DZNSegmentedControl'
 end
 
 target 'DemoAppSwift' do
-  pod 'avocarrot-ios-sdk/Full', '~> 4.7.3'
+  pod 'avocarrot-ios-sdk/Full', '~> 4.7.4'
   pod 'SDWebImage'
   pod 'DZNSegmentedControl'
+
+# Optional report system for QA
+  pod 'Fabric'
+  pod 'Crashlytics'
 end
 
 post_install do |installer|

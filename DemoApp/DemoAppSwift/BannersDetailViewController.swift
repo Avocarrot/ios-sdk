@@ -20,6 +20,7 @@ class BannersDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadBanner()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -88,8 +89,6 @@ extension BannersDetailViewController: AppControllerManagement {
 
         if let adId = userData["adUnitId"] as? String {
             adUnitId = adId
-        }
-
-        loadBanner()
+        }        
     }
 }

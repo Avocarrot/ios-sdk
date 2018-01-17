@@ -1,5 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file.
+# [4.7.4]
+### Fixed
+- WKWebKit loading problem issue
+
 # [4.7.3]
 ### Fixed
 - Global functions renamed to avoid potential conflicts
