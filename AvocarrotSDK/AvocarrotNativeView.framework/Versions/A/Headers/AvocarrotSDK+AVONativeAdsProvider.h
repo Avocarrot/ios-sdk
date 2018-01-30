@@ -14,10 +14,10 @@
 
 /**
  Add native ads provider for UITableView or UICollectionView as more flexible approach instead
-     of the completed stream adapter classes (AVOTableViewStreamAdapter or AVOCollectionViewStreamAdapter)
+     of the complex stream adapter classes (AVOTableViewStreamAdapter or AVOCollectionViewStreamAdapter)
  @param adUnitId                - your ad unit id
  @param templateType            - type of native ads representation template
- @param userData                - user special settings (now for Admob NativeExpress support only)
+ @param userData                - (optional) user special settings
  @param templateCustomization   - (optional) customization for ads representation template
  
  @return AVONativeAdsProvider object which preloads native ads and provided rendered ad views. Generaly it works as ring data structure.
@@ -29,10 +29,10 @@
 
 /**
  Add native ads provider for UITableView or UICollectionView as more flexible approach instead
- of the completed stream adapter classes (AVOTableViewStreamAdapter or AVOCollectionViewStreamAdapter) 
+    of the complex stream adapter classes (AVOTableViewStreamAdapter or AVOCollectionViewStreamAdapter)
  @param adUnitId                - your ad unit id
  @param adViewClass             - UIView subclass with your own native ad representation
- @param userData                - user special settings (now for Admob NativeExpress support only)
+ @param userData                - (optional) user special settings
  
  @return AVONativeAdsProvider object which preloads native ads and provided rendered ad views. Generaly it works as ring data structure.
  */

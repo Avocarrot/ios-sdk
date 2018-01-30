@@ -34,5 +34,9 @@
     return @"7f900c7d-7ce3-4190-8e93-310053e70ca2";
 }
 
++ (NSString *)nativeAssetsAdUnitID {
+    return @"67ac0b81-4ca0-4808-aa09-66bb0b60a2da";
+}
+
 @end
 

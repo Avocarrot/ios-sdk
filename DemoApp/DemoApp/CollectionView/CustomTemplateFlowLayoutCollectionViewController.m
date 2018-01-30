@@ -10,7 +10,6 @@
 #import "NativeBannerView.h"
 
 @interface CustomTemplateFlowLayoutCollectionViewController() <AVOCollectionViewStreamAdapterDelegate>
-@property (strong, nonatomic) AVOCollectionViewStreamAdapter *adapter;
 @end
 
 
@@ -23,13 +22,18 @@
 }
 
 - (void)loadAds {
-    self.adapter = [AvocarrotSDK.sharedSDK createStreamAdapterForCollectionView:self.collectionView
-                                                        parentViewController:self
-                                                                    adUnitId:self.adUnitId
-                                                          useDefaultGridMode:YES
-                                                                    delegate:self
-                                                     adViewClassForRendering:[NativeBannerView class]];
-    self.adapter.shiftOffsetBackOnAdInsert = NO;
+    
+    [AvocarrotSDK.sharedSDK createStreamAdapterForCollectionView:self.collectionView
+                                            parentViewController:self
+                                                        adUnitId:self.adUnitId
+                                                        delegate:self
+                                         adViewClassForRendering:[NativeBannerView class]
+                                                         success:^(AVOCollectionViewStreamAdapter * _Nonnull streamAdapter) {
+                                                            streamAdapter.shiftOffsetBackOnAdInsert = NO;
+                                                        }
+                                                         failure:^(AVOError * _Nonnull error) {
+                                                             NSLog(@"Stream adapter creating error %@", error);
+                                                         }];
 }
 
 #pragma mark - AVOCollectionViewStreamAdapterDelegate

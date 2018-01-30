@@ -36,22 +36,36 @@
     [self.bannerView stop];
     [self.bannerView removeFromSuperview];
     self.bannerView = nil;
+    
+    __weak typeof(self) weakSelf = self;
+    [AvocarrotSDK.sharedSDK loadBannerWithSize:self.bannerSize
+                                      adUnitId:self.adUnitId
+                                       success:^(AVOBannerView * _Nonnull bannerAd) {
+                                           __strong __typeof__(self) sSelf = weakSelf;
+                                           [sSelf addBannerOnScreen:bannerAd];
+                                       }
+                                       failure:^(AVOError * _Nonnull error) {
+                                           NSLog(@"Banner loading error: %@", [error localizedDescription]);
+                                       }];
+}
 
-    self.bannerView = [AvocarrotSDK.sharedSDK loadBannerWithSize:self.bannerSize
-                                                     adUnitId:self.adUnitId
-                                                      success:^(AVOBannerView * _Nonnull bannerAd){
-                                                          NSLog(@"Banner has loaded!");
-                                                      } failure:^(AVOError * _Nonnull error) {
-                                                          NSLog(@"Banner loading error: %@", [error localizedDescription]);
-                                                      }];
+#pragma mark - Actions
 
-    if (self.bannerView == nil) {
-        return;
+- (IBAction)autoupdateSwitched:(UISwitch *)switcher {
+    if (self.bannerView) {
+        self.bannerView.autoUpdate = switcher.isOn;
     }
+}
+
+#pragma mark - Banner ad
+
+- (void)addBannerOnScreen:(AVOBannerView *)newBanner {
+    [self.bannerView stop];
+    [self.bannerView removeFromSuperview];
+    self.bannerView = newBanner;
     
     [self.view addSubview:self.bannerView];
     self.bannerView.autoUpdate = self.autoupdateSwitch.isOn;
-    
     self.bannerView.translatesAutoresizingMaskIntoConstraints = NO;
     
     NSDictionary *views = @{@"bannerView" : self.bannerView,
@@ -61,18 +75,9 @@
     
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[bannerView(==height)]-20-|" options:0 metrics:metrics views:views]];
     
-    
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[bannerView(==width)]" options:0 metrics:metrics views:views]];
     
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[superview]-(<=1)-[bannerView]" options:NSLayoutFormatAlignAllCenterX metrics:metrics views:views]];
-}
-
-#pragma mark - Actions
-
-- (IBAction)autoupdateSwitched:(UISwitch *)switcher {
-    if (self.bannerView) {
-        self.bannerView.autoUpdate = switcher.isOn;
-    }
 }
 
 @end

@@ -14,5 +14,6 @@
 @property (class, strong, nonatomic) NSString *interstitialAdUnitID;
 @property (class, strong, nonatomic) NSString *videoAdUnitID;
 @property (class, strong, nonatomic) NSString *nativeAdUnitID;
+@property (class, strong, nonatomic) NSString *nativeAssetsAdUnitID;
 
 @end

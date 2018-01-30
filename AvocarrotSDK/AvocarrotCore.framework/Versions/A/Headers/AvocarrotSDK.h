@@ -35,14 +35,9 @@ typedef enum {
 @property(class, nonatomic, assign) BOOL logEnabled;
 
 /**
- * Provides access to test modes of external libs
+ * Provides access to test modes of server networks and external libs. With test mode enabled networks will return only test ads
  */
 @property(class, nonatomic, assign) BOOL testMode;
-
-/**
- * Provides access to the AvocarrotSDK statistic sending permission
- */
-@property(class, nonatomic, assign) BOOL statisticsEnabled;
 
 @end
 

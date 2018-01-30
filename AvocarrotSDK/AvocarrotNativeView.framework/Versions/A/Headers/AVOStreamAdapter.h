@@ -74,13 +74,19 @@
 
 @interface AVOStreamAdapter (EventRegistration)
 
+/*
+ Duplicate kAVONotification_StreamAdapterAdsDidLoad notification
+ */
 - (instancetype _Nonnull)onAdsDidLoad:(nullable void (^)(void))block;
 
+/*
+ Duplicate kAVONotification_StreamAdapterAdsFailed notification
+ */
 - (instancetype _Nonnull)onAdsFailed:(nullable void (^)(void))block;
 
 @end
 
-//stream adapter
+//STREAM ADAPTER
 /*
  Called after ads for stream adapter have been loaded. After this event you can either reload your UITableView/UICollectionView or wait - ads will be added automatically during scrolling.
  */

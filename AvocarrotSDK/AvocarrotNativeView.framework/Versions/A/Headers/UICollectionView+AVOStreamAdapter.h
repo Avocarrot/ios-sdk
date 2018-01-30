@@ -14,6 +14,8 @@
 
 @property(nonatomic, strong, readonly) AVOCollectionViewStreamAdapter *streamAdapter;
 
+- (void)resetStreamAdapter;
+
 - (void)avo_reloadData;
 
 - (id)avo_dequeueReusableCellWithReuseIdentifier:(NSString *)identifier forIndexPath:(NSIndexPath *)indexPath;

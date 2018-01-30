@@ -27,17 +27,22 @@
     if (self.adCellHeight > 0) {
         sizeDelegate = self;
     }
+    
+    [AvocarrotSDK.sharedSDK createStreamAdapterForTableView:self.tableView
+                                       parentViewController:self
+                                                   adUnitId:self.adUnitId
+                                               templateType:AVONativeAdsTemplateTypeFeed
+                                                   delegate:sizeDelegate
+                                      templateCustomization:^(AVOTemplateCustomizationObject * _Nonnull templateCustomizationObject) {
+                                                        //example of editing ad representation via customizationObject
+                                                        templateCustomizationObject.avoCTABorderWidth = 1;
+                                                        templateCustomizationObject.avoCTACornerRadius = 5;
+                                                    }
+                                                    success:nil
+                                                    failure:^(AVOError * _Nonnull error) {
+                                                        NSLog(@"Stream adapter creating error %@", error);
+                                                    }];
 
-    self.adapter = [AvocarrotSDK.sharedSDK createStreamAdapterForTableView:self.tableView
-                                                   parentViewController:self
-                                                               adUnitId:self.adUnitId
-                                                           templateType:AVONativeAdsTemplateTypeFeed
-                                                               delegate:sizeDelegate
-                                                  templateCustomization:^(AVOTemplateCustomizationObject *templateCustomizationObject) {
-                                                      //example of editing ad representation via customizationObject
-                                                      templateCustomizationObject.avoCTABorderWidth = 1;
-                                                      templateCustomizationObject.avoCTACornerRadius = 5;
-                                                  }];
 }
 
 #pragma mark - <AVOTableViewStreamAdapterDelegate> protocol

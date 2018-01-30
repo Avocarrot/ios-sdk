@@ -17,8 +17,8 @@ typedef enum {
 
 @interface AVOBannerView : UIView
 
-@property(nonatomic, assign) CGSize adSize;
-@property(nonatomic, assign) BOOL autoUpdate;
+@property(nonatomic, assign, readonly) CGSize adSize;
+@property(nonatomic, assign) BOOL autoUpdate;//Default is YES
 
 /**
  *  Dismiss banner
@@ -40,12 +40,18 @@ typedef enum {
 
 @interface AVOBannerView (EventRegistration)
 
+/**
+Called after a click on the banner. After this event an external browser or a SKStoreProductViewController will be opened.
+
+@param block - callback block
+@return - self
+*/
 - (instancetype _Nonnull)onClick:(nullable void (^)(void))block;
 
 @end
 
 //BANNERS
 /*
- Called after a click on the banner. After this event the app will be minimized and an external browser will be opened.
+ Called after a click on the banner. After this event an external browser or a SKStoreProductViewController will be opened.
  */
 extern NSString *_Nonnull const kAVONotification_BannerClicked;

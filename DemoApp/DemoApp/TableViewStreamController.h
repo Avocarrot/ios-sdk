@@ -9,5 +9,4 @@
 #import "BaseTableViewController.h"
 
 @interface TableViewStreamController : BaseTableViewController
-@property(strong, nonatomic) AVOTableViewStreamAdapter *adapter;
 @end

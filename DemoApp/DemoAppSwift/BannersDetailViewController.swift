@@ -14,7 +14,6 @@ class BannersDetailViewController: UIViewController {
     @IBOutlet weak var autoupdateSwitch: UISwitch!
 
     fileprivate var bannerView: AVOBannerView?
-
     public var bannerSize: AVOBannerViewSize!
     public var adUnitId: String!
 
@@ -36,48 +35,49 @@ class BannersDetailViewController: UIViewController {
     // MARK: - Public
 
     public func loadBanner() {
-        bannerView?.stop()
-        bannerView?.removeFromSuperview()
-        bannerView = nil
-
-        bannerView = AvocarrotSDK.shared.loadBanner(with: bannerSize, adUnitId: adUnitId, success: { (bannerAd) in
-                                                        print("Banner has loaded!")
-                                                    }, failure: { (error) in
-                                                        print("Banner loading error: \(error.localizedDescription)")
-                                                    })
-
-        guard let bv = bannerView else {
-            return
-        }
-
-        view.addSubview(bv)
-        bv.translatesAutoresizingMaskIntoConstraints = false
-
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat:
-            "V:[bannerView(\(bv.frame.size.height))]-20-|",
-            options: NSLayoutFormatOptions(),
-            metrics: nil,
-            views: ["bannerView": bv]))
-
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat:
-            "H:[bannerView(\(bv.frame.size.width))]",
-            options: .alignAllCenterX,
-            metrics: nil,
-            views: ["bannerView": bv]))
-
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat:
-            "V:[superview]-(<=1)-[bannerView]",
-            options: .alignAllCenterX,
-            metrics: nil,
-            views: ["bannerView": bv,
-                    "superview": view]))
-
+        AvocarrotSDK.shared.loadBanner(with: bannerSize, adUnitId: adUnitId,
+                                       success: {[weak self] (bannerAd) in
+                                            self?.addBannerOnScreen(newBanner: bannerAd)
+                                        },
+                                       failure: { (error) in
+                                            print("Banner loading error: \(error.localizedDescription)")
+                                       })
     }
 
     // MARK: - Actions
 
     @IBAction func autoupdateSwitched(_ sender: UISwitch) {
         bannerView?.autoUpdate = sender.isOn
+    }
+    
+    // MARK: - Private
+    private func addBannerOnScreen(newBanner: AVOBannerView) {
+        bannerView?.stop()
+        bannerView?.removeFromSuperview()
+        bannerView = newBanner
+        
+        view.addSubview(newBanner)
+        newBanner.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat:
+            "V:[bannerView(\(newBanner.frame.size.height))]-20-|",
+            options: NSLayoutFormatOptions(),
+            metrics: nil,
+            views: ["bannerView": newBanner]))
+        
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat:
+            "H:[bannerView(\(newBanner.frame.size.width))]",
+            options: .alignAllCenterX,
+            metrics: nil,
+            views: ["bannerView": newBanner]))
+        
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat:
+            "V:[superview]-(<=1)-[bannerView]",
+                                                           options: .alignAllCenterX,
+                                                           metrics: nil,
+                                                           views: ["bannerView": newBanner,
+                                                                   "superview": view]))
+
     }
 }
 

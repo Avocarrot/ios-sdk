@@ -12,9 +12,6 @@ import AvocarrotNativeView
 @objc(CustomTemplateTableViewController)
 class CustomTemplateTableViewController: TableViewStreamController {
 
-    fileprivate
-    var adapter: AVOTableViewStreamAdapter?
-
     override func viewDidLoad() {
         super.viewDidLoad()
         loadAds()
@@ -22,11 +19,15 @@ class CustomTemplateTableViewController: TableViewStreamController {
 
     fileprivate func loadAds() {
 
-        adapter = AvocarrotSDK.shared.createStreamAdapter(for: tableView,
-                parentViewController: self,
-                adUnitId: adUnitId,
-                delegate: self,
-                adViewClassForRendering: NativeBannerView.self)
+        AvocarrotSDK.shared.createStreamAdapter(for: tableView,
+            parentViewController: self,
+            adUnitId: adUnitId,
+            delegate: self,
+            adViewClassForRendering: NativeBannerView.self,
+            success: nil,
+            failure: { (error) in
+                print("Stream adapter creating error: \(error.avo_errorDescription) with code: \(error.code)")
+            })
     }
 }
 

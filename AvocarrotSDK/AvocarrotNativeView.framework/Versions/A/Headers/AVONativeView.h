@@ -37,6 +37,7 @@
  *  @param viewController               - UIViewController where your ad is located
  */
 - (void)unRegisterViewControllerForInteraction:(UIViewController *_Nonnull)viewController;
+
 @end
 
 // SDK can propose to change the controls replacement if some ad data is absent
@@ -55,6 +56,14 @@
  */
 - (void)collapseIconImageSpace:(BOOL)shouldCollapse;
 
+
+/**
+ *  If your native view has XIB file with name that makes it clearly distinguished from your native view class name, simply define XIB file name here
+ *  @return                             - name of XIB file for your native ad view
+ */
++ (NSString *_Nonnull)xibName;
+
+
 @end
 
 
@@ -69,15 +78,15 @@
 @property(weak, nonatomic) IBOutlet UIView *_Nullable avoPrivacyInfoContainerView;
 @property(weak, nonatomic) IBOutlet AVOStarRatingView *_Nullable avoRatingStarView;
 
-+ (NSString *_Nonnull)xibName;
-
 @end
+
 
 @interface AVOMediaContainerView : UIView
 
 @property(assign, nonatomic) IBInspectable BOOL autoPlay;
 
 @end
+
 
 @interface AVOStarRatingView : UIView
 

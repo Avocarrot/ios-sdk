@@ -19,11 +19,16 @@
 }
 
 - (void)loadAds {
-    self.adapter = [AvocarrotSDK.sharedSDK createStreamAdapterForTableView:self.tableView
-                                                   parentViewController:self
-                                                               adUnitId:self.adUnitId
-                                                               delegate:self
-                                                adViewClassForRendering:[NativeBannerView class]];
+    
+    [AvocarrotSDK.sharedSDK createStreamAdapterForTableView:self.tableView
+                                       parentViewController:self
+                                                   adUnitId:self.adUnitId
+                                                   delegate:self
+                                    adViewClassForRendering:[NativeBannerView class]
+                                                    success:nil
+                                                    failure:^(AVOError * _Nonnull error) {
+                                                        NSLog(@"Streamadapter creating error %@", error);
+                                                    }];
 }
 
 #pragma mark - <AVOTableViewStreamAdapterDelegate> protocol

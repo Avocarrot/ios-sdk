@@ -112,6 +112,10 @@ typedef NS_ENUM(NSUInteger, DZDSegmentType) {
                 UserSettings.nativeAdUnitID = adUnitID;
                 break;
                 
+            case AdNativeAssets:
+                UserSettings.nativeAssetsAdUnitID = adUnitID;
+                break;
+                
             default:
                 break;
         }
@@ -269,7 +273,7 @@ typedef NS_ENUM(NSUInteger, DZDSegmentType) {
             break;
             
         case DZDSegmentNative:
-            self.adUnitTextField.text = UserSettings.nativeAdUnitID;
+            self.adUnitTextField.text = @"depends on the type: Native or NativeAssets";
             break;
             
         default:
@@ -363,7 +367,8 @@ typedef NS_ENUM(NSUInteger, DZDSegmentType) {
                                                 withController:NSStringFromClass([NativeAdDemonstratorViewController class])
                                                    withXibName:nil
                                                     withChilds:nil
-                                                  withUserData:@{@"adUnitId" : UserSettings.nativeAdUnitID
+                                                  withUserData:@{@"adUnitId" : UserSettings.nativeAdUnitID,
+                                                                 @"adUnitId_assets" : UserSettings.nativeAssetsAdUnitID
                                                                 }],
                         [[MasterTableItem alloc] initWithTitle:@"Dynamic template from server"
                                                 withController:NSStringFromClass([NativeAdDemonstratorViewController class])

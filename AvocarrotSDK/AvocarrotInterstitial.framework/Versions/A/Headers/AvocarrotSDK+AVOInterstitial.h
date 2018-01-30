@@ -19,7 +19,7 @@
  *  @param failure                  - (optional) called when interstitial download fails, returns AVOError
  */
 - (void)loadInterstitialWithAdUnitId:(NSString *_Nonnull)adUnitId
-                             success:(void (^ _Nullable)(AVOInterstitial *_Nonnull interstitial))success
+                             success:(void (^ _Nonnull)(AVOInterstitial *_Nonnull interstitial))success
                              failure:(void (^ _Nullable)(AVOError *_Nonnull error))failure;
 
 

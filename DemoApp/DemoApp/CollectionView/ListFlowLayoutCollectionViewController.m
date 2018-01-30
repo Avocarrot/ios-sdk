@@ -9,7 +9,6 @@
 #import "ListFlowLayoutCollectionViewController.h"
 
 @interface ListFlowLayoutCollectionViewController() <AVOCollectionViewStreamAdapterDelegate>
-@property (strong, nonatomic) AVOCollectionViewStreamAdapter *adapter;
 @property (assign) NSUInteger adCellHeight;
 @end
 
@@ -31,14 +30,19 @@
     if (self.adCellHeight > 0) {
         sizeDelegate = self;
     }
-
-    self.adapter = [AvocarrotSDK.sharedSDK createStreamAdapterForCollectionView:self.collectionView
-                                                        parentViewController:self
-                                                                    adUnitId:self.adUnitId
-                                                                templateType:AVONativeAdsTemplateTypeList
-                                                                    delegate:sizeDelegate
-                                                       templateCustomization:nil];
-    self.adapter.shiftOffsetBackOnAdInsert = NO;
+    
+    [AvocarrotSDK.sharedSDK createStreamAdapterForCollectionView:self.collectionView
+                                            parentViewController:self
+                                                        adUnitId:self.adUnitId
+                                                    templateType:AVONativeAdsTemplateTypeList
+                                                        delegate:sizeDelegate
+                                           templateCustomization:nil
+                                                         success:^(AVOCollectionViewStreamAdapter * _Nonnull streamAdapter) {
+                                                             streamAdapter.shiftOffsetBackOnAdInsert = NO;
+                                                         }
+                                                         failure:^(AVOError * _Nonnull error) {
+                                                             NSLog(@"Stream adapter creating error %@", error);
+                                                         }];
 }
 
 #pragma mark - AVOCollectionViewStreamAdapterDelegate

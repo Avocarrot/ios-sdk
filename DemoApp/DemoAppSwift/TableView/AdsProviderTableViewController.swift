@@ -108,12 +108,14 @@ class AdsProviderTableViewController: BaseTableViewController, UITableViewDelega
         
         return cell
     }
+
     
     //MARK: Ads
     private func loadAds() {
         adsProvider = AvocarrotSDK.shared.createNativeAdsProvider(forAdunit: adUnitId,
-                                                                  templateType: .list,
-                                                                  templateCustomization: { (templateCustomizationObject) in
+            templateType: .list,
+            userData: nil,
+            templateCustomization: { (templateCustomizationObject) in
                 templateCustomizationObject.avoCTABorderWidth = 1
                 templateCustomizationObject.avoCTACornerRadius = 5
             })

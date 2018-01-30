@@ -11,9 +11,6 @@ import AvocarrotNativeView
 
 @objc(ServerTemplateTableViewStreamController)
 class ServerTemplateTableViewStreamController: TableViewStreamController {
-
-    fileprivate
-    var adapter: AVOTableViewStreamAdapter?
     
     fileprivate
     // You should set value of ad cell height for server template. Just try different values.
@@ -26,16 +23,19 @@ class ServerTemplateTableViewStreamController: TableViewStreamController {
     
     fileprivate func loadAds() {
         
-        adapter = AvocarrotSDK.shared.createStreamAdapter(for: tableView,
-                                                          parentViewController: self,
-                                                          adUnitId: adUnitId,
-                                                          templateType: .server,
-                                                          delegate: self,
-                                                          templateCustomization: {
-                                                            templateCustomizationObject in
-                                                            templateCustomizationObject.avoCTABorderWidth = 1
-                                                            templateCustomizationObject.avoCTACornerRadius = 5
-        })
+        AvocarrotSDK.shared.createStreamAdapter(for: tableView,
+            parentViewController: self,
+            adUnitId: adUnitId,
+            templateType: .server,
+            delegate: self,
+            templateCustomization: { templateCustomizationObject in
+                templateCustomizationObject.avoCTABorderWidth = 1
+                templateCustomizationObject.avoCTACornerRadius = 5
+            },
+            success: nil,
+            failure: { (error) in
+                print("Stream adapter creating error: \(error.avo_errorDescription) with code: \(error.code)")
+            })
     }
 
 }

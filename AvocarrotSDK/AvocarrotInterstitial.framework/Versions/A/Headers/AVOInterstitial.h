@@ -10,11 +10,11 @@
 
 @interface AVOInterstitial : NSObject
 
-@property(nonatomic, readonly) BOOL ready;
+@property(nonatomic, assign, readonly) BOOL ready;
 
 /**
- *  Show interstitial banner modally
- *  @param viewController               - UIViewController for modal presentation
+ *  Show interstitial modally
+ *  @param viewController - UIViewController for modal presentation
  */
 - (void)showFromViewController:(UIViewController *_Nonnull)viewController;
 
@@ -23,42 +23,79 @@
 
 @interface AVOInterstitial (EventRegistration)
 
+/**
+ Called after a click on the interstitial. After this event an external browser or a SKStoreProductViewController will be opened.
+
+ @param block - callback block
+ @return - self
+ */
+- (instancetype _Nonnull)onClick:(nullable void (^)(void))block;
+
+/**
+ Called after the interstitial disappears from the screen.
+
+ @param block - callback block
+ @return - self
+ */
 - (instancetype _Nonnull)onDidHide:(nullable void (^)(void))block;
 
+/**
+ Called after the tap on the "close" button, directly before the interstitial disappears.
+
+ @param block - callback block
+ @return - self
+ */
 - (instancetype _Nonnull)onWillHide:(nullable void (^)(void))block;
 
+/**
+ Called before sending interstitial request to server.
+
+ @param block - callback block
+ @return - self
+ */
 - (instancetype _Nonnull)onWillLoad:(nullable void (^)(void))block;
 
+/**
+ Called before displaying the interstitial.
+
+ @param block - callback block
+ @return - self
+ */
 - (instancetype _Nonnull)onWillShow:(nullable void (^)(void))block;
 
-- (instancetype _Nonnull)onDidShow:(nullable void (^)(void))block;
+/**
+ Called after the interstitial is displayed
 
-- (instancetype _Nonnull)onClick:(nullable void (^)(void))block;
+ @param block - callback block
+ @return - self
+ */
+- (instancetype _Nonnull)onDidShow:(nullable void (^)(void))block;
 
 @end
 
-//FULLSCREENS
+
+//INTERSTITIALS
 /*
- Called after a click on the fullscreen banner. After this event the app will be minimized and an external browser will be opened.
+ Called after a click on the interstitial. After this event an external browser or a SKStoreProductViewController will be opened.
  */
 extern NSString *_Nonnull const kAVONotification_InterstitialClicked;
 /*
- Called after the fullscreen banner disappears from the screen.
+ Called after the interstitial disappears from the screen.
  */
 extern NSString *_Nonnull const kAVONotification_InterstitialDidHide;
 /*
- Called after the tap on the "close" button, directly before the fullscreen banner disappears.
+ Called after the tap on the "close" button, directly before the interstitial disappears.
  */
 extern NSString *_Nonnull const kAVONotification_InterstitialWillHide;
 /*
- Called before sending fullscreen banner request to server.
+ Called before sending interstitial request to server.
  */
 extern NSString *_Nonnull const kAVONotification_InterstitialWillLoad;
 /*
- Called before displaying the fullscreen banner.
+ Called before displaying the interstitial.
  */
 extern NSString *_Nonnull const kAVONotification_InterstitialWillShow;
 /*
- Called after the fullscreen banner is displayed.
+ Called after the interstitial is displayed.
  */
 extern NSString *_Nonnull const kAVONotification_InterstitialDidShow;

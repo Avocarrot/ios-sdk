@@ -1,5 +1,16 @@
 # Change Log
 All notable changes to this project will be documented in this file.
+# [4.8.0]
+### Added
+- VPAID support for fullscreen video ad
+- Debug logs and errors description forwarding to developer side
+
+### Changed
+- SDK public API to conform to "void api"
+
+### Removed
+- Support of AdColony, NativeX, Tencent and Baidu networks mediation
+
 # [4.7.4]
 ### Fixed
 - WKWebKit loading problem issue

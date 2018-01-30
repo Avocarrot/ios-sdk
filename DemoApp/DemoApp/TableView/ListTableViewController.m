@@ -28,16 +28,21 @@
         sizeDelegate = self;
     }
     
-    self.adapter = [AvocarrotSDK.sharedSDK createStreamAdapterForTableView:self.tableView
-                                                   parentViewController:self
-                                                               adUnitId:self.adUnitId
-                                                           templateType:AVONativeAdsTemplateTypeList
-                                                               delegate:sizeDelegate
-                                                  templateCustomization:^(AVOTemplateCustomizationObject *templateCustomizationObject) {
-                                                      //example of editing ad representation via customizationObject
-                                                      templateCustomizationObject.avoCTABorderWidth = 1;
-                                                      templateCustomizationObject.avoCTACornerRadius = 5;
-                                                  }];
+    [AvocarrotSDK.sharedSDK createStreamAdapterForTableView:self.tableView
+                                       parentViewController:self
+                                                   adUnitId:self.adUnitId
+                                               templateType:AVONativeAdsTemplateTypeList
+                                                   delegate:sizeDelegate
+                                      templateCustomization:^(AVOTemplateCustomizationObject * _Nonnull templateCustomizationObject) {
+                                                       //example of editing ad representation via customizationObject
+                                                       templateCustomizationObject.avoCTABorderWidth = 1;
+                                                       templateCustomizationObject.avoCTACornerRadius = 5;
+                                                    }
+                                                    success:nil
+                                                    failure:^(AVOError * _Nonnull error) {
+                                                        NSLog(@"Stream adapter creating error %@", error);
+                                                    }];
+    
 }
 
 #pragma mark - <AVOTableViewStreamAdapterDelegate> protocol

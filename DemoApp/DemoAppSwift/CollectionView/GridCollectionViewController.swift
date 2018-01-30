@@ -11,8 +11,6 @@ import AvocarrotNativeView
 
 @objc(GridCollectionViewController)
 class GridCollectionViewController: BaseFlowLayoutCollectionViewController {
-    fileprivate
-    var adapter: AVOCollectionViewStreamAdapter?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,13 +20,18 @@ class GridCollectionViewController: BaseFlowLayoutCollectionViewController {
 
     func loadAds() {
 
-        adapter = AvocarrotSDK.shared.createStreamAdapter(for: collectionView,
-                                                       parentViewController: self,
-                                                       adUnitId: adUnitId,
-                                                       templateType: .grid,
-                                                       delegate: self,
-                                                       templateCustomization: nil)
-        adapter?.shiftOffsetBackOnAdInsert = false
+        AvocarrotSDK.shared.createStreamAdapter(for: collectionView,
+            parentViewController: self,
+            adUnitId: adUnitId,
+            templateType: .grid,
+            delegate: self,
+            templateCustomization: nil,
+            success: { (adapter) in
+                adapter.shiftOffsetBackOnAdInsert = false
+            },
+            failure: { (error) in
+                print("Stream adapter creating error: \(error.avo_errorDescription) with code: \(error.code)")
+            })
     }
 
 }

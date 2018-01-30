@@ -13,7 +13,8 @@ class UserSettings {
     static private let currentInterstitialAdUnitIdKey = "currentInterstitialAdUnitIdKey"
     static private let currentVideoAdUnitIdKey = "currentVideoAdUnitIdKey"
     static private let currentNativeAdUnitIdKey = "currentNativeAdUnitIdKey"
-
+    static private let currentNativeAssetsAdUnitIdKey = "currentNativeAssetsAdUnitIdKey"
+    
     static var bannerAdUnitID: String {
         get {
             guard let adUnitId = UserDefaults.standard.object(forKey: currentBannerAdUnitIdKey) as? String
@@ -55,6 +56,17 @@ class UserSettings {
         }
         set(newId) {
             UserDefaults.standard.set(newId, forKey: currentNativeAdUnitIdKey)
+        }
+    }
+    
+    static var nativeAssetsAdUnitID: String {
+        get {
+            guard let adUnitId = UserDefaults.standard.object(forKey: currentNativeAssetsAdUnitIdKey) as? String
+                else {return DefaultAdUnitId.nativeAssetsAdUnitID}
+            return adUnitId
+        }
+        set(newId) {
+            UserDefaults.standard.set(newId, forKey: currentNativeAssetsAdUnitIdKey)
         }
     }
 }

@@ -11,8 +11,6 @@ import AvocarrotNativeView
 
 @objc(FeedCollectionViewController)
 class FeedCollectionViewController: BaseFlowLayoutCollectionViewController {
-    fileprivate
-    var adapter: AVOCollectionViewStreamAdapter?
     
     fileprivate
     var adCellHeight: Int = 320
@@ -30,13 +28,18 @@ class FeedCollectionViewController: BaseFlowLayoutCollectionViewController {
             sizeDelegate = self
         }
 
-        adapter = AvocarrotSDK.shared.createStreamAdapter(for: collectionView,
-                parentViewController: self,
-                adUnitId: adUnitId,
-                templateType: .feed,
-                delegate: sizeDelegate,
-                templateCustomization: nil)
-        adapter?.shiftOffsetBackOnAdInsert = false
+        AvocarrotSDK.shared.createStreamAdapter(for: collectionView,
+            parentViewController: self,
+            adUnitId: adUnitId,
+            templateType: .feed,
+            delegate: sizeDelegate,
+            templateCustomization: nil,
+            success: { (adapter) in
+                adapter.shiftOffsetBackOnAdInsert = false
+            },
+            failure: { (error) in
+                print("Stream adapter creating error: \(error.avo_errorDescription) with code: \(error.code)")
+            })
     }
 }
 

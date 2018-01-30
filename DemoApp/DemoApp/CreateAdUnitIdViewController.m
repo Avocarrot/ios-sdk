@@ -61,7 +61,7 @@
 }
 
 - (void)setupData {
-    self.adTypes = @[@(AdBanner), @(AdInterstitial), @(AdVideo), @(AdNative)];
+    self.adTypes = @[@(AdBanner), @(AdInterstitial), @(AdVideo), @(AdNative),  @(AdNativeAssets)];
     [self readAdUnitsFromUserDefaults];
 }
 
@@ -126,7 +126,8 @@
     return @[[AdUnitId unitIdWith:DefaultAdUnitId.bannerAdUnitID withAdType:AdBanner],
              [AdUnitId unitIdWith:DefaultAdUnitId.interstitialAdUnitID withAdType:AdInterstitial],
              [AdUnitId unitIdWith:DefaultAdUnitId.videoAdUnitID withAdType:AdVideo],
-             [AdUnitId unitIdWith:DefaultAdUnitId.nativeAdUnitID withAdType:AdNative]
+             [AdUnitId unitIdWith:DefaultAdUnitId.nativeAdUnitID withAdType:AdNative],
+             [AdUnitId unitIdWith:DefaultAdUnitId.nativeAssetsAdUnitID withAdType:AdNativeAssets]
             ];
 }
 
@@ -183,6 +184,9 @@
             
         case AdNative:
             return @"native ad";
+            
+        case AdNativeAssets:
+            return @"native assets ad";
             
         default:
             return @"unknown";

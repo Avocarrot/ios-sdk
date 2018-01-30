@@ -9,7 +9,6 @@
 #import "ServerTemplateLayoutCollectionViewController.h"
 
 @interface ServerTemplateLayoutCollectionViewController() <AVOCollectionViewStreamAdapterDelegate>
-@property (strong, nonatomic) AVOCollectionViewStreamAdapter *adapter;
 @property (assign) NSUInteger adCellHeight;
 @end
 
@@ -24,13 +23,18 @@
 
 - (void)loadAds {
     
-    self.adapter = [AvocarrotSDK.sharedSDK createStreamAdapterForCollectionView:self.collectionView
-                                                           parentViewController:self
-                                                                       adUnitId:self.adUnitId
-                                                                   templateType:AVONativeAdsTemplateTypeServer
-                                                                       delegate:self
-                                                          templateCustomization:nil];
-    self.adapter.shiftOffsetBackOnAdInsert = NO;
+    [AvocarrotSDK.sharedSDK createStreamAdapterForCollectionView:self.collectionView
+                                            parentViewController:self
+                                                        adUnitId:self.adUnitId
+                                                    templateType:AVONativeAdsTemplateTypeServer
+                                                        delegate:self
+                                           templateCustomization:nil
+                                                         success:^(AVOCollectionViewStreamAdapter * _Nonnull streamAdapter) {
+                                                             streamAdapter.shiftOffsetBackOnAdInsert = NO;
+                                                         }
+                                                         failure:^(AVOError * _Nonnull error) {
+                                                             NSLog(@"Stream adapter creating error %@", error);
+                                                         }];
 }
 
 #pragma mark - AVOCollectionViewStreamAdapterDelegate

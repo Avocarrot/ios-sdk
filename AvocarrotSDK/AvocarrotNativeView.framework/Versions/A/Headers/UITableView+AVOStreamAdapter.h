@@ -14,6 +14,8 @@
 
 @property(nonatomic, strong, readonly) AVOTableViewStreamAdapter *streamAdapter;
 
+- (void)resetStreamAdapter;
+
 - (void)avo_reloadData;
 
 - (CGRect)avo_rectForRowAtIndexPath:(NSIndexPath *)indexPath;

@@ -9,7 +9,6 @@
 #import "GridIconFlowLayoutCollectionViewController.h"
 
 @interface GridIconFlowLayoutCollectionViewController() <AVOCollectionViewStreamAdapterDelegate>
-@property (strong, nonatomic) AVOCollectionViewStreamAdapter *adapter;
 @end
 
 @implementation GridIconFlowLayoutCollectionViewController
@@ -21,13 +20,18 @@
 
 - (void)loadAds {
 
-    self.adapter = [AvocarrotSDK.sharedSDK createStreamAdapterForCollectionView:self.collectionView
-                                                        parentViewController:self
-                                                                    adUnitId:self.adUnitId
-                                                                templateType:AVONativeAdsTemplateTypeGridIcon
-                                                                    delegate:self // or "delegate:nil" if you would like to use our predefined ad cell height of AVONativeAdsTemplateTypeList template
-                                                       templateCustomization:nil];
-    self.adapter.shiftOffsetBackOnAdInsert = NO;
+    [AvocarrotSDK.sharedSDK createStreamAdapterForCollectionView:self.collectionView
+                                            parentViewController:self
+                                                        adUnitId:self.adUnitId
+                                                    templateType:AVONativeAdsTemplateTypeGridIcon
+                                                        delegate:self
+                                           templateCustomization:nil
+                                                         success:^(AVOCollectionViewStreamAdapter * _Nonnull streamAdapter) {
+                                                             streamAdapter.shiftOffsetBackOnAdInsert = NO;
+                                                         }
+                                                         failure:^(AVOError * _Nonnull error) {
+                                                             NSLog(@"Stream adapter creating error %@", error);
+                                                         }];
 }
 
 #pragma mark - AVOCollectionViewStreamAdapterDelegate

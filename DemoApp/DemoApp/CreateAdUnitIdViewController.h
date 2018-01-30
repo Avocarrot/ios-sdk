@@ -13,6 +13,7 @@ typedef NS_ENUM(NSUInteger, AdType) {
     AdInterstitial,
     AdVideo,
     AdNative,
+    AdNativeAssets,
     AdUnknown,
 };
 

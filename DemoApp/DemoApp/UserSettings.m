@@ -13,6 +13,7 @@ static NSString *const kUSCurrentBannerAdUnitIdKey = @"kUSCurrentBannerAdUnitIdK
 static NSString *const kUSCurrentInterstitialAdUnitIdKey = @"kUSCurrentInterstitialAdUnitIdKey";
 static NSString *const kUSCurrentVideoAdUnitIdKey = @"kUSCurrentVideoAdUnitIdKey";
 static NSString *const kUSCurrentNativeAdUnitIdKey = @"kUSCurrentNativeAdUnitIdKey";
+static NSString *const kUSCurrentNativeAssetsAdUnitIdKey = @"kUSCurrentNativeAssetsAdUnitIdKey";
 
 @implementation UserSettings
 
@@ -49,6 +50,14 @@ static NSString *const kUSCurrentNativeAdUnitIdKey = @"kUSCurrentNativeAdUnitIdK
 
 + (void)setNativeAdUnitID:(NSString *)nativeAdUnitID {
     [self setUserDefaultsValue:nativeAdUnitID forKey:kUSCurrentNativeAdUnitIdKey];
+}
+
++ (NSString*)nativeAssetsAdUnitID {
+    return [self getUserDefaultsValueForKey:kUSCurrentNativeAssetsAdUnitIdKey] ?:  DefaultAdUnitId.nativeAssetsAdUnitID;
+}
+
++ (void)setNativeAssetsAdUnitID:(NSString *)nativeAssetsAdUnitID {
+    [self setUserDefaultsValue:nativeAssetsAdUnitID forKey:kUSCurrentNativeAssetsAdUnitIdKey];
 }
 
 #pragma mark - Private

@@ -13,6 +13,7 @@ enum AdType: String {
     case interstitial
     case video
     case native
+    case nativeassets
     case unknown
 }
 
@@ -49,7 +50,7 @@ class CreateAdUnitIdViewController: UIViewController {
     var backBlock: ((String, AdType) -> Void)?
 
     fileprivate var adUnits: [AdUnitId]?
-    fileprivate let adTypes: [AdType] = [.banner, .interstitial, .video, .native]
+    fileprivate let adTypes: [AdType] = [.banner, .interstitial, .video, .native, .nativeassets]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +59,7 @@ class CreateAdUnitIdViewController: UIViewController {
     }
 
     private func setupUI() {
-       fillBackgroundImageView()
+        fillBackgroundImageView()
     }
 
     private func setupData() {
@@ -166,7 +167,8 @@ extension CreateAdUnitIdViewController {
         return [AdUnitId(adUnitId: DefaultAdUnitId.bannerAdUnitID, adType: .banner),
                 AdUnitId(adUnitId: DefaultAdUnitId.interstitialAdUnitID, adType: .interstitial),
                 AdUnitId(adUnitId: DefaultAdUnitId.videoAdUnitID, adType: .video),
-                AdUnitId(adUnitId: DefaultAdUnitId.nativeAdUnitID, adType: .native)]
+                AdUnitId(adUnitId: DefaultAdUnitId.nativeAdUnitID, adType: .native),
+                AdUnitId(adUnitId: DefaultAdUnitId.nativeAssetsAdUnitID, adType: .nativeassets)]
     }
 }
 

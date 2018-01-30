@@ -131,7 +131,7 @@ extension NativeAdDemonstratorViewController {
 
     fileprivate func supportedPresentationsForCustomisation() -> [MasterTableItem] {
         return [
-            MasterTableItem(title: "Native Assets", controller: "NativeAssetsDetailsViewController", xibName: nil, childItems: nil, userData: ["adUnitId": UserSettings.nativeAdUnitID]),
+            MasterTableItem(title: "Native Assets", controller: "NativeAssetsDetailsViewController", xibName: nil, childItems: nil, userData: ["adUnitId": UserSettings.nativeAssetsAdUnitID]),
             MasterTableItem(title: "Custom Layout", controller: "CustomLayoutNativeAdDetailsViewController", xibName: "BaseNativeAdDetailsViewController", childItems: nil, userData: ["adUnitId": UserSettings.nativeAdUnitID])
                 ]
     }

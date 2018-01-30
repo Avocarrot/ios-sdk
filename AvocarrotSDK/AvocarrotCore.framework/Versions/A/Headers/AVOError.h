@@ -23,43 +23,14 @@ typedef enum : NSUInteger {
     AVOErrorInvalidAdUnitID,
     AVOErrorInvalidParameters,
     AVOErrorTooManyRequests,
-    AVOErrorMraidError
+    AVOErrorMraidError,
+    AVOErrorPreviousAdRequestInProgress,
+    AVOErrorFeatureDisabled,
+    AVOErrorTTLExpired
 } AVOErrorCode;
 
 @interface AVOError : NSError
 
 @property(nonatomic, readonly, nonnull) NSString *avo_errorDescription;
-
-+ (nonnull id)errorWithCode:(NSInteger)errorCode andLocalizedDescription:(NSString *_Nonnull)localizedDescription;
-
-+ (nonnull id)errorWithCode:(NSInteger)errorCode andLocalizedDescription:(NSString *_Nonnull)localizedDescription userInfo:(NSDictionary *_Nullable)userInfo;
-
-- (nonnull id)initWithCode:(NSInteger)errorCode andLocalizedDescription:(NSString *_Nonnull)localizedDescription;
-
-- (nonnull id)initWithCode:(NSInteger)errorCode andLocalizedDescription:(NSString *_Nonnull)localizedDescription userInfo:(NSDictionary *_Nullable)userInfo;
-
-+ (nonnull instancetype)avo_invalidHTTPStatusError;
-
-+ (nonnull instancetype)avo_noAdError;
-
-+ (nonnull instancetype)avo_adLoadingError;
-
-+ (nonnull instancetype)avo_unknownError;
-
-+ (nonnull instancetype)avo_dndError;
-
-+ (nonnull instancetype)avo_responseStatusError;
-
-+ (nonnull instancetype)avo_InvalidHandshakeError;
-
-+ (nonnull instancetype)avo_tooFrequentAttempts;
-
-+ (nonnull instancetype)avo_invalidAdUnitID;
-
-+ (nonnull instancetype)avo_invalidParameters;
-
-+ (nonnull instancetype)avo_tooManyRequests;
-
-+ (nonnull instancetype)avo_mraidErrorWithDescription:(nonnull NSString *)errorDescription;
 
 @end

@@ -11,9 +11,6 @@ import AvocarrotNativeView
 
 @objc(FeedTableViewController)
 class FeedTableViewController: TableViewStreamController {
-
-    fileprivate
-    var adapter: AVOTableViewStreamAdapter?
     
     fileprivate
     var adCellHeight: Int = 0 // 320
@@ -32,16 +29,20 @@ class FeedTableViewController: TableViewStreamController {
             sizeDelegate = self
         }
 
-        adapter = AvocarrotSDK.shared.createStreamAdapter(for: tableView,
-                parentViewController: self,
-                adUnitId: adUnitId,
-                templateType: .feed,
-                delegate: sizeDelegate,
-                templateCustomization: {
-                    templateCustomizationObject in
-                    templateCustomizationObject.avoCTABorderWidth = 1
-                    templateCustomizationObject.avoCTACornerRadius = 5
-                })
+        AvocarrotSDK.shared.createStreamAdapter(for: tableView,
+            parentViewController: self,
+            adUnitId: adUnitId,
+            templateType: .feed,
+            delegate: sizeDelegate,
+            templateCustomization: {
+                templateCustomizationObject in
+                templateCustomizationObject.avoCTABorderWidth = 1
+                templateCustomizationObject.avoCTACornerRadius = 5
+            },
+            success: nil,
+            failure: { (error) in
+                print("Stream adapter creating error: \(error.avo_errorDescription) with code: \(error.code)")
+            })
     }
 }
 

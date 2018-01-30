@@ -11,8 +11,6 @@ import AvocarrotNativeView
 
 @objc(CustomTemplateCollectionViewController)
 class CustomTemplateCollectionViewController: BaseFlowLayoutCollectionViewController {
-    fileprivate
-    var adapter: AVOCollectionViewStreamAdapter?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,15 +18,20 @@ class CustomTemplateCollectionViewController: BaseFlowLayoutCollectionViewContro
         loadAds()
     }
 
+
     func loadAds() {
 
-        adapter = AvocarrotSDK.shared.createStreamAdapter(for: collectionView,
-                parentViewController: self,
-                adUnitId: adUnitId,
-                useDefaultGridMode: true,
-                delegate: self,
-                adViewClassForRendering: NativeBannerView.self)
-        adapter?.shiftOffsetBackOnAdInsert = false
+        AvocarrotSDK.shared.createStreamAdapter(for: collectionView,
+            parentViewController: self,
+            adUnitId: adUnitId,
+            delegate: self,
+            adViewClassForRendering: NativeBannerView.self,
+            success: { (adapter) in
+                adapter.shiftOffsetBackOnAdInsert = false
+            },
+            failure: { (error) in
+                print("Stream adapter creating error: \(error.avo_errorDescription) with code: \(error.code)")
+            })
     }
 }
 

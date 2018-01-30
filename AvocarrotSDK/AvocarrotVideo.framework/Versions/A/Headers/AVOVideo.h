@@ -14,8 +14,8 @@
 @property(nonatomic, assign, readonly) BOOL ready;
 
 /**
- *  Show fullscreen banner modally
- *  @param viewController               - UIViewController for modal presentation
+ *  Show video modally
+ *  @param viewController - UIViewController for modal presentation
  */
 - (void)showFromViewController:(UIViewController *_Nonnull)viewController;
 
@@ -24,24 +24,84 @@
 
 @interface AVOVideo (EventRegistration)
 
+/**
+ Called when video did hide (is closed).
+
+ @param block - callback block
+ @return - self
+ */
 - (instancetype _Nonnull)onDidHide:(nullable void (^)(void))block;
 
+/**
+ Called when video will hide (will be closed).
+
+ @param block - callback block
+ @return - self
+ */
 - (instancetype _Nonnull)onWillHide:(nullable void (^)(void))block;
 
+/**
+ Called before sending video request to server.
+
+ @param block - callback block
+ @return - self
+ */
 - (instancetype _Nonnull)onWillLoad:(nullable void (^)(void))block;
 
+/**
+ Called when video will show (will be shown).
+
+ @param block - callback block
+ @return - self
+ */
 - (instancetype _Nonnull)onWillShow:(nullable void (^)(void))block;
 
+/**
+ Called when video did show (is shown).
+
+ @param block - callback block
+ @return - self
+ */
 - (instancetype _Nonnull)onDidShow:(nullable void (^)(void))block;
 
+/**
+ Called when video is paused.
+
+ @param block - callback block
+ @return - self
+ */
 - (instancetype _Nonnull)onPause:(nullable void (^)(void))block;
 
+/**
+ Called when video is resumed.
+
+ @param block - callback block
+ @return - self
+ */
 - (instancetype _Nonnull)onResume:(nullable void (^)(void))block;
 
+/**
+ Called when video is started.
+
+ @param block - callback block
+ @return - self
+ */
 - (instancetype _Nonnull)onStart:(nullable void (^)(void))block;
 
+/**
+ Called when showing of a video has been completed.
+
+ @param block - callback block
+ @return - self
+ */
 - (instancetype _Nonnull)onComplete:(nullable void (^)(void))block;
 
+/**
+ Called after a click on the video. After this event an external browser or a SKStoreProductViewController will be opened.
+
+ @param block - callback block
+ @return - self
+ */
 - (instancetype _Nonnull)onClick:(nullable void (^)(void))block;
 
 @end
@@ -73,11 +133,11 @@ extern NSString *_Nonnull const kAVONotification_VideoDidShow;
  */
 extern NSString *_Nonnull const kAVONotification_VideoStarted;
 /*
- Called when video is paused (not implemented yet).
+ Called when video is paused.
  */
 extern NSString *_Nonnull const kAVONotification_VideoPause;
 /*
- Called when video is resumed (not implemented yet).
+ Called when video is resumed.
  */
 extern NSString *_Nonnull const kAVONotification_VideoResume;
 /*
@@ -85,7 +145,7 @@ extern NSString *_Nonnull const kAVONotification_VideoResume;
  */
 extern NSString *_Nonnull const kAVONotification_VideoCompleted;
 /*
- Called after a click on the video. After this event the app will be minimized and an external browser will be opened
+ Called after a click on the video. After this event an external browser or a SKStoreProductViewController will be opened.
  */
 extern NSString *_Nonnull const kAVONotification_VideoClicked;
 

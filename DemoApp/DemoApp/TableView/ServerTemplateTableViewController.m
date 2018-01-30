@@ -23,16 +23,16 @@
 
 - (void)loadAds {
     
-    self.adapter = [AvocarrotSDK.sharedSDK createStreamAdapterForTableView:self.tableView
-                                                      parentViewController:self
-                                                                  adUnitId:self.adUnitId
-                                                              templateType:AVONativeAdsTemplateTypeServer
-                                                                  delegate:self
-                                                     templateCustomization:^(AVOTemplateCustomizationObject *templateCustomizationObject) {
-                                                         //example of editing ad representation via customizationObject
-                                                         templateCustomizationObject.avoCTABorderWidth = 1;
-                                                         templateCustomizationObject.avoCTACornerRadius = 5;
-                                                     }];
+    [AvocarrotSDK.sharedSDK createStreamAdapterForTableView:self.tableView
+                                       parentViewController:self
+                                                   adUnitId:self.adUnitId
+                                               templateType:AVONativeAdsTemplateTypeServer
+                                                   delegate:self
+                                      templateCustomization:nil
+                                                    success:nil
+                                                    failure:^(AVOError * _Nonnull error) {
+                                                        NSLog(@"Stream adapter creating error %@", error);
+                                                    }];
 }
 
 #pragma mark - <AVOTableViewStreamAdapterDelegate> protocol

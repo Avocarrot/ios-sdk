@@ -11,6 +11,7 @@ Table of contents
 * [Native assets](#native-assets)
 * [Native ads](#native-ads)
 * [Stream adapter](#stream-adapter)
+* [Native ads provider](#native-ads-provider)
 * [Native templates customization](#native-templates-customization)
 * [Other](#other)
 
@@ -82,7 +83,6 @@ From version 4.5 Avocarrot SDK uses modular system to distribute based on subspe
     - `pod 'avocarrot-ios-sdk/InterstitialAdapters/GoogleMobileAdsAdapter'` - Avocarrot interstitials and adapter for  [Google Mobile Ads SDK](https://developers.google.com/admob/ios/download) interstitials
     - `pod 'avocarrot-ios-sdk/InterstitialAdapters/MopubAdapter'` - Avocarrot interstitials and adapter for  [MoPub](https://github.com/mopub/mopub-ios-sdk) interstitials
     - `pod 'avocarrot-ios-sdk/InterstitialAdapters/ChartboostAdapter'` - Avocarrot interstitials and adapter for  [Chartboost](http://cboo.st/ios_v6-3) interstitials
-    - `pod 'avocarrot-ios-sdk/InterstitialAdapters/NativeXAdapter'` - Avocarrot interstitials and adapter for  [NativeX](https://github.com/nativex/NativeX-iOS-SDK) interstitials
     - `pod 'avocarrot-ios-sdk/InterstitialAdapters/AppLovinAdapter'` - Avocarrot interstitials and adapter for  [AppLovin](https://www.applovin.com/) interstitials
     - `pod 'avocarrot-ios-sdk/InterstitialAdapters/InLocoAdapter'` - Avocarrot interstitials and adapter for  [InLoco](http://docs.inlocomedia.com/docs/ios) interstitials
 
@@ -96,10 +96,8 @@ From version 4.5 Avocarrot SDK uses modular system to distribute based on subspe
 - For videos, if you want to select which client networks SDK to be included with server side mediated networks, refer to the pods specified below to add into your Podfile:
 
     - `pod 'avocarrot-ios-sdk/VideoAdapters/ChartboostAdapter'` - Avocarrot banners and adapter for  [Chartboost](http://cboo.st/ios_v6-3) videos
-    - `pod 'avocarrot-ios-sdk/VideoAdapters/NativeXAdapter'` - Avocarrot banners and adapter for  [NativeX](https://github.com/nativex/NativeX-iOS-SDK) videos
     - `pod 'avocarrot-ios-sdk/VideoAdapters/UnityAdsAdapter'` - Avocarrot banners and adapter for  [Unity Ads](https://github.com/Applifier/unity-ads-sdk) videos
     - `pod 'avocarrot-ios-sdk/VideoAdapters/VungleAdapter'` - Avocarrot banners and adapter for  [Vungle](https://v.vungle.com/sdk) videos
-    - `pod 'avocarrot-ios-sdk/VideoAdapters/AdColonyAdapter'` - Avocarrot banners and adapter for  [AdColony](https://github.com/AdColony/AdColony-iOS-SDK) videos
 
 
 *Rendered native ads*
@@ -117,23 +115,16 @@ From version 4.5 Avocarrot SDK uses modular system to distribute based on subspe
     - `pod 'avocarrot-ios-sdk/NativeViewAdapters/InLocoAdapter'` - Avocarrot native views and adapter for  [InLoco](http://docs.inlocomedia.com/docs/ios) native views
 
 
-**Warning: Avocarrot SDK 4.7.4 was designed and verified to work correctly with the following versions of 3rd party ad network SDKs:**
+**Warning: Avocarrot SDK 4.8.0 was designed and verified to work correctly with the following versions of 3rd party ad network SDKs:**
 
-* AdColony – 3.2.1
 * Chartboost – 6.6.3
-* Google Mobile Ads – 7.24.1
-* NativeX – 5.5.9
-* Unity Ads – 2.1.1
+* Google Mobile Ads – 7.27.2
+* Unity Ads – 2.1.2
 * Vungle – 4.1.0
 * Facebook Audience – 4.26.0
-* MoPub – 4.17.0
-* AppLovin – 3.1
-* Baidu - 4.5
-* Tencent - 4.5.4
+* MoPub – 4.19.0
+* AppLovin – 4.6
 * InLoco - 2.4.4
-
-
-**Note**: The Baidu and Tencent ad network adapters and SDKs must be added to your project manually and are not included in the Cocoapods distribution.
 
 **Warning: Some Xcode versions support new settings only after the Xcode reboot. This also cleans the Xcode cache and remedies other problems.**
 
@@ -160,7 +151,7 @@ Since the Avocarrot SDK uses 3rd party networks to load ads and we have no contr
 Standard banners
 ================
 
-ID of advertising space for testing (STANDARD): `"04c447d7-ffb8-4ba1-985e-4d2b9f88cd69"`
+AdUnitId for testing (STANDARD): `"04c447d7-ffb8-4ba1-985e-4d2b9f88cd69"`
 Available banner sizes:
 
 - AVOBannerViewSizeSmall (320x50) (recommended)
@@ -169,10 +160,10 @@ Available banner sizes:
 Use the following methods in your UIViewController subclass:
 
 ```objective-c
-- (AVOBannerView *_Nullable)loadBannerWithSize:(AVOBannerViewSize)size
-                            adUnitId:(NSString *_Nonnull)adUnitId
-                            success:(void (^ _Nullable)(AVOBannerView *_Nonnull bannerAd))success
-                            failure:(void (^ _Nullable)(AVOError *_Nonnull error))failure;
+- (void)loadBannerWithSize:(AVOBannerViewSize)size
+                  adUnitId:(NSString *_Nonnull)adUnitId
+                   success:(void (^ _Nullable)(AVOBannerView *_Nonnull bannerAd))success
+                   failure:(void (^ _Nullable)(AVOError *_Nonnull error))failure;
 ```
 
 For example:
@@ -183,11 +174,14 @@ For example:
 #import <AvocarrotBanner/AvocarrotSDK+AVOBannerView.h>
 ...
 [self.bannerView stop];
-self.bannerView = [AvocarrotSDK.sharedSDK loadBannerWithSize:AVOBannerViewSizeSmall
-                                       adUnitId:@"04c447d7-ffb8-4ba1-985e-4d2b9f88cd69"
-                                       success:nil
-                                       failure:nil];
-[self.view addSubview:self.bannerView];
+__weak typeof(self) weakSelf = self;
+[AvocarrotSDK.sharedSDK loadBannerWithSize:AVOBannerViewSizeSmall
+                                  adUnitId:@"04c447d7-ffb8-4ba1-985e-4d2b9f88cd69"
+                                   success:^(AVOBannerView * _Nonnull bannerAd) {
+                                       __strong __typeof__(self) sSelf = weakSelf;
+                                       sSelf.bannerView = bannerAd;
+                                       [sSelf.view addSubview:bannerAd];
+                                 } failure:nil];
 ```
 *swift*
 
@@ -200,10 +194,15 @@ if bannerView != nil {
     bannerView = nil
 }
 
-bannerView = AvocarrotSDK.shared.loadBanner(with: AVOBannerViewSizeSmall,
-	                                       adUnitId: "04c447d7-ffb8-4ba1-985e-4d2b9f88cd69",
-                                         success: nil,
-                                         failure: nil)
+AvocarrotSDK.shared.loadBanner(with: AVOBannerViewSizeSmall,
+                               adUnitId: "04c447d7-ffb8-4ba1-985e-4d2b9f88cd69",
+                               success: { [weak self] (bannerAd) in
+                                           guard let sSelf = self else {
+                                               return
+                                           }
+                                           sSelf.bannerView = bannerAd
+                                           sSelf.view.addSubview(bannerAd)
+                               }, failure: nil)
 ```
 
 Add the following code to `viewDidAppear` and `viewWillDisappear` methods:
@@ -255,17 +254,17 @@ If you want to stop and remove banner from screen:
 
 To process banner events, you should implement blocks or subscribe to notifications:
 
-| Method | Description  | NSNotificationCenter key |
+| Method | Description  | `NSNotificationCenter` key |
 |:-----------------------------------------------------------------------|:-------------------------------------------------------------------------|:-------------------------------------------------------------------------|
 |` (void (^ _Nullable)(void))success `|    Called after the banner is served successfully. | |
 |` (void (^ _Nullable)(AVOError *_Nonnull error))failure `| Called if the banner was not downloaded.| |
-|`- (instancetype _Nonnull)onClick:(nullable void (^)(void))block`| Called after a click on a banner. After this event app will be minimized and an external browser will be opened.| `kAVONotification_BannerClicked` |
+|`- (instancetype _Nonnull)onClick:(nullable void (^)(void))block`| Called after a click on a banner. After this event app will be minimized and an external browser will be opened. | `kAVONotification_BannerClicked` |
 
 
 Interstitials
 =============
 
-ID of advertising space for testing (INTERSTITIAL): `"2cb34a73-0012-4264-9526-bde1fce2ba92"`.
+AdUnitId for testing (INTERSTITIAL): `"2cb34a73-0012-4264-9526-bde1fce2ba92"`.
 Interstitial size is defined automatically, depending on the screen size.
 Use the following methods in your UIViewController subclass:
 
@@ -304,14 +303,16 @@ For example:
 __weak typeof(self) weakSelf = self;
 [AvocarrotSDK.sharedSDK loadInterstitialWithAdUnitId:@"2cb34a73-0012-4264-9526-bde1fce2ba92"
                      success:^(AVOInterstitial * _Nonnull interstitial) {
-                        weakSelf.intestitial = interstitial;
-                        [interstitial showFromViewController:weakSelf];
+                        __strong __typeof__(self) sSelf = weakSelf;
+                        sSelf.intestitial = interstitial;
+                        [interstitial showFromViewController:sSelf];
                     } failure:nil];
 
 [AvocarrotSDK.sharedSDK loadInterstitialAndShowWithDelayWithAdUnitId:@"2cb34a73-0012-4264-9526-bde1fce2ba92"
                      forViewController:self
                      success:^(AVOInterstitial * _Nonnull interstitial) {
-                       weakSelf.intestitial = interstitial;
+                       __strong __typeof__(self) sSelf = weakSelf;
+                       sSelf.intestitial = interstitial;
                      } failure:nil];
 
 ```
@@ -322,26 +323,32 @@ __weak typeof(self) weakSelf = self;
 import AvocarrotInterstitial
 ...
 AvocarrotSDK.shared.loadInterstitial(withAdUnitId: "2cb34a73-0012-4264-9526-bde1fce2ba92",
-                                  success: { [unowned self] (interstitial) in
-                                      self.interstitial = interstitial
-                                      interstitial.show(from: self)
+                                  success: { [weak self] (interstitial) in
+                                      guard let sSelf = self else {
+                                         return
+                                      }
+                                      sSelf.interstitial = interstitial
+                                      interstitial.show(from: sSelf)
                                }, failure: nil)
 
 AvocarrotSDK.shared.loadInterstitialAndShowWithDelay(withAdUnitId: "2cb34a73-0012-4264-9526-bde1fce2ba92",
                                                   for: self,
-                                                  success: { [unowned self] (interstitial) in
-                                                      self.interstitial = interstitial
+                                                  success: { [weak self] (interstitial) in
+                                                      guard let sSelf = self else {
+                                                         return
+                                                      }
+                                                      sSelf.interstitial = interstitial
                                                }, failure: nil)
 ```
 ### Interstitial events handling
 
 To process interstitial events, you should implement blocks or subscribe to notifications. The following is available:
 
-| Method | Description  | NSNotificationCenter key |
+| Method | Description  | `NSNotificationCenter` key |
 |:-----------------------------------------------------------------------|:-------------------------------------------------------------------------|:-------------------------------------------------------------------------|
 |`(void (^ _Nullable)(AVOInterstitial` `*_Nonnull interstitial))success `| Called after the interstitial is served. After this method is called, the interstitial is ready to be displayed.| |
 |`(void (^ _Nullable)(AVOError *_Nonnull error))failure `| Called if the interstitial was not downloaded.| |
-|`- (instancetype _Nonnull)onClick:(nullable void (^)(void))block`|	Called after a click on the interstitial. After this event the app will be minimized and an external browser will be opened.| `kAVONotification_InterstitialClicked` |
+|`- (instancetype _Nonnull)onClick:(nullable void (^)(void))block`|	Called after a click on the interstitial. After this event an external browser or a SKStoreProductViewController will be opened. | `kAVONotification_InterstitialClicked` |
 |`- (instancetype _Nonnull)onDidHide:(nullable void (^)(void))block`| Called after the interstitial disappears from the screen.| `kAVONotification_InterstitialDidHide`|
 |`- (instancetype _Nonnull)onDidShow:(nullable void (^)(void))block`|	Called after the interstitial is displayed.| `kAVONotification_InterstitialDidShow` |
 |`- (instancetype _Nonnull)onWillHide:(nullable void (^)(void))block `| Called after the tap on the "close" button, directly before the interstitial disappears.| `kAVONotification_InterstitialWillHide`|
@@ -372,9 +379,11 @@ For example:
 ```objective-c
 #import <AvocarrotVideo/AvocarrotSDK+AVOVideo.h>
 ...
+__weak typeof(self) weakSelf = self;
 [AvocarrotSDK.sharedSDK loadVideoWithAdUnitId:@"87f65c4c-f12d-4bb6-96fd-063fe30c4d69"
                      success:^(AVOVideo *video) {
-                        [video showFromViewController:self];
+                        __strong __typeof__(self) sSelf = weakSelf;
+                        [video showFromViewController:sSelf];
                      } failure:nil];
 ```
 
@@ -383,16 +392,19 @@ For example:
 ```swift
 import AvocarrotVideo
 ...
-AvocarrotSDK.shared.loadVideo(withAdUnitId: "87f65c4c-f12d-4bb6-96fd-063fe30c4d69", success: { [unowned self]
+AvocarrotSDK.shared.loadVideo(withAdUnitId: "87f65c4c-f12d-4bb6-96fd-063fe30c4d69", success: { [weak self]
     video in
-    video.show(from: self)
+    guard let sSelf = self else {
+       return
+    }
+    video.show(from: sSelf)
 }, failure: nil)
 ```
 ### Video events handling
 
 To process video ad events, you should implement blocks or subscribe to notifications. The following is available:
 
-| Method | Description  | NSNotificationCenter key |
+| Method | Description  | `NSNotificationCenter` key |
 |:-----------------------------------------------------------------------|:-------------------------------------------------------------------------|:-------------------------------------------------------------------------|
 |`(void (^ _Nullable)(AVOVideo *_Nonnull video))success `| Called after the video is served. After this method is called, the video ad is ready to be displayed. | |
 |`(void (^ _Nullable)(AVOError *_Nonnull error))failure `| Called if the video ad was not downloaded. | |
@@ -405,13 +417,13 @@ To process video ad events, you should implement blocks or subscribe to notifica
 |` - (instancetype _Nonnull)onResume:(nullable void (^)(void))block`| Called when the video is resumed. | `kAVONotification_VideoResume` |
 |` - (instancetype _Nonnull)onComplete:(nullable void (^)(void))block`| Called when showing of a video has been completed. | `kAVONotification_VideoCompleted` |
 |` - (instancetype _Nonnull)onWillLoad:(nullable void (^)(void))block`| Called before sending the video request to server. | `kAVONotification_VideoWillLoad` |
-|` - (instancetype _Nonnull)onClick:(nullable void (^)(void))block`| Called after a click on the video. After this event the app will be minimized and an external browser will be opened. | `kAVONotification_VideoClicked` |
+|` - (instancetype _Nonnull)onClick:(nullable void (^)(void))block`| Called after a click on the video. After this event an external browser or a SKStoreProductViewController will be opened. | `kAVONotification_VideoClicked` |
 
 
 Native assets
 ==========
 
-ID of advertising space for testing (Native ad): `"7f900c7d-7ce3-4190-8e93-310053e70ca2"`
+AdUnitId for testing (Native ad): `"7f900c7d-7ce3-4190-8e93-310053e70ca2"`
 
 Our native assets are raw ad data without any pre-defined wrapping UI. We only request the container of this data for event registration.
 The layout for a native assets is configured by developers with the help of the Interface Builder (creating .xib file) or manual creation of UI controls in code.
@@ -455,9 +467,9 @@ For example:
 #import <AvocarrotNativeAssets/AvocarrotSDK+AVONativeAssets.h>
 ...
 __weak typeof(self) weakSelf = self;
-
 [AvocarrotSDK.sharedSDK loadNativeAdWithAdUnitId:self.unitID
                      success:^UIView * _Nonnull(AVONativeAssets * _Nonnull nativeAd) {
+                            __strong __typeof__(self) sSelf = weakSelf;
                             CustomNativeView *nativeView = [CustomNativeView new];
                             [nativeView fillWithNativeAd:nativeAd];
 
@@ -469,7 +481,7 @@ __weak typeof(self) weakSelf = self;
                                 NSLog(@"Left application");
                             }] registerViewForInteraction:nativeView forClickableSubviews:nil];
 
-                            [weakSelf.view addSubview:nativeView];
+                            [sSelf.view addSubview:nativeView];
 
                             return nativeView;
                      } failure:^(AVOError * _Nonnull error) {
@@ -482,7 +494,10 @@ __weak typeof(self) weakSelf = self;
 import AvocarrotNativeAssets
 ...
 AvocarrotSDK.shared.loadNativeAd(withAdUnitId: "",
-                 success: { [unowned self] (ad: AVONativeAssets) -> UIView? in
+                 success: { [weak self] (ad: AVONativeAssets) -> UIView? in
+                        guard let sSelf = self else {
+                           return
+                        }
                         let containerView = CustomNativeView()
                         containerView.fillWithNativeAd(ad)
 
@@ -494,7 +509,7 @@ AvocarrotSDK.shared.loadNativeAd(withAdUnitId: "",
                             print("Left application")
                         }).registerView(forInteraction: containerView, forClickableSubviews: nil)
 
-                        self.view.addSubview(containerView)
+                        sSelf.view.addSubview(containerView)
 
                         return containerView
 
@@ -515,7 +530,7 @@ To process custom native ad events, you should implement blocks. The following i
 Native ads
 ==========
 
-ID of advertising space for testing (Native ad): `"7f900c7d-7ce3-4190-8e93-310053e70ca2"`
+AdUnitId for testing (Native ad): `"7f900c7d-7ce3-4190-8e93-310053e70ca2"`
 
 A native ad is a raw representation of an ad without any pre-defined wrapping UI, which gives developers the freedom to design and control the ad, or for the easiest integration you could use our customizable templates: *List*, *Feed*, *Grid* and *GridIcon* based on `AVONativeAdsTemplateType` enum. You can also choose *Server* template (i.e Dynamic Template), which will be downloaded from the server based on your color preferences. The main advantage of this template  is the possibility to change the color scheme of the native ad after your app has been uploaded to the AppStore. The full list of templates is available in the `AVONativeAdsTemplateType` enum.
 
@@ -607,7 +622,7 @@ There is a common algorithm to use when implementing a native ad:
 	* XIB option - Design the layout of `MyNativeBannerView` in a separate XIB file. The developer should bind the  desired UI controls in this XIB and properties from `<AVONativeViewInterface>`, which `AVONativeView` adopts. The implementation of `MyNativeBannerView` class has to override `+ (NSString *)xibName` method, which returns the name of the same XIB.   
 	* Coding option - The implementation of `MyNativeBannerView` class must be performed by the creation and placement of UI controls using `<AVONativeViewInterface>`, which `AVONativeView` adopts.
 3. Call `loadNativeAdWithAdUnitId: etc` with the required parameters, where the `adUnitId` is your private advertising space ID and className is the name of the `MyNativeBannerView` class. After downloading the ad data, the SDK immediately initiates `MyNativeBannerView` class created in step 2. After, the SDK renders the native ad data inside the controls boundaries. Not all controls are filled this way, but only the main ones:`avoTitleTextLabel, avoMainTextLabel,  avoIconImageView, avoMainMediaView`. When the rendering has finished, the successful completion block with this instance will be called.
-4. Show ad view container on the screen.
+4. Show native ad view container on the screen.
 
 For example:
 
@@ -621,10 +636,10 @@ __weak typeof(self) weakSelf = self;
                        parentViewController:self
                        classForRendering:NSStringFromClass([MyNativeBannerView class])
                        success:^(UIView *adNativeViewContainer) {
+                           __strong __typeof__(self) sSelf = weakSelf;
                            UIView *nativeView = adNativeViewContainer;
-                           nativeView.frame = weakSelf.adContainerView.bounds;
-                           [weakSelf.adContainerView addSubview:nativeView];
-                           [nativeView registerViewControllerForInteraction:weakSelf];
+                           nativeView.frame = sSelf.adContainerView.bounds;
+                           [sSelf.adContainerView addSubview:nativeView];
                        } failure:^(NSError *error) {
 }];
 ```
@@ -634,47 +649,55 @@ __weak typeof(self) weakSelf = self;
 import AvocarrotNativeView
 ...
 AvocarrotSDK.shared.loadNativeAd(withAdUnitId: "7f900c7d-7ce3-4190-8e93-310053e70ca2", parentViewController: self, adViewClassForRendering: classForRendering, success: {
-    view in
-    nativeView = view
+    [weak self] (nativeview) in
+    guard let sSelf = self else {
+       return
+    }
+    nativeview.frame = sSelf.adContainerView.bounds
+    sSelf.adContainerView.addSubview(nativeview)
 }, failure: nil)
 ```
 
 To process native view events, you should implement blocks. The following is available:
 
-| Method | Description |
-|:-----------------------------------------------------------------------|:-------------------------------------------------------------------------|
-|`- (instancetype _Nonnull)onImpression:(nullable void (^)(void))impression `| Called when ad impression has been counted. |
-|`- (instancetype _Nonnull)onClick:(nullable void (^)(void))click `| Called when ad click has been counted. |
-|`- (instancetype _Nonnull)onLeftApplication:(nullable void (^)(void))leftApplication `| Called when application has been left after click. |
-
+| Method | Description  | `NSNotificationCenter` key |
+|:-----------------------------------------------------------------------|:-------------------------------------------------------------------------|:-------------------------------------------------------------------------|
+|`- (instancetype _Nonnull)onImpression:(nullable void (^)(void))impression `| Called when ad impression has been counted. | `kAVONotification_NativeAssetsImpressed` |
+|`- (instancetype _Nonnull)onClick:(nullable void (^)(void))click `| Called when ad click has been counted. | `kAVONotification_NativeAssetsClicked` |
+|`- (instancetype _Nonnull)onLeftApplication:(nullable void (^)(void))leftApplication `| Called when application has been left after click. | `kAVONotification_NativeAssetsLeftApplication` |
 
 Stream adapter
 ================
 
-ID of advertising space for testing (like for native ad): `"7f900c7d-7ce3-4190-8e93-310053e70ca2"`
+AdUnitId for testing (like for native ad): `"7f900c7d-7ce3-4190-8e93-310053e70ca2"`
 
 Stream adapter is a smart technology to add native ads as items in your feeds based on *UITableView* or *UICollectionView*. Settings for stream adapter are returned from the server side and you can change it as you wish.
 
-For the easiest integration you could use our customizable templates: *List*, *Feed*, *Grid* and *GridIcon* based on `AVONativeAdsTemplateType` enum:
+To simplify integration for Stream Adapter you can use our customizable templates: *List*, *Feed*, *Grid* and *GridIcon* based on `AVONativeAdsTemplateType` enum:
 
 *objective-c*
 
 ```objective-c
 #import <AvocarrotNativeView/AvocarrotNativeView.h>
 ...
-- (AVOTableViewStreamAdapter *_Nonnull)createStreamAdapterForTableView:(UITableView *_Nonnull)tableView
-                                       parentViewController:(UIViewController *_Nonnull)viewController
-                                       adUnitId:(NSString *_Nonnull)adUnitId
-                                       templateType:(AVONativeAdsTemplateType)templateType
-                                       delegate:(id <AVOTableViewStreamAdapterDelegate> _Nullable)delegate
-                                       templateCustomization:(void (^ _Nullable)(AVOTemplateCustomizationObject *_Nonnull templateCustomizationObject))templateCustomization;
+- (void)createStreamAdapterForTableView:(UITableView *_Nonnull)tableView
+                   parentViewController:(UIViewController *_Nonnull)viewController
+                               adUnitId:(NSString *_Nonnull)adUnitId
+                           templateType:(AVONativeAdsTemplateType)templateType
+                               delegate:(id <AVOTableViewStreamAdapterDelegate> _Nullable)delegate
+                  templateCustomization:(void (^ _Nullable)(AVOTemplateCustomizationObject *_Nonnull templateCustomizationObject))templateCustomization
+                                success:(void (^ _Nullable)(AVOTableViewStreamAdapter *_Nonnull streamAdapter))success
+                                failure:(void (^ _Nullable)(AVOError *_Nonnull error))failure;
 
-- (AVOCollectionViewStreamAdapter *_Nonnull)createStreamAdapterForCollectionView:(UICollectionView *_Nonnull)collectionView
-                                            parentViewController:(UIViewController *_Nonnull)viewController
-                                            adUnitId:(NSString *_Nonnull)adUnitId
-                                            templateType:(AVONativeAdsTemplateType)templateType
-                                            delegate:(id <AVOCollectionViewStreamAdapterDelegate> _Nullable)delegate
-                                            templateCustomization:(void (^ _Nullable)(AVOTemplateCustomizationObject *_Nonnull templateCustomizationObject))templateCustomization;                                       
+
+- (void)createStreamAdapterForCollectionView:(UICollectionView *_Nonnull)collectionView
+                        parentViewController:(UIViewController *_Nonnull)viewController
+                                    adUnitId:(NSString *_Nonnull)adUnitId
+                                templateType:(AVONativeAdsTemplateType)templateType
+                                    delegate:(id <AVOCollectionViewStreamAdapterDelegate> _Nullable)delegate
+                       templateCustomization:(void (^ _Nullable)(AVOTemplateCustomizationObject *_Nonnull templateCustomizationObject))templateCustomization
+                                     success:(void (^ _Nullable)(AVOCollectionViewStreamAdapter *_Nonnull streamAdapter))success
+                                     failure:(void (^ _Nullable)(AVOError *_Nonnull error))failure;
 ```
 
 *swift*
@@ -687,14 +710,18 @@ func createStreamAdapter(for tableView: UITableView,
                          adUnitId: String,
                          templateType: AVONativeAdsTemplateType,
                          delegate: AVOTableViewStreamAdapterDelegate?,
-                         templateCustomization: ((AVOTemplateCustomizationObject) -> ())?) -> AVOTableViewStreamAdapter
+                         templateCustomization: ((AVOTemplateCustomizationObject) -> ())?,
+                         success:((AVOTableViewStreamAdapterDelegate) -> ())?,
+                         failure:((AVOError) -> ())?)
 
 func createStreamAdapter(for collectionView: UICollectionView,
                          parentViewController viewController: UIViewController,
                          adUnitId: String,
                          templateType: AVONativeAdsTemplateType,
                          delegate: AVOCollectionViewStreamAdapterDelegate?,
-                         templateCustomization: ((AVOTemplateCustomizationObject) -> ())?) -> AVOCollectionViewStreamAdapter
+                         templateCustomization: ((AVOTemplateCustomizationObject) -> ())?,
+                         success:((AVOCollectionViewStreamAdapter) -> ())?,
+                         failure:((AVOError) -> ())?)
 ```
 
 List of available template customizations is [here](#native-templates-customization)
@@ -706,18 +733,21 @@ If you want to use your own representation of a native ad, use these methods:
 ```objective-c
 #import <AvocarrotNativeView/AvocarrotNativeView.h>
 ...
-- (AVOTableViewStreamAdapter *_Nonnull)createStreamAdapterForTableView:(UITableView *_Nonnull)tableView
-                                       parentViewController:(UIViewController *_Nonnull)viewController
-                                       adUnitId:(NSString *_Nonnull)adUnitId
-                                       delegate:(id <AVOTableViewStreamAdapterDelegate> _Nullable)delegate
-                                       adViewClassForRendering:(Class _Nonnull)adViewClass;
+- (void)createStreamAdapterForTableView:(UITableView *_Nonnull)tableView
+                   parentViewController:(UIViewController *_Nonnull)viewController
+                               adUnitId:(NSString *_Nonnull)adUnitId
+                              delegate:(id <AVOTableViewStreamAdapterDelegate> _Nullable)delegate
+               adViewClassForRendering:(Class _Nonnull)adViewClass
+                               success:(void (^ _Nullable)(AVOTableViewStreamAdapter *_Nonnull streamAdapter))success
+                               failure:(void (^ _Nullable)(AVOError *_Nonnull error))failure;
 
-- (AVOCollectionViewStreamAdapter *_Nonnull)createStreamAdapterForCollectionView:(UICollectionView *_Nonnull)collectionView
-                                            parentViewController:(UIViewController *_Nonnull)viewController
-                                            adUnitId:(NSString *_Nonnull)adUnitId
-                                            useDefaultGridMode:(BOOL)gridMode
-                                            delegate:(id <AVOCollectionViewStreamAdapterDelegate> _Nullable)delegate
-                                            adViewClassForRendering:(Class _Nonnull)adViewClass;                                     
+- (void)createStreamAdapterForCollectionView:(UICollectionView *_Nonnull)collectionView
+                        parentViewController:(UIViewController *_Nonnull)viewController
+                                    adUnitId:(NSString *_Nonnull)adUnitId
+                                    delegate:(id <AVOCollectionViewStreamAdapterDelegate> _Nullable)delegate
+                     adViewClassForRendering:(Class _Nonnull)adViewClass
+                                     success:(void (^ _Nullable)(AVOCollectionViewStreamAdapter *_Nonnull streamAdapter))success
+                                     failure:(void (^ _Nullable)(AVOError *_Nonnull error))failure;
 ```
 
 *swift*
@@ -729,58 +759,25 @@ func createStreamAdapter(for tableView: UITableView,
                          parentViewController viewController: UIViewController,
                          adUnitId: String,
                          delegate: AVOTableViewStreamAdapterDelegate?,
-                         adViewClassForRendering adViewClass: AnyClass) -> AVOTableViewStreamAdapter
+                         adViewClassForRendering adViewClass: AnyClass,
+                         success:((AVOTableViewStreamAdapterDelegate) -> ())?,
+                         failure:((AVOError) -> ())?)
 
 func createStreamAdapter(for collectionView: UICollectionView,
                          parentViewController viewController: UIViewController,
                          adUnitId: String,
-                         useDefaultGridMode gridMode: Bool,
                          delegate: AVOCollectionViewStreamAdapterDelegate?,
-                         adViewClassForRendering adViewClass: AnyClass) -> AVOCollectionViewStreamAdapter
+                         adViewClassForRendering adViewClass: AnyClass,
+                         success:((AVOCollectionViewStreamAdapter) -> ())?,
+                         failure:((AVOError) -> ())?)
 ```
 
 These methods work the same way as [Native Ads](#native-ads). You have to use the instructions of this type of ad to set `adViewClass` field in methods, but you need to implement `AVOCollectionViewStreamAdapterDelegate` protocol or set `estimatedItemSize` property of your `UICollectionViewFlowLayout`.
 
 For `UITableView` you have to do nothing in `UITableViewDelegate` and `UITableViewDataSource` methods to add ads in your feed, native ads will be added automatically.
 
-For `UICollectionView` you have to write some code in `UICollectionViewDelegate` and `UICollectionViewDataSource` methods to add ads in your feed if you use custom collection view layout only, for `UICollectionViewFlowLayout` native ads will be added automatically:
+For `UICollectionView` you have to do nothing in `UICollectionViewDelegate` and `UICollectionViewDelegate` methods to add ads in your feed, native ads will be added automatically. Only `UICollectionViewFlowLayout` is supported. To add ads to custom layout `UICollectionView` use `AVONativeAdsProvider` class.
 
-*objective-c*
-
-```objective-c
-#import <AvocarrotNativeView/AvocarrotNativeView.h>
-...
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
-	cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-	if ([self.adapter shouldDisplayAdAtIndexPath:indexPath]) {
-		YourAdContainerCollectionViewCell *cell = [collectionView
-			dequeueReusableCellWithReuseIdentifier:NSStringFromClass([YourAdContainerCollectionViewCell class])
-				forIndexPath:indexPath];
-		cell.layer.zPosition = 1000;
-		return [self.adapter renderedAdCellAtIndexPath:indexPath inCell:cell];
-		} else {
-			//your feed cell
-    }
-	}
-}
-```
-
-*swift*
-
-```swift
-import AvocarrotNativeView
-...
-override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    if (adapter?.shouldDisplayAd(at: indexPath) == true) {
-        let cell: AVOAdContainerCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "AVOAdContainerCollectionViewCell", for: indexPath) as! AVOAdContainerCollectionViewCell
-
-        cell.layer.zPosition = 100
-        return (adapter?.renderedAdCell(at: indexPath, in: cell))!
-    } else {
-        //your feed cell
-    }
-}
-```
 **Note for custom collection view layout: if you want to know the original index path of a cell in your feed without ads use this method (it may be important to load data from your data array):**
 
 ```objective-c
@@ -791,14 +788,130 @@ If you want to use methods of `UITableView` and `UICollectionView` which work wi
 
 To process stream adapter events, you should implement blocks or subscribe to notifications. The following is available:
 
-| Method | Description  | NSNotificationCenter key |
+| Method | Description  | `NSNotificationCenter` key |
 |:-----------------------------------------------------------------------|:-------------------------------------------------------------------------|:-------------------------------------------------------------------------|
 |`- (instancetype _Nonnull)onAdsDidLoad:(nullable void (^)(void))block `|  Called after ads for stream adapter have been loaded. After this event you can reload your UITableView/UICollectionView or could wait - ads will be added automatically during scrolling. | `kAVONotification_StreamAdapterAdsDidLoad` |
 |`- (instancetype _Nonnull)onAdsFailed:(nullable void (^)(void))block `|  Called after ads for stream adapter failed to load. | `kAVONotification_StreamAdapterAdsFailed` |
 
 **Note: Currently stream adapter doesn't support dynamic modification of data source (insert, move, delete of items). This support will be added soon.**
 
-**Note: Don't forget to retain stream adapter by using your local variable**
+To delete ads from your `UITableView` or `UICollectionView` just use that code:
+
+*objective-c*
+
+```objective-c
+[self.tableView resetStreamAdapter];
+[self.collectionView resetStreamAdapter];
+```
+
+*swift*
+
+```swift
+tableView.resetStreamAdapter()
+collectionView.resetStreamAdapter()
+```
+
+Native ads provider
+=====
+
+AdUnitId for testing (like for native ad): `"7f900c7d-7ce3-4190-8e93-310053e70ca2"`
+
+Native ads provider is more flexible approach to add rendered native ads for `UITableView` or `UICollectionView` instead of the complex Stream Adapter classes (`AVOTableViewStreamAdapter` or `AVOCollectionViewStreamAdapter`).
+
+To simplify integration for both Stream Adapter and Native Ads Provider you can use our customizable templates: *List*, *Feed*, *Grid* and *GridIcon* based on `AVONativeAdsTemplateType` enum.
+
+To create `AVONativeAdsProvider` object use this method:
+
+*objective-c*
+
+```objective-c
+#import <AvocarrotNativeView/AvocarrotNativeView.h>
+...
+- (AVONativeAdsProvider *_Nonnull)createNativeAdsProviderForAdunit:(NSString *_Nonnull)adUnitId
+                                                      templateType:(AVONativeAdsTemplateType)templateType
+                                                          userData:(NSDictionary <NSString *, id> * _Nullable)userData
+                                             templateCustomization:(void (^ _Nullable)(AVOTemplateCustomizationObject *_Nonnull templateCustomizationObject))templateCustomization;
+```
+
+*swift*
+
+```swift
+import AvocarrotNativeView
+...
+func createNativeAdsProvider(forAdunit adUnitId: String,
+                             templateType: AVONativeAdsTemplateType,
+                             userData: [String: id]?,
+                             templateCustomization: ((_ templateCustomizationObject: AVOTemplateCustomizationObject) -> Void)? = nil) -> AVONativeAdsProvider
+```
+
+List of available template customizations is [here](#native-templates-customization)
+
+Also if you want to use your own representation of a native ad, use this method:
+
+*objective-c*
+
+```objective-c
+#import <AvocarrotNativeView/AvocarrotNativeView.h>
+...
+- (AVONativeAdsProvider *_Nonnull)createNativeAdsProviderForAdunit:(NSString *_Nonnull)adUnitId
+                                           adViewClassForRendering:(Class _Nonnull)adViewClass
+                                                          userData:(NSDictionary <NSString *, id> * _Nullable)userData;
+```
+
+*swift*
+
+```swift
+import AvocarrotNativeView
+...
+func createNativeAdsProvider(forAdunit adUnitId: String,
+                             adViewClassForRendering adViewClass: AnyClass,
+                             userData: [String: id]?) -> AVONativeAdsProvider;
+```
+
+After creating `AVONativeAdsProvider` object you have to preload need amount of ads by using this method of `AVONativeAdsProvider`:
+
+
+*objective-c*
+
+```objective-c
+#import <AvocarrotNativeView/AvocarrotNativeView.h>
+...
+- (void)preloadAdsInCache:(NSUInteger)preloadCount
+     parentViewController:(UIViewController *_Nonnull)viewController
+                  didLoad:(void (^ _Nullable)(NSUInteger preloadCount))successBlock
+                  didFail:(void (^ _Nullable)(AVOError *_Nonnull error))errorBlock;
+```
+
+*swift*
+
+```swift
+import AvocarrotNativeView
+...
+func preloadAds(inCache preloadCount: Int,
+                parentViewController viewController: UIViewController,
+                didLoad successBlock: ((_ preloadCount: Int) -> Void)? = nil,
+                didFail errorBlock: ((_ error: AVOError) -> Void)? = nil)
+```
+
+After getting success callback you are able to get rendered native ads from your  `AVONativeAdsProvider` object by using this method:
+
+*objective-c*
+
+```objective-c
+#import <AvocarrotNativeView/AvocarrotNativeView.h>
+...
+- (AVONativeView* _Nullable)getNextAdView;
+```
+
+*swift*
+
+```swift
+import AvocarrotNativeView
+...
+func getNextAdView() -> AVONativeView?
+```
+
+**Note: This method gets next native ad from the ring cache. Each ad will be inserted repeatedly every 'preloadCount' interval until it's tapped or impression is counted and as result ad is automatically replaced with a new one.**
 
 
 Native templates customization
@@ -853,13 +966,15 @@ Other
 
 
 ### Test mode (development mode)
-During the development phase, it is highly recommended to set testMode to `YES` to avoid generating false impressions and clicks tracking. The default setting is `NO`.
+
+During the development phase, it is highly recommended to set testMode to `YES` to work with test ads only. The default setting is `NO`.
 
 ```objective-c
 #import <AvocarrotCore/Avocarrot.h>
 ...
 AvocarrotSDK.testMode = YES;
 ```
+
 
 ### User data
 

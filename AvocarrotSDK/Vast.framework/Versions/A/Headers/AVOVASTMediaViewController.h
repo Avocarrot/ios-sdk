@@ -19,7 +19,6 @@
                                                      delegate:(id <AVOVASTMediaViewControllerDelegate> _Nullable)delegate
                                                    infoSource:(id <AVOVASTMediaViewControllerInfoSource> _Nullable)infoSource;
 
-
 + (_Nonnull instancetype)mediaViewControllerWithVideoURL:(NSURL *_Nonnull)videoURL
                                               htmlString:(NSString *_Nullable)htmlString
                                                 delegate:(id <AVOVASTMediaViewControllerDelegate> _Nullable)delegate
@@ -29,18 +28,21 @@
 
 - (void)freeResources;
 
-@property(assign, nonatomic, readonly) BOOL isReady;
+@property (assign, nonatomic, readonly) BOOL isReady;
+@property (assign, nonatomic, readonly) BOOL hasOwnControls;
+@property (copy, nonatomic, readonly, nullable) NSString *vastVersion;
+@property (assign, nonatomic) BOOL officialVPAIDSupport;
 
 @property(assign, nonatomic) BOOL shouldShowExitButton;                //default is NO
 @property(assign, nonatomic) BOOL supportsAutoRotate;                  //default is NO
 @property(assign, nonatomic) BOOL shouldShowTimeline;                  //default is YES
 @property(assign, nonatomic) BOOL shouldPauseVideoWhenResignActive;    //default is NO
 
-@property(strong, nonatomic, nonnull) UIImage *exitButtonImage;
-@property(strong, nonatomic, nonnull) UIColor *timeLineMinimumTrackTintColor;   //default is [UIColor orangeColor]
-@property(strong, nonatomic, nonnull) UIColor *timeLineMaximumTrackTintColor;   //default is [UIColor blackColor]
-@property(assign, nonatomic) BOOL looping;
-@property(assign, nonatomic) BOOL stopPlayAfterExit;
+@property (strong, nonatomic, nonnull) UIImage *exitButtonImage;
+@property (strong, nonatomic, nonnull) UIColor *timeLineMinimumTrackTintColor;   //default is [UIColor orangeColor]
+@property (strong, nonatomic, nonnull) UIColor *timeLineMaximumTrackTintColor;   //default is [UIColor blackColor]
+@property (assign, nonatomic) BOOL looping;
+@property (assign, nonatomic) BOOL stopPlayAfterExit;
 
 @end
 
@@ -62,6 +64,8 @@
 - (void)mediaViewControllerCompanionAdDidShow:(AVOVASTMediaViewController *_Nonnull)mediaViewController;
 
 - (void)mediaViewControllerUserHasToBeRedirectedFrom:(AVOVASTMediaViewController *_Nonnull)mediaViewController withUrl:(NSURL *_Nullable)url;
+
+- (void)mediaViewControllerdidLoadConfig:(AVOVASTMediaViewController *_Nonnull)mediaViewController;
 
 - (void)mediaViewController:(AVOVASTMediaViewController *_Nonnull)mediaViewController didFailWithError:(AVOVASTError *_Nonnull)error;
 

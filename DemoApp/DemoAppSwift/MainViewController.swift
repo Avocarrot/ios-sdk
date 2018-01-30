@@ -92,6 +92,8 @@ class MainViewController: UIViewController {
                 UserSettings.videoAdUnitID = adUnitId
             case .native:
                 UserSettings.nativeAdUnitID = adUnitId
+            case .nativeassets:
+                UserSettings.nativeAssetsAdUnitID = adUnitId
             default:
                 break
             }
@@ -225,7 +227,7 @@ class MainViewController: UIViewController {
         case .segmentVideo:
             adUnitTextField.text = UserSettings.videoAdUnitID
         case .segmentNative:
-            adUnitTextField.text = UserSettings.nativeAdUnitID
+            adUnitTextField.text = "depends on the type: Native or NativeAssets"
         }
     }
 }
@@ -260,7 +262,8 @@ extension MainViewController {
                 ),
                 MasterTableItem(title: "Grid", controller: "NativeAdDemonstratorViewController", xibName: nil, childItems: nil, userData: ["template": AVONativeAdsTemplateType.grid, "adUnitId": UserSettings.nativeAdUnitID]
                 ),
-                MasterTableItem(title: "Custom", controller: "NativeAdDemonstratorViewController", xibName: nil, childItems: nil, userData: ["adUnitId": UserSettings.nativeAdUnitID]
+                MasterTableItem(title: "Custom", controller: "NativeAdDemonstratorViewController", xibName: nil, childItems: nil, userData: ["adUnitId": UserSettings.nativeAdUnitID,
+                               "adUnitId_assets": UserSettings.nativeAssetsAdUnitID]
                 ),
                 MasterTableItem(title: "Dynamic template from server", controller: "NativeAdDemonstratorViewController", xibName: nil, childItems: nil, userData: ["template": AVONativeAdsTemplateType.server, "adUnitId": UserSettings.nativeAdUnitID]
                 ),

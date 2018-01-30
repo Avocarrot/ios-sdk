@@ -11,8 +11,6 @@ import AvocarrotNativeView
 
 @objc(ServerTemplateCollectionViewController)
 class ServerTemplateCollectionViewController: BaseFlowLayoutCollectionViewController {
-    fileprivate
-    var adapter: AVOCollectionViewStreamAdapter?
     
     // You should set value of ad cell height for server template. Just try different values.
     fileprivate
@@ -26,13 +24,18 @@ class ServerTemplateCollectionViewController: BaseFlowLayoutCollectionViewContro
     
     func loadAds() {
         
-        adapter = AvocarrotSDK.shared.createStreamAdapter(for: collectionView,
-                                                          parentViewController: self,
-                                                          adUnitId: adUnitId,
-                                                          templateType: .server,
-                                                          delegate: self,
-                                                          templateCustomization: nil)
-        adapter?.shiftOffsetBackOnAdInsert = false
+        AvocarrotSDK.shared.createStreamAdapter(for: collectionView,
+            parentViewController: self,
+            adUnitId: adUnitId,
+            templateType: .server,
+            delegate: self,
+            templateCustomization: nil,
+            success: { (adapter) in
+                adapter.shiftOffsetBackOnAdInsert = false
+            },
+            failure: { (error) in
+                print("Stream adapter creating error: \(error.avo_errorDescription) with code: \(error.code)")
+            })
     }
 }
 

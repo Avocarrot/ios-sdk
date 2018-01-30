@@ -209,7 +209,7 @@
                                       withController:@"NativeAssetsDetailsViewController"
                                          withXibName:nil
                                           withChilds:nil
-                                        withUserData:@{@"adUnitId" : UserSettings.nativeAdUnitID}],
+                                        withUserData:@{@"adUnitId" : UserSettings.nativeAssetsAdUnitID}],
               [[MasterTableItem alloc] initWithTitle:@"Custom Layout"
                                       withController:@"CustomLayoutNativeAdDetailsViewController"
                                          withXibName:@"BaseNativeAdDetailsViewController"
