@@ -26,7 +26,8 @@ typedef enum : NSUInteger {
     AVOErrorMraidError,
     AVOErrorPreviousAdRequestInProgress,
     AVOErrorFeatureDisabled,
-    AVOErrorTTLExpired
+    AVOErrorTTLExpired,
+    AVOErrorTooManyResolveRequests
 } AVOErrorCode;
 
 @interface AVOError : NSError

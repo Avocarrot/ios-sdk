@@ -27,7 +27,6 @@
                                                         delegate:self
                                            templateCustomization:nil
                                                          success:^(AVOCollectionViewStreamAdapter * _Nonnull streamAdapter) {
-                                                             streamAdapter.shiftOffsetBackOnAdInsert = NO;
                                                          }
                                                          failure:^(AVOError * _Nonnull error) {
                                                              NSLog(@"Stream adapter creating error %@", error);

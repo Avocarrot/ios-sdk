@@ -38,93 +38,34 @@ Adding through Cocoapods
 
 From version 4.5 Avocarrot SDK uses modular system to distribute based on subspecs:
 
-- By default Avocarrot SDK pod provides SDK with our native assets ad format only, add  pod 'avocarrot-ios-sdk' to your Podfile to integrate it to your project.
+- By default Avocarrot SDK pod provides SDK with our native assets ad format only, add  `pod 'avocarrot-ios-sdk'` to your Podfile to integrate it to your project.
 - If you want to use custom set of SDK modules, include `pod 'avocarrot-ios-sdk/Core` to your Podfile and then select additional modules below.
 
 
-*Native assets adapters*
+*Native assets*
 
-
-- If you want to use the Avocarrot native assets with server-side mediated networks only, add pod 'avocarrot-ios-sdk/NativeAssets' to your Podfile
-
-- If you want to use the Avocarrot native assets with all server-side mediated networks including client side SDKs, add pod 'avocarrot-ios-sdk/NativeAssetsAdapters' to your Podfile
-
-- For native assets, if you want to select which client networks SDK to be included with server side mediated networks, refer to the pods specified below to add into your Podfile:
-
-- `pod 'avocarrot-ios-sdk/NativeAssetsAdapters/FBAudienceAdapter'` - Avocarrot native assets and adapter for  [Facebook Audience](https://developers.facebook.com/docs/ios) native assets
-- `pod 'avocarrot-ios-sdk/NativeAssetsAdapters/GoogleMobileAdsAdapter'` - Avocarrot native assets and adapter for  [Google Mobile Ads SDK](https://developers.google.com/admob/ios/download) native assets
-- `pod 'avocarrot-ios-sdk/NativeAssetsAdapters/AppLovinAdapter'` - Avocarrot native assets and adapter for  [AppLovin](https://www.applovin.com/) native assets
-- `pod 'avocarrot-ios-sdk/NativeAssetsAdapters/InLocoAdapter'` - Avocarrot native assets and adapter for  [InLoco](http://docs.inlocomedia.com/docs/ios) native assets
+- If you want to use the Avocarrot native assets, add pod `'avocarrot-ios-sdk/NativeAssets'` to your Podfile
 
 
 *Banners*
 
-- If you want to use the Avocarrot banners with server-side mediated networks only, add pod 'avocarrot-ios-sdk/Banner' to your Podfile
-
-- If you want to use the Avocarrot banners with all server-side mediated networks including client side SDKs, add pod 'avocarrot-ios-sdk/BannerAdapters' to your Podfile
-
-- For Banners, If you want to select which client networks SDK to be included with server side mediated networks, refer to the pods specified below to add into your Podfile:
-
-    - `pod 'avocarrot-ios-sdk/BannerAdapters/FBAudienceAdapter'` - Avocarrot banners and adapter for  [Facebook Audience](https://developers.facebook.com/docs/ios) banners
-    - `pod 'avocarrot-ios-sdk/BannerAdapters/GoogleMobileAdsAdapter'` - Avocarrot banners and adapter for  [Google Mobile Ads SDK](https://developers.google.com/admob/ios/download) banners
-    - `pod 'avocarrot-ios-sdk/BannerAdapters/MopubAdapter'` - Avocarrot banners and adapter for  [MoPub](https://github.com/mopub/mopub-ios-sdk) banners
-    - `pod 'avocarrot-ios-sdk/BannerAdapters/InLocoAdapter'` - Avocarrot banners and adapter for  [InLoco](http://docs.inlocomedia.com/docs/ios) banners
+- If you want to use the Avocarrot banners, add `pod 'avocarrot-ios-sdk/Banner'` to your Podfile
 
 
 *Interstitials*
 
-- If you want to use the Avocarrot interstitials with server-side mediated networks only, add pod 'avocarrot-ios-sdk/Interstitial' to your Podfile
-
-- If you want to use the Avocarrot interstitials with all server-side mediated networks including client side SDKs, add pod 'avocarrot-ios-sdk/InterstitialAdapters' to your Podfile
-
-- For Interstitials, if you want to select which client networks SDK to be included with server side mediated networks, refer to the pods specified below to add into your Podfile:
-
-    - `pod 'avocarrot-ios-sdk/InterstitialAdapters/FBAudienceAdapter'` - Avocarrot interstitials and adapter for  [Facebook Audience](https://developers.facebook.com/docs/ios) interstitials
-    - `pod 'avocarrot-ios-sdk/InterstitialAdapters/GoogleMobileAdsAdapter'` - Avocarrot interstitials and adapter for  [Google Mobile Ads SDK](https://developers.google.com/admob/ios/download) interstitials
-    - `pod 'avocarrot-ios-sdk/InterstitialAdapters/MopubAdapter'` - Avocarrot interstitials and adapter for  [MoPub](https://github.com/mopub/mopub-ios-sdk) interstitials
-    - `pod 'avocarrot-ios-sdk/InterstitialAdapters/ChartboostAdapter'` - Avocarrot interstitials and adapter for  [Chartboost](http://cboo.st/ios_v6-3) interstitials
-    - `pod 'avocarrot-ios-sdk/InterstitialAdapters/AppLovinAdapter'` - Avocarrot interstitials and adapter for  [AppLovin](https://www.applovin.com/) interstitials
-    - `pod 'avocarrot-ios-sdk/InterstitialAdapters/InLocoAdapter'` - Avocarrot interstitials and adapter for  [InLoco](http://docs.inlocomedia.com/docs/ios) interstitials
+- If you want to use the Avocarrot interstitials, add `pod 'avocarrot-ios-sdk/Interstitial'` to your Podfile
 
 
 *Videos*
 
-- If you want to use the Avocarrot videos with server-side mediated networks, only add `pod 'avocarrot-ios-sdk/Video'` to your Podfile
-
-- If you want to use the Avocarrot videos with all server-side mediated networks including client side SDKs, add pod 'avocarrot-ios-sdk/VideoAdapters' to your Podfile
-
-- For videos, if you want to select which client networks SDK to be included with server side mediated networks, refer to the pods specified below to add into your Podfile:
-
-    - `pod 'avocarrot-ios-sdk/VideoAdapters/ChartboostAdapter'` - Avocarrot banners and adapter for  [Chartboost](http://cboo.st/ios_v6-3) videos
-    - `pod 'avocarrot-ios-sdk/VideoAdapters/UnityAdsAdapter'` - Avocarrot banners and adapter for  [Unity Ads](https://github.com/Applifier/unity-ads-sdk) videos
-    - `pod 'avocarrot-ios-sdk/VideoAdapters/VungleAdapter'` - Avocarrot banners and adapter for  [Vungle](https://v.vungle.com/sdk) videos
+- If you want to use the Avocarrot videos, add `pod 'avocarrot-ios-sdk/Video'` to your Podfile
 
 
 *Rendered native ads*
 
-- If you want to use the Avocarrot native views with server-side mediated networks only, add `pod 'avocarrot-ios-sdk/NativeView'` to your Podfile
+- If you want to use the Avocarrot native views, add `pod 'avocarrot-ios-sdk/NativeView'` to your Podfile
 
-- If you want to use the Avocarrot native views with all server-side mediated networks including client side SDKs, add pod 'avocarrot-ios-sdk/NativeViewAdapters' to your Podfile
-
-- For native views, if you want to select which client networks SDK to be included with server side mediated networks, refer to the pods specified below to add into your Podfile:
-
-    - `pod 'avocarrot-ios-sdk/NativeViewAdapters/FBAudienceAdapter'` - Avocarrot native views and adapter for  [Facebook Audience](https://developers.facebook.com/docs/ios) native views
-    - `pod 'avocarrot-ios-sdk/NativeViewAdapters/GoogleMobileAdsAdapter'` - Avocarrot native views and adapter for  [Google Mobile Ads SDK](https://developers.google.com/admob/ios/download) native views
-    - `pod 'avocarrot-ios-sdk/NativeViewAdapters/MopubAdapter'` - Avocarrot native views and adapter for  [MoPub](https://github.com/mopub/mopub-ios-sdk) native views
-    - `pod 'avocarrot-ios-sdk/NativeViewAdapters/AppLovinAdapter'` - Avocarrot native views and adapter for  [AppLovin](https://www.applovin.com/) native views
-    - `pod 'avocarrot-ios-sdk/NativeViewAdapters/InLocoAdapter'` - Avocarrot native views and adapter for  [InLoco](http://docs.inlocomedia.com/docs/ios) native views
-
-
-**Warning: Avocarrot SDK 4.8.0 was designed and verified to work correctly with the following versions of 3rd party ad network SDKs:**
-
-* Chartboost – 6.6.3
-* Google Mobile Ads – 7.27.2
-* Unity Ads – 2.1.2
-* Vungle – 4.1.0
-* Facebook Audience – 4.26.0
-* MoPub – 4.19.0
-* AppLovin – 4.6
-* InLoco - 2.4.4
 
 **Warning: Some Xcode versions support new settings only after the Xcode reboot. This also cleans the Xcode cache and remedies other problems.**
 
@@ -266,7 +207,8 @@ Interstitials
 
 AdUnitId for testing (INTERSTITIAL): `"2cb34a73-0012-4264-9526-bde1fce2ba92"`.
 Interstitial size is defined automatically, depending on the screen size.
-Use the following methods in your UIViewController subclass:
+
+Use the following method in your UIViewController subclass:
 
 *objective-c*
 
@@ -274,24 +216,10 @@ Use the following methods in your UIViewController subclass:
 - (void)loadInterstitialWithAdUnitId:(NSString *_Nonnull)adUnitId
         success:(void (^ _Nullable)(AVOInterstitial *_Nonnull interstitial))success
         failure:(void (^ _Nullable)(AVOError *_Nonnull error))failure;
-
-- (void)loadInterstitialAndShowWithDelayWithAdUnitId:(NSString *_Nonnull)adUnitId
-        forViewController:(UIViewController *_Nonnull)viewController
-        success:(void (^ _Nullable)(AVOInterstitial *_Nonnull interstitial))success
-        failure:(void (^ _Nullable)(AVOError *_Nonnull error))failure;                           
 ```
 
 
-Two different presentation methods are available for interstitials. These are as follows:
-
-- `loadInterstitialWithAdUnitId`
-- `loadInterstitialAndShowWithDelayWithAdUnitId`
-
-
-The `loadInterstitialWithAdUnitId` method is to load the interstitial and call the success block if the interstitial loaded. You can show the interstitial from this block immediately. The `loadInterstitialAndShowWithDelayWithAdUnitId` method loads the interstitial, calls the success block and shows it after a delay, which returns from the server. From the success block you can save it to your UIViewController subclass property, show it immediately or do nothing.
-
-**Note: If delay is not specified, the interstitial will be shown immediately after the load is finished.**
-
+The `loadInterstitialWithAdUnitId` method is to load the interstitial and call the success block if the interstitial loaded. From the success block you can save it to your UIViewController subclass property, show it immediately or do nothing.
 
 For example:
 
@@ -307,14 +235,6 @@ __weak typeof(self) weakSelf = self;
                         sSelf.intestitial = interstitial;
                         [interstitial showFromViewController:sSelf];
                     } failure:nil];
-
-[AvocarrotSDK.sharedSDK loadInterstitialAndShowWithDelayWithAdUnitId:@"2cb34a73-0012-4264-9526-bde1fce2ba92"
-                     forViewController:self
-                     success:^(AVOInterstitial * _Nonnull interstitial) {
-                       __strong __typeof__(self) sSelf = weakSelf;
-                       sSelf.intestitial = interstitial;
-                     } failure:nil];
-
 ```
 
 *swift*
@@ -330,15 +250,6 @@ AvocarrotSDK.shared.loadInterstitial(withAdUnitId: "2cb34a73-0012-4264-9526-bde1
                                       sSelf.interstitial = interstitial
                                       interstitial.show(from: sSelf)
                                }, failure: nil)
-
-AvocarrotSDK.shared.loadInterstitialAndShowWithDelay(withAdUnitId: "2cb34a73-0012-4264-9526-bde1fce2ba92",
-                                                  for: self,
-                                                  success: { [weak self] (interstitial) in
-                                                      guard let sSelf = self else {
-                                                         return
-                                                      }
-                                                      sSelf.interstitial = interstitial
-                                               }, failure: nil)
 ```
 ### Interstitial events handling
 
@@ -572,7 +483,8 @@ __weak typeof(self) weakSelf = self;
                              parentViewController:self
                                      templateType:AVONativeAdsTemplateTypeList
                                           success:^(UIView * _Nonnull adNativeViewContainer) {
-                                              [weakSelf.view addSubview:adNativeViewContainer];
+                                              __strong __typeof__(self) sSelf = weakSelf;
+                                              [sSelf.view addSubview:adNativeViewContainer];
                                           } failure:nil
                             templateCustomization:nil];
 ```
@@ -584,7 +496,10 @@ import AvocarrotNativeView
 AvocarrotSDK.shared.loadNativeAd(withAdUnitId: "7f900c7d-7ce3-4190-8e93-310053e70ca2",
                                       parentViewController: self,
                                       templateType: .list,
-                                      success: { [unowned self] (view) in
+                                      success: { [weak self] (view) in
+                                        guard let sSelf = self else {
+                                           return
+                                        }
                                         self.view.addSubview(view)
             }, failure: nil,
                templateCustomization: nil)

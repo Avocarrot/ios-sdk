@@ -32,6 +32,11 @@ class VideoDetailViewController: UIViewController {
                                             guard let sSelf = self else {return}
                                             sSelf.video = video
                                             sSelf.showButton.isEnabled = true
+            
+                                            video.onClick{
+                                                print("The video is clicked")
+                                            }
+            
                                             print("Video has loaded!")
                                         }, failure: { (error) in
                                             print("Video loading error: \(error.localizedDescription)")
@@ -48,6 +53,11 @@ class VideoDetailViewController: UIViewController {
         AvocarrotSDK.shared.loadVideo(withAdUnitId: adUnitId, success: { [weak self] (video) in
                                         guard let sSelf = self else {return}
                                         sSelf.video = video
+            
+                                        video.onClick{
+                                            print("The video is clicked")
+                                        }
+            
                                         video.show(from: sSelf)
                                         print("Video has loaded! And it will be shown...")
                                     }, failure: { (error) in

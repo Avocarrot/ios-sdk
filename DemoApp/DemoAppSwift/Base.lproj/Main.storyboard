@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="c5V-oQ-PPU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="c5V-oQ-PPU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="HelveticaNeue.ttc">
             <string>HelveticaNeue</string>
+            <string>HelveticaNeue-Bold</string>
+            <string>HelveticaNeue-Italic</string>
         </array>
     </customFonts>
     <scenes>
@@ -37,7 +39,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ff-4x-AaZ">
-                                        <rect key="frame" x="10" y="174" width="300" height="40"/>
+                                        <rect key="frame" x="10" y="114" width="300" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.30588235289999999" green="0.57254901960000004" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
@@ -76,28 +78,8 @@
                                             <action selector="loadAndShowClicked:" destination="wdT-49-3tq" eventType="touchUpInside" id="3cD-oZ-lGY"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pk6-md-rOm">
-                                        <rect key="frame" x="10" y="114" width="300" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.30588235289999999" green="0.57254901960000004" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                        <state key="normal" title="Load and show with delay">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="disabled">
-                                            <color key="titleColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="loadAndShowWithDelayClicked:" destination="wdT-49-3tq" eventType="touchUpInside" id="dX8-i5-upn"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QlU-48-8fX">
-                                        <rect key="frame" x="10" y="234" width="300" height="40"/>
+                                        <rect key="frame" x="10" y="174" width="300" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.30588235289999999" green="0.57254901960000004" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
@@ -137,7 +119,6 @@
                     </view>
                     <connections>
                         <outlet property="loadAndShowButton" destination="nVJ-E0-QnP" id="sDK-To-umy"/>
-                        <outlet property="loadAndShowWithDelayButton" destination="pk6-md-rOm" id="aOV-Wg-oRS"/>
                         <outlet property="loadButton" destination="2ff-4x-AaZ" id="oYL-B9-BzK"/>
                         <outlet property="showButton" destination="QlU-48-8fX" id="7BS-7X-iGs"/>
                     </connections>
@@ -202,7 +183,7 @@
                                 <rect key="frame" x="8" y="8" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="82L-BE-MHH"/>
-                                    <constraint firstAttribute="width" constant="40" id="Tec-2v-BnE"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="Tec-2v-BnE"/>
                                 </constraints>
                                 <state key="normal" title="X"/>
                                 <connections>
@@ -248,7 +229,7 @@
                                 <color key="backgroundColor" red="0.30588235289999999" green="0.57254901960000004" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="d66-zH-nfq"/>
-                                    <constraint firstAttribute="width" constant="160" id="hzc-lh-Oen"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="hzc-lh-Oen"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Create">
@@ -266,6 +247,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aJq-gJ-2Ch" secondAttribute="trailing" constant="20" symbolic="YES" id="0y2-Zp-c8k"/>
                             <constraint firstItem="pRq-o6-pBa" firstAttribute="leading" secondItem="boj-op-iho" secondAttribute="leading" id="65P-AH-8QF"/>
                             <constraint firstItem="aJq-gJ-2Ch" firstAttribute="leading" secondItem="boj-op-iho" secondAttribute="leading" constant="8" id="6ry-Yo-a8l"/>
                             <constraint firstItem="A2f-Yr-kdM" firstAttribute="top" secondItem="uQy-iP-ZIs" secondAttribute="bottom" id="AfH-r4-gcQ"/>
@@ -438,7 +420,6 @@
             <objects>
                 <navigationController navigationBarHidden="YES" id="c5V-oQ-PPU" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="AGs-YZ-lWH">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

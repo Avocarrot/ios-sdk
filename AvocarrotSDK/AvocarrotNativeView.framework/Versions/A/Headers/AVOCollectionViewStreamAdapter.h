@@ -21,11 +21,6 @@
  */
 @property(nonatomic, assign) BOOL interchangeLayoutSpacings;
 
-
-/**
- If flag is true, we shift collection view offset back to the original position after we insert ads, cause it's moved if there ads, that inserted before the current offset. Default value is true.
- */
-@property(nonatomic, assign) BOOL shiftOffsetBackOnAdInsert;
 @end
 
 

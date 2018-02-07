@@ -35,7 +35,6 @@ class ListCollectionViewController: BaseFlowLayoutCollectionViewController {
             delegate: sizeDelegate,
             templateCustomization: nil,
             success: { (adapter) in
-                adapter.shiftOffsetBackOnAdInsert = false
             },
             failure: { (error) in
                 print("Stream adapter creating error: \(error.avo_errorDescription) with code: \(error.code)")

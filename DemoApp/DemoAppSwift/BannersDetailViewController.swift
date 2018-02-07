@@ -37,7 +37,12 @@ class BannersDetailViewController: UIViewController {
     public func loadBanner() {
         AvocarrotSDK.shared.loadBanner(with: bannerSize, adUnitId: adUnitId,
                                        success: {[weak self] (bannerAd) in
-                                            self?.addBannerOnScreen(newBanner: bannerAd)
+                                            guard let sSelf = self else {return}
+                                        
+                                            bannerAd.onClick{
+                                                print("The banner is clicked")
+                                            }
+                                            sSelf.addBannerOnScreen(newBanner: bannerAd)
                                         },
                                        failure: { (error) in
                                             print("Banner loading error: \(error.localizedDescription)")

@@ -1,5 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file.
+# [4.9.0]
+### Removed
+- Mediation support for all networks
+
 # [4.8.0]
 ### Added
 - VPAID support for fullscreen video ad

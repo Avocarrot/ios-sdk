@@ -33,6 +33,11 @@ class InterstitialsDetailViewController: UIViewController {
                                             guard let sSelf = self else {return}
                                             sSelf.interstitial = interstitial
                                             sSelf.showButton.isEnabled = true
+            
+                                            interstitial.onClick{
+                                                print("The intestitial is clicked")
+                                            }
+            
                                             print("Interstitial has loaded!")
                                            }, failure: { (error) in
                                             print("Interstitial loading error: \(error.localizedDescription)")
@@ -50,25 +55,17 @@ class InterstitialsDetailViewController: UIViewController {
                                               success: { [weak self] (interstitial) in
                                                 guard let sSelf = self else {return}
                                                 sSelf.interstitial = interstitial
+                                                
+                                                interstitial.onClick{
+                                                    print("The intestitial is clicked")
+                                                }
+                                                
                                                 interstitial.show(from: sSelf)
                                                 print("Interstitial has loaded! And it will be shown...")
                                               }, failure: { (error) in
                                                 print("Interstitial loading error: \(error.localizedDescription)")
                                               })
 
-    }
-
-    @IBAction func loadAndShowWithDelayClicked(_ sender: UIButton) {
-        showButton.isEnabled = false
-        AvocarrotSDK.shared.loadInterstitialAndShowWithDelay(withAdUnitId: adUnitId,
-                                                              for: self,
-                                                              success: { [weak self] (interstitial) in
-                                                                guard let sSelf = self else {return}
-                                                                sSelf.interstitial = interstitial
-                                                                print("Interstitial has loaded! And it will be shown soon...")
-                                                               }, failure: { (error) in
-                                                                print("Interstitial loading error: \(error.localizedDescription)")
-                                                               })
     }
 
 }

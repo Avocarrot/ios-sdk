@@ -52,20 +52,6 @@
                                               }];
 }
 
-- (IBAction)loadAndShowWithDelayClicked:(id)sender {
-    __weak typeof(self) weakSelf = self;
-    [AvocarrotSDK.sharedSDK loadInterstitialAndShowWithDelayWithAdUnitId:self.adUnitId
-                                                       forViewController:self
-                                                                 success:^(AVOInterstitial *interstitial) {
-                                                                     __strong __typeof__(self) sSelf = weakSelf;
-                                                                     sSelf.interstitial = interstitial;
-                                                                     NSLog(@"Interstitial has loaded! And it will be shown soon...");
-                                                                 }
-                                                                 failure:^(AVOError * _Nonnull error) {
-                                                                     NSLog(@"Interstitial loading error: %@", [error localizedDescription]);
-                                                                 }];
-}
-
 @end
 
 

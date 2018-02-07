@@ -27,7 +27,6 @@ class CustomTemplateCollectionViewController: BaseFlowLayoutCollectionViewContro
             delegate: self,
             adViewClassForRendering: NativeBannerView.self,
             success: { (adapter) in
-                adapter.shiftOffsetBackOnAdInsert = false
             },
             failure: { (error) in
                 print("Stream adapter creating error: \(error.avo_errorDescription) with code: \(error.code)")
