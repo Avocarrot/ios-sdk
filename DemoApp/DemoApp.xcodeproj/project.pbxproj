@@ -798,7 +798,6 @@
 				905097C91C0F026E00C96364 /* Frameworks */,
 				905097CA1C0F026E00C96364 /* Resources */,
 				6BD0F5594DF8BF41FAEF5514 /* [CP] Embed Pods Frameworks */,
-				10F366566DB53F8D904BC472 /* [CP] Copy Pods Resources */,
 				487E6CCE200CC27700662EC1 /* ShellScript */,
 			);
 			buildRules = (
@@ -819,7 +818,6 @@
 				BF2CB9B01CEDBEDB00176530 /* Frameworks */,
 				BF2CB9B11CEDBEDB00176530 /* Resources */,
 				D31EF830F34E863602C6ACDB /* [CP] Embed Pods Frameworks */,
-				46F3F7744D210706DD84B736 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -918,52 +916,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		10F366566DB53F8D904BC472 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DemoApp/Pods-DemoApp-resources.sh",
-				"${PODS_ROOT}/VungleSDK-iOS/VungleSDK.embeddedframework/Resources/vg_close.png",
-				"${PODS_ROOT}/VungleSDK-iOS/VungleSDK.embeddedframework/Resources/vg_cta.png",
-				"${PODS_ROOT}/VungleSDK-iOS/VungleSDK.embeddedframework/Resources/vg_mute_off.png",
-				"${PODS_ROOT}/VungleSDK-iOS/VungleSDK.embeddedframework/Resources/vg_mute_on.png",
-				"${PODS_ROOT}/VungleSDK-iOS/VungleSDK.embeddedframework/Resources/vg_privacy.png",
-				"${PODS_ROOT}/VungleSDK-iOS/VungleSDK.embeddedframework/Resources/__vungle.db",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoApp/Pods-DemoApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		46F3F7744D210706DD84B736 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DemoAppSwift/Pods-DemoAppSwift-resources.sh",
-				"${PODS_ROOT}/VungleSDK-iOS/VungleSDK.embeddedframework/Resources/vg_close.png",
-				"${PODS_ROOT}/VungleSDK-iOS/VungleSDK.embeddedframework/Resources/vg_cta.png",
-				"${PODS_ROOT}/VungleSDK-iOS/VungleSDK.embeddedframework/Resources/vg_mute_off.png",
-				"${PODS_ROOT}/VungleSDK-iOS/VungleSDK.embeddedframework/Resources/vg_mute_on.png",
-				"${PODS_ROOT}/VungleSDK-iOS/VungleSDK.embeddedframework/Resources/vg_privacy.png",
-				"${PODS_ROOT}/VungleSDK-iOS/VungleSDK.embeddedframework/Resources/__vungle.db",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoAppSwift/Pods-DemoAppSwift-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		487E6CCE200CC27700662EC1 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1295,7 +1247,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 180207.135525-13;
+				CURRENT_PROJECT_VERSION = 180529.170516-;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 7C7H88B9P9;
 				ENABLE_BITCODE = YES;
@@ -1356,7 +1308,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CURRENT_PROJECT_VERSION = 180207.135525-13;
+				CURRENT_PROJECT_VERSION = 180529.170516-;
 				DEVELOPMENT_TEAM = 7C7H88B9P9;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1415,7 +1367,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 180207.135525-13;
+				CURRENT_PROJECT_VERSION = 180529.170516-;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 7C7H88B9P9;
 				ENABLE_BITCODE = YES;
@@ -1440,7 +1392,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CURRENT_PROJECT_VERSION = 180207.135525-13;
+				CURRENT_PROJECT_VERSION = 180529.170516-;
 				DEVELOPMENT_TEAM = 7C7H88B9P9;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = DemoAppSwift/Info.plist;

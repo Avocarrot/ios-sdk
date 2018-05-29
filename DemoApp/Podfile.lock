@@ -1,53 +1,62 @@
 PODS:
-  - avocarrot-ios-dev/Banner (4.9.0-180207.141012):
+  - avocarrot-ios-dev/Banner (4.10.0-180524.095453):
     - avocarrot-ios-dev/Core
     - avocarrot-ios-dev/Mraid
-  - avocarrot-ios-dev/Core (4.9.0-180207.141012)
-  - avocarrot-ios-dev/Full (4.9.0-180207.141012):
+  - avocarrot-ios-dev/Core (4.10.0-180524.095453)
+  - avocarrot-ios-dev/Full (4.10.0-180524.095453):
     - avocarrot-ios-dev/Banner
     - avocarrot-ios-dev/Core
     - avocarrot-ios-dev/Interstitial
     - avocarrot-ios-dev/NativeAssets
     - avocarrot-ios-dev/NativeView
     - avocarrot-ios-dev/Video
-  - avocarrot-ios-dev/Interstitial (4.9.0-180207.141012):
+  - avocarrot-ios-dev/Interstitial (4.10.0-180524.095453):
     - avocarrot-ios-dev/Core
     - avocarrot-ios-dev/Mraid
-  - avocarrot-ios-dev/Mraid (4.9.0-180207.141012):
+  - avocarrot-ios-dev/Mraid (4.10.0-180524.095453):
     - avocarrot-ios-dev/Core
-  - avocarrot-ios-dev/NativeAssets (4.9.0-180207.141012):
+  - avocarrot-ios-dev/NativeAssets (4.10.0-180524.095453):
     - avocarrot-ios-dev/Core
-  - avocarrot-ios-dev/NativeView (4.9.0-180207.141012):
+  - avocarrot-ios-dev/NativeView (4.10.0-180524.095453):
     - avocarrot-ios-dev/Core
     - avocarrot-ios-dev/NativeAssets
     - avocarrot-ios-dev/Vast
-  - avocarrot-ios-dev/Vast (4.9.0-180207.141012):
+  - avocarrot-ios-dev/Vast (4.10.0-180524.095453):
     - avocarrot-ios-dev/Core
-  - avocarrot-ios-dev/Video (4.9.0-180207.141012):
+  - avocarrot-ios-dev/Video (4.10.0-180524.095453):
     - avocarrot-ios-dev/Core
     - avocarrot-ios-dev/Vast
-  - Crashlytics (3.9.3):
-    - Fabric (~> 1.7.2)
+  - Crashlytics (3.10.2):
+    - Fabric (~> 1.7.7)
   - DZNSegmentedControl (1.3.3)
-  - Fabric (1.7.3)
-  - SDWebImage (4.3.0):
-    - SDWebImage/Core (= 4.3.0)
-  - SDWebImage/Core (4.3.0)
+  - Fabric (1.7.7)
+  - SDWebImage (4.3.3):
+    - SDWebImage/Core (= 4.3.3)
+  - SDWebImage/Core (4.3.3)
 
 DEPENDENCIES:
-  - avocarrot-ios-dev/Full (~> 4.9.0-0)
+  - avocarrot-ios-dev/Full (~> 4.10.0-0)
   - Crashlytics
   - DZNSegmentedControl
   - Fabric
   - SDWebImage
 
+SPEC REPOS:
+  "git@gitlab.glispa.com:ssp/ios-podspecs.git":
+    - avocarrot-ios-dev
+  https://github.com/cocoapods/specs.git:
+    - Crashlytics
+    - DZNSegmentedControl
+    - Fabric
+    - SDWebImage
+
 SPEC CHECKSUMS:
-  avocarrot-ios-dev: 35b3070c5c9c4f129530c5ecb6bf08e0746dcfc2
-  Crashlytics: dbb07d01876c171c5ccbdf7826410380189e452c
+  avocarrot-ios-dev: e460e42f1777c73a14df457e9709fc7f9b5dc57b
+  Crashlytics: 0360624eea1c978a743feddb2fb1ef8b37fb7a0d
   DZNSegmentedControl: ecc2f31c5581cce10c4d766ea4bd2d0781814c1f
-  Fabric: bb495bb9a7a7677c6d03a1f8b83d95bc49b47e41
-  SDWebImage: 6da6c8bca115addc4de8613362e1b15f66333825
+  Fabric: bda89e242bce1b7b8ab264248cf3407774ce0095
+  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
 
-PODFILE CHECKSUM: 08d7d671ffea32d2314c54b3e4cae7731017344a
+PODFILE CHECKSUM: 7baa06114a5463874e2b6840fc25793bf0ed8a27
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.2

@@ -1,8 +1,0 @@
-framework module AvocarrotInsights {
-  umbrella header "AVOInsights.h"
-  
-  export *
-  module * { export * }
-
-
-}

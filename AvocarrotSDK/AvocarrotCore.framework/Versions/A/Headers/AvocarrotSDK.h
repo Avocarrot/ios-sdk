@@ -39,6 +39,11 @@ typedef enum {
  */
 @property(class, nonatomic, assign) BOOL testMode;
 
+/**
+ * Inform SDK that the user has given consent
+ */
++ (void) hasConsent:(BOOL) consent;
+
 @end
 
 

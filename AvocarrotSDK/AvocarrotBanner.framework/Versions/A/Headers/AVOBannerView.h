@@ -11,7 +11,13 @@
 typedef enum {
     AVOBannerViewSizeSmall, // (320 x 50)
     AVOBannerViewSizeLarge,  // (728 x 90)
-    AVOBannerViewSizeMREC // (300 x 250)
+    AVOBannerViewSizeMREC, // (300 x 250)
+    AVOBannerViewSize300x50,
+    AVOBannerViewSize320x50,
+    AVOBannerViewSize468x60,
+    AVOBannerViewSize728x90,
+    AVOBannerViewSize300x250,
+    AVOBannerViewSize160x600
 } AVOBannerViewSize;
 
 
