@@ -30,9 +30,9 @@ PODS:
     - Fabric (~> 1.7.7)
   - DZNSegmentedControl (1.3.3)
   - Fabric (1.7.7)
-  - SDWebImage (4.3.3):
-    - SDWebImage/Core (= 4.3.3)
-  - SDWebImage/Core (4.3.3)
+  - SDWebImage (4.4.1):
+    - SDWebImage/Core (= 4.4.1)
+  - SDWebImage/Core (4.4.1)
 
 DEPENDENCIES:
   - avocarrot-ios-dev/Full (~> 4.10.0-0)
@@ -55,7 +55,7 @@ SPEC CHECKSUMS:
   Crashlytics: 0360624eea1c978a743feddb2fb1ef8b37fb7a0d
   DZNSegmentedControl: ecc2f31c5581cce10c4d766ea4bd2d0781814c1f
   Fabric: bda89e242bce1b7b8ab264248cf3407774ce0095
-  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
+  SDWebImage: 47e9b5b925cbce75946c23f0c42dd19464189af4
 
 PODFILE CHECKSUM: 7baa06114a5463874e2b6840fc25793bf0ed8a27
 

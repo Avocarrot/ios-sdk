@@ -1,5 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file.
+# [4.10.1]
+### Added
+- Fix NativeAssets precaching logic
+
 # [4.10.0]
 ### Added
 - Support more banner size
