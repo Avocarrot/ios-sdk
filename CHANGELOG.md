@@ -1,5 +1,11 @@
+
 # Change Log
 All notable changes to this project will be documented in this file.
+# [4.10.2]
+### Added
+- Reduce network usage
+- Reduce latency
+
 # [4.10.1]
 ### Added
 - Fix NativeAssets precaching logic
